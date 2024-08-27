@@ -424,7 +424,8 @@ export const stateDefinitionsDecoder: Decoder<UIDLStateDefinition> = object({
     constant('object'),
     constant('children')
   ),
-  defaultValue: stateDefinitionsDefaultValueDecoder,
+  defaultValue: optional(stateDefinitionsDefaultValueDecoder),
+  value: optional(stateDefinitionsDefaultValueDecoder),
 })
 
 export const pageOptionsDecoder: Decoder<UIDLPageOptions> = object({
