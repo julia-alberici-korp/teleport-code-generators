@@ -14,6 +14,7 @@ import {
 } from './uidl'
 
 export enum FileType {
+  SCSS = 'scss',
   CSS = 'css',
   HTML = 'html',
   JS = 'js',
