@@ -415,14 +415,18 @@ export const pageOptionsPaginationDecoder: Decoder<PagePaginationOptions> = obje
 })
 
 export const stateDefinitionsDecoder: Decoder<UIDLStateDefinition> = object({
-  type: union(
+  type: oneOf(
     constant('string'),
     constant('boolean'),
     constant('number'),
     constant('array'),
     constant('func'),
     constant('object'),
-    constant('children')
+    constant('children'),
+    constant('children'),
+    constant('any'),
+    // with this we can have a state that have a custom type
+    string()
   ),
   defaultValue: optional(stateDefinitionsDefaultValueDecoder),
   value: optional(stateDefinitionsDefaultValueDecoder),
