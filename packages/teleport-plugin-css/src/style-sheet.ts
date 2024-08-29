@@ -4,7 +4,7 @@ import {
   ComponentPluginFactory,
   ChunkType,
   FileType,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { join, relative } from 'path'
 
 interface StyleSheetPlugin {

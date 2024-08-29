@@ -5,7 +5,7 @@ import { createPrettierTSPostProcessor } from '@teleporthq/teleport-postprocesso
 import prettierHTML from '@teleporthq/teleport-postprocessor-prettier-html'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { createProjectGenerator } from '@viasoft/teleport-project-generator'
-import { Mapping, FileType } from '@teleporthq/teleport-types'
+import { Mapping, FileType } from '@viasoft/teleport-types'
 import { createStyleSheetPlugin } from '@teleporthq/teleport-plugin-css'
 
 import { CUSTOM_BODY_CONTENT } from './constants'

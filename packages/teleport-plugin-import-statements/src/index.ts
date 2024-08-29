@@ -8,7 +8,7 @@ import {
   ChunkType,
   FileType,
   ComponentStructure,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 interface ImportPluginConfig {
   importLibsChunkName?: string

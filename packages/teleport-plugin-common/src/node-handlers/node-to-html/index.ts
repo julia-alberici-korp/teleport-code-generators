@@ -10,7 +10,7 @@ import {
   HastNode,
   HastText,
   UIDLDynamicReference,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { createConditionalStatement, handleAttribute, handleEvent } from './utils'
 import { NodeToHTML } from './types'
 import { DEFAULT_TEMPLATE_SYNTAX } from './constants'

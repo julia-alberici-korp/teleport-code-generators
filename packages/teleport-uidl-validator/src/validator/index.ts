@@ -5,7 +5,7 @@ import {
   ComponentValidationError,
   VComponentUIDL,
   VProjectUIDL,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { componentUIDLDecoder, rootComponentUIDLDecoder, projectUIDLDecoder } from '../decoders'
 import * as utils from './utils'
 

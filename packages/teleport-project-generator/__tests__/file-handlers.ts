@@ -1,11 +1,6 @@
 import { handlePackageJSON, createEntryFile, createManifestJSONFile } from '../src/file-handlers'
 import { PackageJSON } from '../src/types'
-import {
-  GeneratedFolder,
-  ProjectUIDL,
-  FileType,
-  UIDLRootComponent,
-} from '@teleporthq/teleport-types'
+import { GeneratedFolder, ProjectUIDL, FileType, UIDLRootComponent } from '@viasoft/teleport-types'
 import { component, elementNode } from '@teleporthq/teleport-uidl-builders'
 import { createStrategyWithCommonGenerator } from './mocks'
 

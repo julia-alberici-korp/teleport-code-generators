@@ -9,7 +9,7 @@ import {
   FileType,
   GeneratorOptions,
   GeneratorFactoryParams,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import AssemblyLine from './assembly-line'
 import Builder from './builder'
 

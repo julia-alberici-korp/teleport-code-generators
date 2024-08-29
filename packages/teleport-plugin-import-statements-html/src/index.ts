@@ -4,7 +4,7 @@ import {
   ChunkType,
   HTMLComponentGeneratorError,
   HastNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { HASTBuilders, HASTUtils } from '@teleporthq/teleport-plugin-common'
 import { StringUtils } from '@viasoft/teleport-shared'
 

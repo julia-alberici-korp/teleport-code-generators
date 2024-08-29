@@ -24,7 +24,7 @@ import {
   UIDLElementNodeInlineReferencedStyle,
   UIDLElementNode,
   UIDLElement,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import {
   generateStylesFromStyleObj,
   createStylesHookDecleration,

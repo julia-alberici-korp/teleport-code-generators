@@ -1,4 +1,4 @@
-import { GeneratedFile, GeneratedFolder, VercelDeployResponse } from '@teleporthq/teleport-types'
+import { GeneratedFile, GeneratedFolder, VercelDeployResponse } from '@viasoft/teleport-types'
 
 export interface ProjectFolderInfo {
   folder: GeneratedFolder

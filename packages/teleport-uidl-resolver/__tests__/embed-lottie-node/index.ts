@@ -1,6 +1,6 @@
 import { wrapHtmlNode } from '../../src/resolvers/embed-node/utils'
 import { elementNode, staticNode } from '@teleporthq/teleport-uidl-builders'
-import { UIDLElementNode } from '@teleporthq/teleport-types'
+import { UIDLElementNode } from '@viasoft/teleport-types'
 
 describe('wrap html-node element', () => {
   it('wraps a simple element', () => {

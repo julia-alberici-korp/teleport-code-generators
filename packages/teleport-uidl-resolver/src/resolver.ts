@@ -6,7 +6,7 @@ import {
   Mapping,
   GeneratorOptions,
   ElementsLookup,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { resolveAbilities } from './resolvers/abilities'
 import { resolveStyleSetDefinitions } from './resolvers/style-set-definitions'
 import { resolveReferencedStyle } from './resolvers/referenced-styles'

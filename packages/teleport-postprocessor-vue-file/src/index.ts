@@ -1,4 +1,4 @@
-import { PostProcessor, FileType } from '@teleporthq/teleport-types'
+import { PostProcessor, FileType } from '@viasoft/teleport-types'
 import { StringUtils } from '@viasoft/teleport-shared'
 
 export const createVueFilePostProcessor = () => {

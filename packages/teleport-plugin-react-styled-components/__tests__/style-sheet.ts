@@ -2,7 +2,7 @@ import {
   ComponentStructure,
   UIDLDesignTokens,
   UIDLStyleSetDefinition,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { createStyleSheetPlugin } from '../src'
 import { component, elementNode, staticNode } from '@teleporthq/teleport-uidl-builders'
 import { createComponentChunk } from './mocks'

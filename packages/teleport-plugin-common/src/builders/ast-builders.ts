@@ -11,7 +11,7 @@ import {
   UIDLGlobalAsset,
   UIDLStateModifierEvent,
   UIDLStaticValue,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { UIDLUtils } from '@viasoft/teleport-shared'
 
 // tslint:disable-next-line no-any

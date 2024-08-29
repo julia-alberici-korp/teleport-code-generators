@@ -1,11 +1,6 @@
 import { createPropTypesPlugin } from '../src'
 import { component, elementNode } from '@teleporthq/teleport-uidl-builders'
-import {
-  ComponentStructure,
-  ChunkType,
-  FileType,
-  ChunkDefinition,
-} from '@teleporthq/teleport-types'
+import { ComponentStructure, ChunkType, FileType, ChunkDefinition } from '@viasoft/teleport-types'
 import type {
   AssignmentExpression,
   ExpressionStatement,

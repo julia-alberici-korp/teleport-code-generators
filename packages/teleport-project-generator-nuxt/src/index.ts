@@ -5,7 +5,7 @@ import vueHeadConfigPlugin from '@teleporthq/teleport-plugin-vue-head-config'
 import prettierHTML from '@teleporthq/teleport-postprocessor-prettier-html'
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'
 import { createStyleSheetPlugin } from '@teleporthq/teleport-plugin-css'
-import { FileType } from '@teleporthq/teleport-types'
+import { FileType } from '@viasoft/teleport-types'
 import { configContentGenerator } from './utils'
 
 import { NuxtProjectMapping } from './nuxt-project-mapping'

@@ -7,7 +7,7 @@ import {
   PluginStyledJSX,
   UIDLElement,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { generateStyledJSXTag } from './utils'
 import * as types from '@babel/types'
 

@@ -1,6 +1,6 @@
 import { createVueComponentPlugin } from '../src/index'
 import { structure } from './mocks'
-import { ChunkType, ComponentStructure } from '@teleporthq/teleport-types'
+import { ChunkType, ComponentStructure } from '@viasoft/teleport-types'
 import { component, elementNode } from '@teleporthq/teleport-uidl-builders'
 import type { ExportDefaultDeclaration, ObjectExpression, ObjectProperty } from '@babel/types'
 

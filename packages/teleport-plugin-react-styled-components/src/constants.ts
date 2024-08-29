@@ -1,4 +1,4 @@
-import { UIDLExternalDependency } from '@teleporthq/teleport-types'
+import { UIDLExternalDependency } from '@viasoft/teleport-types'
 
 export const VARIANT_DEPENDENCY: UIDLExternalDependency = {
   type: 'package',

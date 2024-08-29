@@ -6,9 +6,9 @@ The collection of reusable types across the entire teleport ecosystem.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-types
+npm install @viasoft/teleport-types
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-types
+yarn add @viasoft/teleport-types
 ```

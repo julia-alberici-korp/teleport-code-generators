@@ -4,7 +4,7 @@ import {
   ComponentPluginFactory,
   FileType,
   UIDLStaticValue,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import * as types from '@babel/types'
 import { ASTUtils } from '@teleporthq/teleport-plugin-common'

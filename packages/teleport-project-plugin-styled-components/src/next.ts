@@ -2,7 +2,7 @@ import {
   FileType,
   ProjectPluginStructure,
   ReactNativeStyleVariation,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { createStyleSheetPlugin } from '@teleporthq/teleport-plugin-react-styled-components'
 import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'

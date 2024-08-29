@@ -5,7 +5,7 @@ import {
   UIDLEventHandlerStatement,
   ChunkType,
   FileType,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { UIDLUtils } from '@viasoft/teleport-shared'
 import {
   ASTBuilders,

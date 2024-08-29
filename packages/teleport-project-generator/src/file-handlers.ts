@@ -15,7 +15,7 @@ import {
   FileType,
   ChunkType,
   ComponentGenerator,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { DEFAULT_GITIGNORE, DEFAULT_PACKAGE_JSON, DEFAULT_ROUTER_FILE_NAME } from './constants'
 import { PackageJSON } from './types'
 import { bootstrapGenerator } from './utils'

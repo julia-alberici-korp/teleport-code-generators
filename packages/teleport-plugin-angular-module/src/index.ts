@@ -7,7 +7,7 @@ import {
   FileType,
   UIDLDependency,
   UIDLRootComponent,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { relative, join } from 'path'
 
 import {

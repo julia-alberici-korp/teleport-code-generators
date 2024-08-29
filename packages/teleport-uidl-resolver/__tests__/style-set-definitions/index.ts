@@ -1,6 +1,6 @@
 import { resolveStyleSetDefinitions } from '../../src/resolvers/style-set-definitions'
 import { staticNode } from '@teleporthq/teleport-uidl-builders'
-import { UIDLStyleSetDefinition, UIDLStyleSetMediaCondition } from '@teleporthq/teleport-types'
+import { UIDLStyleSetDefinition, UIDLStyleSetMediaCondition } from '@viasoft/teleport-types'
 
 describe('Resolves style-sheet', () => {
   const styleSheet: Record<string, UIDLStyleSetDefinition> = {

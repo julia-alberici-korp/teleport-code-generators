@@ -17,7 +17,7 @@ import {
   StyleVariation,
   GeneratorFactoryParams,
   UIDLRouteDefinitions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { elementNode } from '@teleporthq/teleport-uidl-builders'
 import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'

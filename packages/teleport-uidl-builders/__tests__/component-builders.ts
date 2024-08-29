@@ -7,7 +7,7 @@ import {
   repeatNode,
   conditionalNode,
 } from '../src/component-builders'
-import { UIDLStaticValue, UIDLElement, UIDLDynamicReference } from '@teleporthq/teleport-types'
+import { UIDLStaticValue, UIDLElement, UIDLDynamicReference } from '@viasoft/teleport-types'
 
 describe('UIDL Builders', () => {
   describe('component', () => {

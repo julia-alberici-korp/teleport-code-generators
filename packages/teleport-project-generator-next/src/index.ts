@@ -11,7 +11,7 @@ import {
   createNextPagesInlineFetchPlugin,
   createNextComponentInlineFetchPlugin,
 } from '@teleporthq/teleport-plugin-next-inline-fetch'
-import { ReactStyleVariation, FileType } from '@teleporthq/teleport-types'
+import { ReactStyleVariation, FileType } from '@viasoft/teleport-types'
 import { createStyleSheetPlugin } from '@teleporthq/teleport-plugin-css'
 import { createDocumentFileChunks, configContentGenerator } from './utils'
 import { NextProjectMapping } from './next-project-mapping'

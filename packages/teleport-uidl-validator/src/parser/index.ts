@@ -27,7 +27,7 @@ import {
   UIDLDependency,
   UIDLEventHandlerStatement,
   UIDLCMSMixedTypeNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 interface ParseComponentJSONParams {
   noClone?: boolean

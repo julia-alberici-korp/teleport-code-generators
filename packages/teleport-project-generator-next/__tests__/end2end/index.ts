@@ -1,4 +1,4 @@
-import { FileType, GeneratedFolder } from '@teleporthq/teleport-types'
+import { FileType, GeneratedFolder } from '@viasoft/teleport-types'
 import fallbackUidlSample from '../../../../examples/uidl-samples/project.json'
 import uidlSample from '../../../../examples/test-samples/project-sample.json'
 import invalidUidlSample from '../../../../examples/test-samples/project-invalid-sample.json'

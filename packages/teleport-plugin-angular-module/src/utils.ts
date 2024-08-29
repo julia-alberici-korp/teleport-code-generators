@@ -5,7 +5,7 @@ import {
   UIDLStateDefinition,
   ComponentUIDL,
   UIDLRouteDefinitions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import { join } from 'path'
 

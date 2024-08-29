@@ -1,4 +1,4 @@
-import { ComponentStructure, UIDLStyleSetDefinition } from '@teleporthq/teleport-types'
+import { ComponentStructure, UIDLStyleSetDefinition } from '@viasoft/teleport-types'
 import { createReactJSSPlugin } from '../src'
 import { component, elementNode, staticNode } from '@teleporthq/teleport-uidl-builders'
 import { createComponentChunk } from './mocks'

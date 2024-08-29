@@ -1,4 +1,4 @@
-import { ComponentPluginFactory, ComponentPlugin, UIDLDependency } from '@teleporthq/teleport-types'
+import { ComponentPluginFactory, ComponentPlugin, UIDLDependency } from '@viasoft/teleport-types'
 import { UIDLUtils } from '@viasoft/teleport-shared'
 import * as types from '@babel/types'
 

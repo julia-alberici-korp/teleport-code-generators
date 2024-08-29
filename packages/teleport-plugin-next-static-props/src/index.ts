@@ -4,7 +4,7 @@ import {
   ComponentPluginFactory,
   FileType,
   TeleportError,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { StringUtils } from '@viasoft/teleport-shared'
 import { generateInitialPropsAST } from './utils'
 import { join, relative } from 'path'

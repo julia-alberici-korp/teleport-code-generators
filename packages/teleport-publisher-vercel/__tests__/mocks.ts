@@ -1,4 +1,4 @@
-import { GeneratedFolder } from '@teleporthq/teleport-types'
+import { GeneratedFolder } from '@viasoft/teleport-types'
 
 export const projectFiles: GeneratedFolder = {
   name: 'project-name',

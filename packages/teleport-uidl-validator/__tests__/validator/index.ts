@@ -23,7 +23,7 @@ import {
   dynamicNode,
   elementNode,
 } from '@teleporthq/teleport-uidl-builders'
-import { ComponentUIDL, UIDLStyleInlineAsset } from '@teleporthq/teleport-types'
+import { ComponentUIDL, UIDLStyleInlineAsset } from '@viasoft/teleport-types'
 import { parseProjectJSON } from '../../src/parser'
 
 const uidl = component(

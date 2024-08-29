@@ -26,7 +26,7 @@ import {
   UIDLRepeatNode,
   Mapping,
   UIDLStyleDefinitions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import mapping from './mapping.json'
 
 describe('generateUniqueKeys', () => {

@@ -26,8 +26,8 @@
   "dependencies": {
     "@teleporthq/teleport-plugin-react-jss": "^0.36.0",
     "@teleporthq/teleport-postprocessor-prettier-js": "^0.36.0",
-    "@teleporthq/teleport-types": "^0.36.0",
     "@viasoft/teleport-plugin-import-statements": "^0.36.0",
+    "@viasoft/teleport-types": "^0.36.0",
     "magic-string": "^0.25.4"
   }
 }

@@ -5,7 +5,7 @@ import {
   ChunkType,
   FileType,
   UIDLStyleSetDefinition,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const styleSetDefinitions: Record<string, UIDLStyleSetDefinition> = {
   primaryButton: {

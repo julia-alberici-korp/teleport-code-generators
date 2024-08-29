@@ -9,7 +9,7 @@ import {
   ComponentGenerator,
   ComponentGeneratorInstance,
   GeneratorFactoryParams,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 import { VueMapping } from './vue-mapping'
 

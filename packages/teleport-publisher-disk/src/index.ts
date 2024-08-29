@@ -5,7 +5,7 @@ import {
   PublisherFactory,
   MissingProjectUIDLError,
   DiskUnexpectedError,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 import { writeFolder } from './utils'
 

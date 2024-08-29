@@ -4,7 +4,7 @@ import {
   UIDLMailLinkNode,
   UIDLPhoneLinkNode,
   UIDLSectionLinkNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { staticNode } from '@teleporthq/teleport-uidl-builders'
 
 export const urlMockedDefinition = (openInNewTab: boolean = false): UIDLURLLinkNode => ({

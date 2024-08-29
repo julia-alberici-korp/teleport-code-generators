@@ -1,4 +1,4 @@
-import { FileType } from '@teleporthq/teleport-types'
+import { FileType } from '@viasoft/teleport-types'
 import ProjectTemplate from '../src/project-template'
 import { htmlErrorPageMapping } from '../src/error-page-mapping'
 import { createHTMLProjectGenerator, pluginCloneGlobals, pluginHomeReplace } from '../src'

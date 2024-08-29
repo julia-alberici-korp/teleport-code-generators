@@ -29,7 +29,7 @@ import {
   HastNode,
   UIDLElement,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { createStyleSheetPlugin } from './style-sheet'
 import { generateStyledFromStyleContent } from './utils'
 

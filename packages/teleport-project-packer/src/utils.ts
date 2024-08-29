@@ -5,7 +5,7 @@ import {
   GeneratedFolder,
   GeneratedFile,
   RemoteTemplateDefinition,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const fetchTemplate = async (template: RemoteTemplateDefinition) => {
   const authData = template.auth || {}

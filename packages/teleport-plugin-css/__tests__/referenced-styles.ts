@@ -4,7 +4,7 @@ import {
   FileType,
   ComponentStructure,
   UIDLReferencedStyles,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { setUpHASTChunk, setUpJSXComponentChunk, styleSetDefinitions } from './mocks'
 import { createCSSPlugin } from '../src'
 

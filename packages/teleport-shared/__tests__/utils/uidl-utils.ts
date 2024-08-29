@@ -37,7 +37,7 @@ import {
   UIDLAttributeValue,
   ComponentUIDL,
   UIDLDependency,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 import uidlStyleJSON from './uidl-utils-style.json'
 import projectUIDL from '../../../../examples/test-samples/project-sample.json'

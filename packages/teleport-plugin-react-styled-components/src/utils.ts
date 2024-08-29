@@ -5,7 +5,7 @@ import {
   UIDLStyleSetDefinition,
   PluginStyledComponent,
   UIDLDependency,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { componentVariantPropPrefix } from './constants'
 
 export const generateStyledComponent = (params: {

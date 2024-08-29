@@ -3,7 +3,7 @@ import {
   ComponentPlugin,
   UIDLDynamicReference,
   UIDLStaticValue,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { ASTBuilders, ASTUtils } from '@teleporthq/teleport-plugin-common'
 import * as types from '@babel/types'
 

@@ -9,7 +9,7 @@ import {
   UIDLStateDefinition,
   UIDLEventHandlerStatement,
   UIDLPropCallEvent,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const generateExportAST = (
   uidl: ComponentUIDL,

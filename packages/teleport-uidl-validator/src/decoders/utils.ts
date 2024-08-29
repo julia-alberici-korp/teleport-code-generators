@@ -93,7 +93,7 @@ import {
   VUIDLCMSMixedTypeNode,
   UIDLLocalFontAsset,
   VUIDLPropDefinitions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import {
   isValidElementName,
   isValidNavLink,

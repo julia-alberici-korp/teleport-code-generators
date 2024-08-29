@@ -1,5 +1,5 @@
 import componentUIDLSample from '../../../examples/test-samples/component-sample.json'
-import { ComponentUIDL } from '@teleporthq/teleport-types'
+import { ComponentUIDL } from '@viasoft/teleport-types'
 
 export const structure = {
   chunks: [],

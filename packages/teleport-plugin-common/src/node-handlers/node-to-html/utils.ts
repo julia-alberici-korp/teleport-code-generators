@@ -7,7 +7,7 @@ import {
   UIDLAttributeValue,
   UIDLEventHandlerStatement,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { HTMLTemplateGenerationParams, HTMLTemplateSyntax } from './types'
 import { createHTMLNode } from '../../builders/hast-builders'
 import generateElementNode from '../node-to-html'

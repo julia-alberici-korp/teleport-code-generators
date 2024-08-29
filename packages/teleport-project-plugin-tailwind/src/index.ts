@@ -1,4 +1,4 @@
-import { ProjectPlugin, ProjectPluginStructure, ProjectType } from '@teleporthq/teleport-types'
+import { ProjectPlugin, ProjectPluginStructure, ProjectType } from '@viasoft/teleport-types'
 import { nextJSTailwindModifier } from './next'
 import { defaultTailwindModifier } from './default'
 import { reactTailwindModifier } from './react'

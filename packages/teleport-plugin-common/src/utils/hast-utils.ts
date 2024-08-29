@@ -1,4 +1,4 @@
-import { HastNode, HastText } from '@teleporthq/teleport-types'
+import { HastNode, HastText } from '@viasoft/teleport-types'
 import { createTextNode } from '../builders/hast-builders'
 
 export const addBooleanAttributeToNode = (node: HastNode, key: string, value: boolean = true) => {

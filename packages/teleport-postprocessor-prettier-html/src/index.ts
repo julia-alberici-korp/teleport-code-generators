@@ -3,7 +3,7 @@ const { format } = standalone
 import parserHTML from 'prettier/parser-html.js'
 
 import { Constants } from '@viasoft/teleport-shared'
-import { PostProcessor, PrettierFormatOptions, FileType } from '@teleporthq/teleport-types'
+import { PostProcessor, PrettierFormatOptions, FileType } from '@viasoft/teleport-types'
 
 interface PostProcessorFactoryOptions {
   fileType?: string

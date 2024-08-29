@@ -1,7 +1,7 @@
 /* tslint:disable no-string-literal */
 import { createCSSPlugin } from '../src'
 import { staticNode, elementNode, component } from '@teleporthq/teleport-uidl-builders'
-import { ComponentStructure } from '@teleporthq/teleport-types'
+import { ComponentStructure } from '@viasoft/teleport-types'
 import { setUpHASTChunk, setUpJSXComponentChunk } from './mocks'
 
 describe('Component Scoped Styles', () => {

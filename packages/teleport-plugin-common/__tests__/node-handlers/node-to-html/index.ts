@@ -1,6 +1,6 @@
 import { HTMLTemplateGenerationParams } from '../../../src/node-handlers/node-to-html/types'
 import generateHTMLTemplateSyntax from '../../../src/node-handlers/node-to-html'
-import { HastNode, HastText, ComponentUIDL } from '@teleporthq/teleport-types'
+import { HastNode, HastText, ComponentUIDL } from '@viasoft/teleport-types'
 import { DEFAULT_TEMPLATE_SYNTAX } from '../../../src/node-handlers/node-to-html/constants'
 import componentUIDLSample from '../../../../../examples/test-samples/component-sample.json'
 

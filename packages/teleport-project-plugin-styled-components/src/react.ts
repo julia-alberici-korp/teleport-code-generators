@@ -1,4 +1,4 @@
-import { ProjectPluginStructure, ReactStyleVariation } from '@teleporthq/teleport-types'
+import { ProjectPluginStructure, ReactStyleVariation } from '@viasoft/teleport-types'
 import {
   createStyleSheetPlugin,
   createReactStyledComponentsPlugin,

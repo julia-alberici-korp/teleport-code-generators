@@ -12,7 +12,7 @@ import {
   FileType,
   ComponentGeneratorInstance,
   GeneratorFactoryParams,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 const importStatementsPlugin = createImportPlugin({ fileType: FileType.TS })
 const stylePlugin = createCSSPlugin({

@@ -1,10 +1,5 @@
 import { component, elementNode, staticNode } from '@teleporthq/teleport-uidl-builders'
-import {
-  ComponentStructure,
-  ChunkDefinition,
-  ChunkType,
-  FileType,
-} from '@teleporthq/teleport-types'
+import { ComponentStructure, ChunkDefinition, ChunkType, FileType } from '@viasoft/teleport-types'
 import { createCSSPlugin } from '../src'
 import { setUpHASTChunk, setUpJSXComponentChunk } from './mocks'
 

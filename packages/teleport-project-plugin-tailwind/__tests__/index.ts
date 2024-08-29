@@ -5,7 +5,7 @@ import {
   ProjectStrategy,
   ProjectType,
   ProjectUIDL,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { ProjectPluginTailwind } from '../src'
 import projectUIDL from '../../../examples/test-samples/project-sample.json'
 import { NextTemplate } from '@teleporthq/teleport-project-generator-next'

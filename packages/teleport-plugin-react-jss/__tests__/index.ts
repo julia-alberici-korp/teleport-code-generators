@@ -1,5 +1,5 @@
 import { component, elementNode, staticNode } from '@teleporthq/teleport-uidl-builders'
-import { ComponentStructure, ChunkType } from '@teleporthq/teleport-types'
+import { ComponentStructure, ChunkType } from '@viasoft/teleport-types'
 import { createReactJSSPlugin } from '../src/index'
 import { createComponentChunk } from './mocks'
 

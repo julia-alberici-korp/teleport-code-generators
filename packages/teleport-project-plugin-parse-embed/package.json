@@ -24,8 +24,8 @@
         "build": "tsc -p tsconfig.json && tsc -p tsconfig.json --module commonjs --moduleResolution node16 --outDir dist/cjs "
     },
     "dependencies": {
-        "@teleporthq/teleport-types": "^0.36.0",
         "@viasoft/teleport-shared": "^0.36.0",
+        "@viasoft/teleport-types": "^0.36.0",
         "hast-util-from-html": "^1.0.1",
         "hast-util-to-html": "^8.0.4",
         "hast-util-to-jsx-inline-script": "^1.1.0"

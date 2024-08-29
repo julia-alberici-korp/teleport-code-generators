@@ -4,7 +4,7 @@ import {
   UIDLStyleSetDefinition,
   UIDLStyleSheetContent,
   UIDLStyleValue,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const generateStyledFromStyleContent = (
   styles: Record<string, UIDLStyleSheetContent> | Record<string, UIDLStyleValue> = {}

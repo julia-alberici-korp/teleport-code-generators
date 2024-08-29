@@ -1,5 +1,5 @@
 import { injectFilesToPath, extractPageOptions, prepareComponentOutputOptions } from '../src/utils'
-import { UIDLRouteDefinitions, UIDLStateDefinition } from '@teleporthq/teleport-types'
+import { UIDLRouteDefinitions, UIDLStateDefinition } from '@viasoft/teleport-types'
 import { emptyFolder, folderWithFiles, createStrategyWithCommonGenerator } from './mocks'
 import { component, elementNode } from '@teleporthq/teleport-uidl-builders'
 import { GenericUtils } from '@viasoft/teleport-shared'

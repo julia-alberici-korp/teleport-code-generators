@@ -1,4 +1,4 @@
-import { UIDLDependency } from '@teleporthq/teleport-types'
+import { UIDLDependency } from '@viasoft/teleport-types'
 
 export const REACT_LIBRARY_DEPENDENCY: UIDLDependency = {
   type: 'library',

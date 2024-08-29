@@ -1,4 +1,4 @@
-import { ReactStyleVariation } from '@teleporthq/teleport-types'
+import { ReactStyleVariation } from '@viasoft/teleport-types'
 import AssemblyLine from '../src/assembly-line'
 import { mockAssemblyLineStructure, simplePluginMock, simplePluginMockToInjectFiles } from './mocks'
 

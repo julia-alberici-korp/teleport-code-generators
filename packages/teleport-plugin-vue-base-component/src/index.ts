@@ -6,7 +6,7 @@ import {
   ChunkType,
   UIDLEventHandlerStatement,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import {
   createHTMLTemplateSyntax,
   HTMLTemplateGenerationParams,

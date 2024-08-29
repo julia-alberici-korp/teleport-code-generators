@@ -6,7 +6,7 @@ import {
   dynamicNode,
   definition,
 } from '@teleporthq/teleport-uidl-builders'
-import { ComponentStructure, ChunkType, UIDLStateDefinition } from '@teleporthq/teleport-types'
+import { ComponentStructure, ChunkType, UIDLStateDefinition } from '@viasoft/teleport-types'
 
 describe('plugin-vue-app-routing', () => {
   const plugin = createVueAppRoutingPlugin({

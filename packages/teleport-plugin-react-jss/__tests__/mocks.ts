@@ -1,4 +1,4 @@
-import { ChunkDefinition, FileType, ChunkType } from '@teleporthq/teleport-types'
+import { ChunkDefinition, FileType, ChunkType } from '@viasoft/teleport-types'
 
 export const createComponentChunk = (): ChunkDefinition => ({
   name: 'jsx-component',

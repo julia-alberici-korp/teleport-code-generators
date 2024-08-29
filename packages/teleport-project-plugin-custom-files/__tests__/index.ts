@@ -2,7 +2,7 @@ import {
   ProjectPluginStructure,
   InMemoryFileRecord,
   ProjectStrategy,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { component, elementNode, project } from '@teleporthq/teleport-uidl-builders'
 import { ProjectPluginCustomFiles } from '../src'
 import {

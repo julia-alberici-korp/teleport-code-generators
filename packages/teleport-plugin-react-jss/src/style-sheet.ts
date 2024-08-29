@@ -5,7 +5,7 @@ import {
   ComponentPluginFactory,
   ChunkType,
   FileType,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { StringUtils } from '@viasoft/teleport-shared'
 import { convertMediaAndStylesToObject, generateProjectStyleSheet } from './utils'
 

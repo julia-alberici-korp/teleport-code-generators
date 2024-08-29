@@ -4,7 +4,7 @@ import {
   GeneratedFile,
   ProjectPlugin,
   ProjectPluginStructure,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 class ProjectPluginHomeReplace implements ProjectPlugin {
   async runBefore(structure: ProjectPluginStructure) {

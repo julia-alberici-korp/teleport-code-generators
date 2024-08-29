@@ -9,7 +9,7 @@ import {
   ReactStyleVariation,
   ProjectPlugin,
   FileType,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { UIDLUtils } from '@viasoft/teleport-shared'
 import projectUIDL from '../../../examples/test-samples/project-sample.json'
 import { DEFAULT_TEMPLATE } from '../src/constants'

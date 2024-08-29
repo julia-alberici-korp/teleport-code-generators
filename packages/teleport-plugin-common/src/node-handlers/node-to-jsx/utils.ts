@@ -12,7 +12,7 @@ import {
   UIDLPropCallEvent,
   UIDLStateModifierEvent,
   UIDLExpressionValue,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 import {
   BinaryOperator,

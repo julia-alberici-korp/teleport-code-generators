@@ -9,7 +9,7 @@ import {
   UIDLPageOptions,
   UIDLRootComponent,
   UIDLRouteDefinitions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { join } from 'path'
 
 interface AppRoutingComponentConfig {

@@ -1,4 +1,4 @@
-import { ProjectPlugin, ProjectPluginStructure } from '@teleporthq/teleport-types'
+import { ProjectPlugin, ProjectPluginStructure } from '@viasoft/teleport-types'
 
 class NuxtErrorMappingPlugin implements ProjectPlugin {
   async runBefore(structure: ProjectPluginStructure) {

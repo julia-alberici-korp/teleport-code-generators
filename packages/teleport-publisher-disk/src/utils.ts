@@ -2,7 +2,7 @@ import { existsSync, mkdir, writeFile, WriteFileOptions } from 'fs'
 import PathResolver from 'path-browserify'
 import fetch from 'cross-fetch'
 const { join } = PathResolver
-import { GeneratedFolder, GeneratedFile } from '@teleporthq/teleport-types'
+import { GeneratedFolder, GeneratedFile } from '@viasoft/teleport-types'
 
 export const writeFolder = async (
   folder: GeneratedFolder,

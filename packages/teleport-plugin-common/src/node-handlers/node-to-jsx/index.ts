@@ -13,7 +13,7 @@ import {
   UIDLCMSListRepeaterNode,
   UIDLCMSMixedTypeNode,
   UIDLElement,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { UIDLUtils, StringUtils } from '@viasoft/teleport-shared'
 import { JSXASTReturnType, JSXGenerationOptions, JSXGenerationParams, NodeToJSX } from './types'
 

@@ -22,7 +22,7 @@ import {
   UIDLComponentOutputOptions,
   UIDLElement,
   ElementsLookup,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { join, relative } from 'path'
 import { HASTBuilders, HASTUtils } from '@teleporthq/teleport-plugin-common'
 import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'

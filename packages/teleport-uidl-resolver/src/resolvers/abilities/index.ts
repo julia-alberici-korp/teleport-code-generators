@@ -1,4 +1,4 @@
-import { ComponentUIDL, GeneratorOptions, UIDLElementNode } from '@teleporthq/teleport-types'
+import { ComponentUIDL, GeneratorOptions, UIDLElementNode } from '@viasoft/teleport-types'
 import { insertLinks } from './utils'
 
 export const resolveAbilities = (uidl: ComponentUIDL, options: GeneratorOptions) => {

@@ -1,6 +1,6 @@
 import { createReactComponentPlugin } from '../src/index'
 import { component, elementNode } from '@teleporthq/teleport-uidl-builders'
-import { ComponentStructure, ChunkType, FileType } from '@teleporthq/teleport-types'
+import { ComponentStructure, ChunkType, FileType } from '@viasoft/teleport-types'
 
 describe('plugin-react-base-component', () => {
   const plugin = createReactComponentPlugin({

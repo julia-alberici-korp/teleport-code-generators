@@ -1,4 +1,4 @@
-import { ComponentStructure, ComponentUIDL, ChunkType, FileType } from '@teleporthq/teleport-types'
+import { ComponentStructure, ComponentUIDL, ChunkType, FileType } from '@viasoft/teleport-types'
 import { createAngularModulePlugin } from '../src/index'
 import projectUIDL from '../../../examples/test-samples/project-sample.json'
 

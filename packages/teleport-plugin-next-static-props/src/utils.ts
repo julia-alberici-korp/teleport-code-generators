@@ -1,6 +1,6 @@
 import * as types from '@babel/types'
 import { ASTUtils } from '@teleporthq/teleport-plugin-common'
-import { UIDLInitialPropsData, UIDLResources } from '@teleporthq/teleport-types'
+import { UIDLInitialPropsData, UIDLResources } from '@viasoft/teleport-types'
 import { StringUtils } from '@viasoft/teleport-shared'
 
 export const generateInitialPropsAST = (

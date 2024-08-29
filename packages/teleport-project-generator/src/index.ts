@@ -17,7 +17,7 @@ import {
   ProjectGenerator as ProjectGeneratorType,
   FileType,
   UIDLLocalFontAsset,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import {
   injectFilesToPath,
   resolveLocalDependencies,

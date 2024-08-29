@@ -8,7 +8,7 @@ import {
   ProjectType,
   PublisherType,
   ProjectPlugin,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { performance } from 'perf_hooks'
 import { ProjectPluginCSSModules } from '@teleporthq/teleport-project-plugin-css-modules'
 import { ProjectPluginReactJSS } from '@teleporthq/teleport-project-plugin-react-jss'

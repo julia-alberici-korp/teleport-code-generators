@@ -1,5 +1,5 @@
-import { UIDLStyleSetDefinition, UIDLStyleSetTokenReference } from '@teleporthq/teleport-types'
-import { UIDLDesignTokens } from '@teleporthq/teleport-types/src'
+import { UIDLStyleSetDefinition, UIDLStyleSetTokenReference } from '@viasoft/teleport-types'
+import { UIDLDesignTokens } from '@viasoft/teleport-types/src'
 import { dynamicNode, staticNode } from '@teleporthq/teleport-uidl-builders'
 import { createStyleSheetPlugin } from '../src/style-sheet'
 import { generateStylesFromStyleSetDefinitions } from '../src/utils'

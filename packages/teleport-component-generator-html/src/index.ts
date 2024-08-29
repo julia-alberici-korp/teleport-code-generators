@@ -8,7 +8,7 @@ import {
   ComponentUIDL,
   GeneratorFactoryParams,
   GeneratorOptions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { StringUtils } from '@viasoft/teleport-shared'
 import { Parser } from '@teleporthq/teleport-uidl-validator'

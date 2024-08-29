@@ -8,7 +8,7 @@ import {
   UIDLEventHandlerStatement,
   ComponentUIDL,
   UIDLPropCallEvent,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const extractStateObject = (stateDefinitions: Record<string, UIDLStateDefinition>) => {
   return Object.keys(stateDefinitions).reduce((result: Record<string, unknown>, key) => {

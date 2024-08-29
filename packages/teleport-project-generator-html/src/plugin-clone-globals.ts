@@ -3,7 +3,7 @@ import {
   GeneratedFile,
   ProjectPlugin,
   ProjectPluginStructure,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { createPrettierHTMLPostProcessor } from '@teleporthq/teleport-postprocessor-prettier-html'
 import { load } from 'cheerio'
 import { relative, join } from 'path'

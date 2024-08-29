@@ -1,4 +1,4 @@
-import { ComponentPlugin, ComponentPluginFactory, HastNode } from '@teleporthq/teleport-types'
+import { ComponentPlugin, ComponentPluginFactory, HastNode } from '@viasoft/teleport-types'
 import { UIDLUtils } from '@viasoft/teleport-shared'
 import { SUPPORTED_PROJECT_TYPES } from './utils'
 import type { JSXElement, JSXIdentifier, JSXText } from '@babel/types'

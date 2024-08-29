@@ -11,7 +11,7 @@ import {
   ProjectUIDL,
   ProjectGenerator,
   ReactStyleVariation,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 import config from '../config.json'
 

@@ -8,7 +8,7 @@ import {
   FileType,
   ChunkType,
   FrameWorkConfigOptions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const createDocumentFileChunks = (uidl: ProjectUIDL, options: EntryFileOptions) => {
   const { settings, meta, assets, manifest, customCode } = uidl.globals

@@ -1,4 +1,4 @@
-import { FileType, ProjectPluginStructure, ReactStyleVariation } from '@teleporthq/teleport-types'
+import { FileType, ProjectPluginStructure, ReactStyleVariation } from '@viasoft/teleport-types'
 import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import { createStyleSheetPlugin } from '@teleporthq/teleport-plugin-react-jss'
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'

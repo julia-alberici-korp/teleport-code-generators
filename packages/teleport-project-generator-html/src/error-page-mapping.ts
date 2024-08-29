@@ -1,4 +1,4 @@
-import { FileType, ProjectPlugin, ProjectPluginStructure } from '@teleporthq/teleport-types'
+import { FileType, ProjectPlugin, ProjectPluginStructure } from '@viasoft/teleport-types'
 
 class HTMLErrorPageMapping implements ProjectPlugin {
   async runBefore(structure: ProjectPluginStructure) {

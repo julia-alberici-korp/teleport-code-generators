@@ -3,7 +3,7 @@ import { createGithubPublisher } from '../src'
 import projectJSON from './project-files.json'
 import githubFiles from './github-files-content.json'
 import { generateProjectFiles } from '../src/utils'
-import { GeneratedFolder } from '@teleporthq/teleport-types'
+import { GeneratedFolder } from '@viasoft/teleport-types'
 
 const project = projectJSON as GeneratedFolder
 describe('teleport publisher github', () => {

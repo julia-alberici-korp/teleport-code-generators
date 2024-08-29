@@ -1,4 +1,4 @@
-import { Mapping } from '@teleporthq/teleport-types'
+import { Mapping } from '@viasoft/teleport-types'
 
 export const VueProjectMapping: Mapping = {
   elements: {

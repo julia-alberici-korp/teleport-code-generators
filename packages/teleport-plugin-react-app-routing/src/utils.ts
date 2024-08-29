@@ -1,5 +1,5 @@
 import * as types from '@babel/types'
-import { UIDLDependency } from '@teleporthq/teleport-types'
+import { UIDLDependency } from '@viasoft/teleport-types'
 import { ASTBuilders, ASTUtils } from '@teleporthq/teleport-plugin-common'
 
 export const createRouteRouterTag = (routeJSXDefinitions: types.JSXElement[]) => {

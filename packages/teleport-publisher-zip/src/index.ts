@@ -5,7 +5,7 @@ import {
   Publisher,
   MissingProjectUIDLError,
   ZipUnexpectedError,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { isNodeProcess, writeZipToDisk, generateProjectZip } from './utils'
 
 declare type ZipPublisherResponse = string | Buffer | Blob

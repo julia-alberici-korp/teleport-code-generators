@@ -1,4 +1,4 @@
-import { ProjectPlugin, ProjectPluginStructure } from '@teleporthq/teleport-types'
+import { ProjectPlugin, ProjectPluginStructure } from '@viasoft/teleport-types'
 export interface ProjectCustomFile {
   name: string
   fileType: string

@@ -12,7 +12,7 @@ import {
   ChunkType,
   FileType,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import * as types from '@babel/types'
 
 import {

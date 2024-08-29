@@ -13,7 +13,7 @@ import {
   ReactStyleVariation,
   ComponentGeneratorInstance,
   GeneratorFactoryParams,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { ReactMapping } from './react-mapping'
 

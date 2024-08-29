@@ -1,4 +1,4 @@
-import { GeneratorOptions, UIDLElementNode } from '@teleporthq/teleport-types'
+import { GeneratorOptions, UIDLElementNode } from '@viasoft/teleport-types'
 
 export const wrapHtmlNode = (node: UIDLElementNode, options: GeneratorOptions): UIDLElementNode => {
   const { children } = node.content

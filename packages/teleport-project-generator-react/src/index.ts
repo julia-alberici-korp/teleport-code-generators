@@ -6,7 +6,7 @@ import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import headConfigPlugin from '@teleporthq/teleport-plugin-jsx-head-config'
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'
 import prettierHTML from '@teleporthq/teleport-postprocessor-prettier-html'
-import { ReactStyleVariation } from '@teleporthq/teleport-types'
+import { ReactStyleVariation } from '@viasoft/teleport-types'
 import { createStyleSheetPlugin, createCSSPlugin } from '@teleporthq/teleport-plugin-css'
 
 import { ReactProjectMapping } from './react-project-mapping'

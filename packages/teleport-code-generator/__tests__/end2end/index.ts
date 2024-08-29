@@ -5,7 +5,7 @@ import {
 import { ProjectPluginCSSModules } from '../../../teleport-project-plugin-css-modules'
 import { ProjectPluginStyledComponents } from '../../../teleport-project-plugin-styled-components'
 import projectUIDL from '../../../../examples/test-samples/project-with-import-global-styles.json'
-import { FileType, ProjectType } from '@teleporthq/teleport-types'
+import { FileType, ProjectType } from '@viasoft/teleport-types'
 import uidlSample from '../../../../examples/test-samples/project-sample.json'
 import uidlSampleWithExternalDependencies from '../../../../examples/test-samples/project-sample-with-dependency.json'
 import uidlSampleWithJustTokens from '../../../../examples/test-samples/project-with-only-tokens.json'

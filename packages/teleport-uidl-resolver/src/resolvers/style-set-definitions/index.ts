@@ -8,7 +8,7 @@ import {
   UIDLStyleSetDefinition,
   UIDLStyleSetMediaCondition,
   UIDLStyleSetStateCondition,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { prefixAssetURLs } from '../../utils'
 
 export const resolveStyleSetDefinitions = (

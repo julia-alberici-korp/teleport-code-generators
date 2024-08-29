@@ -4,7 +4,7 @@ import {
   UIDLLinkNode,
   UIDLElementNode,
   UIDLAttributeValue,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const insertLinks = (
   node: UIDLElementNode,

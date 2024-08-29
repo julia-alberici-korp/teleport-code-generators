@@ -1,4 +1,4 @@
-import { ProjectPlugin, ProjectPluginStructure } from '@teleporthq/teleport-types'
+import { ProjectPlugin, ProjectPluginStructure } from '@viasoft/teleport-types'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { createNextCacheValidationPlugin } from './component-plugin'
 import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'

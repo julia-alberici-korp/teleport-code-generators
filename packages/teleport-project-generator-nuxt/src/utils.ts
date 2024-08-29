@@ -3,7 +3,7 @@ import {
   ChunkDefinition,
   ChunkType,
   FileType,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import * as types from '@babel/types'
 
 export const configContentGenerator = (options: FrameWorkConfigOptions, t = types) => {
