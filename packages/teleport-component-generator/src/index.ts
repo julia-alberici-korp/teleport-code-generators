@@ -1,4 +1,4 @@
-import { Validator, Parser } from '@teleporthq/teleport-uidl-validator'
+import { Validator, Parser } from '@viasoft/teleport-uidl-validator'
 import { Resolver, HTMLMapping } from '@teleporthq/teleport-uidl-resolver'
 import { UIDLUtils } from '@viasoft/teleport-shared'
 import {

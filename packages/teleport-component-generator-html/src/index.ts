@@ -11,7 +11,7 @@ import {
 } from '@viasoft/teleport-types'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { StringUtils } from '@viasoft/teleport-shared'
-import { Parser } from '@teleporthq/teleport-uidl-validator'
+import { Parser } from '@viasoft/teleport-uidl-validator'
 import { Resolver } from '@teleporthq/teleport-uidl-resolver'
 import { PlainHTMLMapping } from './plain-html-mapping'
 

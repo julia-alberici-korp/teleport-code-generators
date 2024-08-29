@@ -6,9 +6,9 @@ A module that offers validation and parsing for non-standard UIDL structures.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-uidl-validator
+npm install @viasoft/teleport-uidl-validator
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-uidl-validator
+yarn add @viasoft/teleport-uidl-validator
 ```

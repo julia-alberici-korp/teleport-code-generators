@@ -1,5 +1,5 @@
 import { GenericUtils, StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
-import { Validator, Parser } from '@teleporthq/teleport-uidl-validator'
+import { Validator, Parser } from '@viasoft/teleport-uidl-validator'
 import {
   GeneratorOptions,
   GeneratedFolder,

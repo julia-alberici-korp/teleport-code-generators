@@ -1,5 +1,5 @@
 {
-  "name": "@teleporthq/teleport-uidl-validator",
+  "name": "@viasoft/teleport-uidl-validator",
   "version": "0.36.0",
   "description": "A module that offers validation and parsing for non-standard UIDL structures",
   "author": "teleportHQ",
