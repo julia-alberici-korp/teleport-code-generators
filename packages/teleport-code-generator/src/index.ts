@@ -127,7 +127,7 @@ export const packProject: PackProjectFunction = async (
   let publisher
   if (publisherType === PublisherType.DISK) {
     if (isNodeProcess()) {
-      const createDiskPublisher = await import('@teleporthq/teleport-publisher-disk').then(
+      const createDiskPublisher = await import('@viasoft/teleport-publisher-disk').then(
         (mod) => mod.createDiskPublisher
       )
       publisher = createDiskPublisher

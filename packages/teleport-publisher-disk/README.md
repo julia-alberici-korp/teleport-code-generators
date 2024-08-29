@@ -6,9 +6,9 @@ Writes a project folder to disk.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-publisher-disk
+npm install @viasoft/teleport-publisher-disk
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-publisher-disk
+yarn add @viasoft/teleport-publisher-disk
 ```

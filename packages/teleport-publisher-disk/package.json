@@ -1,5 +1,5 @@
 {
-  "name": "@teleporthq/teleport-publisher-disk",
+  "name": "@viasoft/teleport-publisher-disk",
   "version": "0.36.0",
   "description": "Project disk publisher",
   "author": "teleportHQ",

@@ -5,7 +5,7 @@ import { createNextProjectGenerator } from '@teleporthq/teleport-project-generat
 import { createVueProjectGenerator } from '@teleporthq/teleport-project-generator-vue'
 import { createNuxtProjectGenerator } from '@teleporthq/teleport-project-generator-nuxt'
 import { createAngularProjectGenerator } from '@teleporthq/teleport-project-generator-angular'
-import { createDiskPublisher } from '@teleporthq/teleport-publisher-disk'
+import { createDiskPublisher } from '@viasoft/teleport-publisher-disk'
 import {
   RemoteTemplateDefinition,
   ProjectUIDL,
