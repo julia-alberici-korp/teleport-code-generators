@@ -1,4 +1,4 @@
-import { StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import {
   UIDLDynamicReference,
   ComponentUIDL,

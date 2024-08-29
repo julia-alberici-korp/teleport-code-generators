@@ -5,7 +5,7 @@ import {
   ChunkType,
   FileType,
 } from '@teleporthq/teleport-types'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 
 interface PropTypesConfig {
   componentChunkName?: string

@@ -1,4 +1,4 @@
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 import {
   GeneratorOptions,
   UIDLLinkNode,

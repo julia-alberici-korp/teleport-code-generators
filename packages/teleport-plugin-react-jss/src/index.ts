@@ -8,7 +8,7 @@
 */
 
 import * as types from '@babel/types'
-import { StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import {
   ASTUtils,
   ASTBuilders,

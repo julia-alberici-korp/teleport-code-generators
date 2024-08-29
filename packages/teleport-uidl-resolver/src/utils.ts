@@ -1,4 +1,4 @@
-import { UIDLUtils, StringUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils, StringUtils } from '@viasoft/teleport-shared'
 import {
   UIDLEventDefinitions,
   UIDLElement,

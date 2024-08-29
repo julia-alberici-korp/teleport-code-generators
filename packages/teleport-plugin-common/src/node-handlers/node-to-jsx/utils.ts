@@ -1,7 +1,7 @@
 import * as types from '@babel/types'
 
 import { convertValueToLiteral } from '../../utils/ast-utils'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 import {
   UIDLPropDefinition,
   UIDLAttributeValue,

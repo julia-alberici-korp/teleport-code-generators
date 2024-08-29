@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@teleporthq/teleport-plugin-common": "^0.36.0",
-    "@teleporthq/teleport-shared": "^0.36.0",
-    "@teleporthq/teleport-types": "^0.36.0"
+    "@teleporthq/teleport-types": "^0.36.0",
+    "@viasoft/teleport-shared": "^0.36.0"
   }
 }

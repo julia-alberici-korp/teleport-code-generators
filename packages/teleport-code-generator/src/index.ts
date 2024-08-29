@@ -17,7 +17,7 @@ import {
   HTMLComponentGenerator,
   ComponentPlugin,
 } from '@teleporthq/teleport-types'
-import { Constants } from '@teleporthq/teleport-shared'
+import { Constants } from '@viasoft/teleport-shared'
 
 import { createProjectPacker } from '@viasoft/teleport-project-packer'
 import {

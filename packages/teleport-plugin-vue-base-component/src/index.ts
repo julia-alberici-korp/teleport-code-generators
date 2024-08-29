@@ -12,7 +12,7 @@ import {
   HTMLTemplateGenerationParams,
   HTMLTemplateSyntax,
 } from '@teleporthq/teleport-plugin-common'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 
 import {
   DEFAULT_VUE_TEMPLATE_CHUNK_NAME,

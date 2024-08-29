@@ -1,4 +1,4 @@
-import { Constants, UIDLUtils } from '@teleporthq/teleport-shared'
+import { Constants, UIDLUtils } from '@viasoft/teleport-shared'
 import {
   createJSXSyntax,
   JSXGenerationOptions,

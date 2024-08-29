@@ -6,7 +6,7 @@ import {
   ComponentUIDL,
   UIDLRouteDefinitions,
 } from '@teleporthq/teleport-types'
-import { StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import { join } from 'path'
 
 export const createPageModuleModuleDecorator = (

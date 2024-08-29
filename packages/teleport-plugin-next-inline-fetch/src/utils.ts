@@ -9,7 +9,7 @@ import {
 } from '@teleporthq/teleport-types'
 import * as types from '@babel/types'
 import { ASTUtils } from '@teleporthq/teleport-plugin-common'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 import { relative } from 'path'
 
 export const extractResourceIntoNextAPIFolder = (

@@ -14,7 +14,7 @@ import {
   UIDLCMSMixedTypeNode,
   UIDLElement,
 } from '@teleporthq/teleport-types'
-import { UIDLUtils, StringUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils, StringUtils } from '@viasoft/teleport-shared'
 import { JSXASTReturnType, JSXGenerationOptions, JSXGenerationParams, NodeToJSX } from './types'
 
 import {

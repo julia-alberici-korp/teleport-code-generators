@@ -2,7 +2,7 @@ import standalone from 'prettier/standalone.js'
 const { format } = standalone
 import parserTypescript from 'prettier/parser-typescript.js'
 
-import { Constants } from '@teleporthq/teleport-shared'
+import { Constants } from '@viasoft/teleport-shared'
 import { PostProcessor, PrettierFormatOptions, FileType } from '@teleporthq/teleport-types'
 
 interface PostProcessorFactoryOptions {

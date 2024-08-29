@@ -5,7 +5,7 @@ import {
   ComponentUIDL,
   GeneratorOptions,
 } from '@teleporthq/teleport-types'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 
 export default class AssemblyLine {
   private plugins: ComponentPlugin[]

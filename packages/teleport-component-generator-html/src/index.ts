@@ -10,7 +10,7 @@ import {
   GeneratorOptions,
 } from '@teleporthq/teleport-types'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 import { Parser } from '@teleporthq/teleport-uidl-validator'
 import { Resolver } from '@teleporthq/teleport-uidl-resolver'
 import { PlainHTMLMapping } from './plain-html-mapping'

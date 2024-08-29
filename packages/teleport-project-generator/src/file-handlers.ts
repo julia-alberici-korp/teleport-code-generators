@@ -1,4 +1,4 @@
-import { UIDLUtils, StringUtils, GenericUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils, StringUtils, GenericUtils } from '@viasoft/teleport-shared'
 import { HASTUtils, HASTBuilders } from '@teleporthq/teleport-plugin-common'
 import {
   GeneratedFile,

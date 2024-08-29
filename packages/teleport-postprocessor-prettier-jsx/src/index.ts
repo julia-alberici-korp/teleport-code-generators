@@ -3,7 +3,7 @@ const { format } = standalone
 import parserBabel from 'prettier/parser-babel.js'
 import parserPostCSS from 'prettier/parser-postcss.js'
 
-import { Constants } from '@teleporthq/teleport-shared'
+import { Constants } from '@viasoft/teleport-shared'
 import { PostProcessor, PrettierFormatOptions, FileType } from '@teleporthq/teleport-types'
 
 interface PostProcessorFactoryOptions {

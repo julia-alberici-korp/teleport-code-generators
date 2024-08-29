@@ -1,5 +1,5 @@
 import * as hastUtils from '../../utils/hast-utils'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 import {
   UIDLConditionalExpression,
   UIDLConditionalNode,

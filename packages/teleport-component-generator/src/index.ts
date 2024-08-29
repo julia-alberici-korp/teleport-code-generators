@@ -1,6 +1,6 @@
 import { Validator, Parser } from '@teleporthq/teleport-uidl-validator'
 import { Resolver, HTMLMapping } from '@teleporthq/teleport-uidl-resolver'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 import {
   ChunkDefinition,
   ComponentGenerator,

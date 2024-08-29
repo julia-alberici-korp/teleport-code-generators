@@ -6,7 +6,7 @@ import {
   HastNode,
 } from '@teleporthq/teleport-types'
 import { HASTBuilders, HASTUtils } from '@teleporthq/teleport-plugin-common'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 
 export const createHTMLImportStatementsPlugin = () => {
   const htmlImportsPlugin: ComponentPlugin = async (structure) => {

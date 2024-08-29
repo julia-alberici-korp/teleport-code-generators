@@ -1,6 +1,6 @@
 import * as hastUtils from '../../utils/hast-utils'
 import { createComment, createHTMLNode } from '../../builders/hast-builders'
-import { UIDLUtils, StringUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils, StringUtils } from '@viasoft/teleport-shared'
 import {
   UIDLRepeatNode,
   UIDLConditionalNode,

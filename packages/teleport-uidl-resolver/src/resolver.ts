@@ -1,5 +1,5 @@
 import * as utils from './utils'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 import {
   ComponentUIDL,
   UIDLElement,
