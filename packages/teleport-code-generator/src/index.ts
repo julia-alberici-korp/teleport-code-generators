@@ -19,7 +19,7 @@ import {
 } from '@teleporthq/teleport-types'
 import { Constants } from '@teleporthq/teleport-shared'
 
-import { createProjectPacker } from '@teleporthq/teleport-project-packer'
+import { createProjectPacker } from '@viasoft/teleport-project-packer'
 import {
   ReactTemplate,
   createReactProjectGenerator,

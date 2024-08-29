@@ -1,5 +1,5 @@
 {
-  "name": "@teleporthq/teleport-project-packer",
+  "name": "@viasoft/teleport-project-packer",
   "version": "0.36.0",
   "description": "Bare-bone project packer that accepts any project generator and publisher",
   "author": "teleportHQ",

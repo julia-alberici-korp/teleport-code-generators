@@ -1,4 +1,4 @@
-import { createProjectPacker } from '@teleporthq/teleport-project-packer'
+import { createProjectPacker } from '@viasoft/teleport-project-packer'
 
 import { createReactProjectGenerator } from '@teleporthq/teleport-project-generator-react'
 import { createNextProjectGenerator } from '@teleporthq/teleport-project-generator-next'
