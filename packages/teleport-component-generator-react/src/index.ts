@@ -14,7 +14,7 @@ import {
   ComponentGeneratorInstance,
   GeneratorFactoryParams,
 } from '@teleporthq/teleport-types'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { ReactMapping } from './react-mapping'
 
 const cssPlugin = createCSSPlugin({

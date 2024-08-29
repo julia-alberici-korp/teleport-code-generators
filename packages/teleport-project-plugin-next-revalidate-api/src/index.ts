@@ -1,5 +1,5 @@
 import { ProjectPlugin, ProjectPluginStructure } from '@teleporthq/teleport-types'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { createNextCacheValidationPlugin } from './component-plugin'
 import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
 import prettierJSPlugin from '@teleporthq/teleport-postprocessor-prettier-js'

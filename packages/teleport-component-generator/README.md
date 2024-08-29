@@ -6,16 +6,16 @@ Bare-bone component generator on top of which you can add plugins, mappings and 
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-component-generator
+npm install @viasoft/teleport-component-generator
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-component-generator
+yarn add @viasoft/teleport-component-generator
 ```
 
 ## Usage
 ```javascript
-import generator from '@teleporthq/teleport-component-generator'
+import generator from '@viasoft/teleport-component-generator'
 
 generator.addMapping({ /*...*/ }) // Add a mapping object for UIDL element types
 

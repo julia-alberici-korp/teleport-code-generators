@@ -24,7 +24,7 @@
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.json --module commonjs --outDir dist/cjs"
   },
   "dependencies": {
-    "@teleporthq/teleport-component-generator": "^0.36.1",
+    "@viasoft/teleport-component-generator": "^0.36.1",
     "@teleporthq/teleport-plugin-common": "^0.36.0",
     "@teleporthq/teleport-plugin-import-statements": "^0.36.0",
     "@teleporthq/teleport-shared": "^0.36.0",

@@ -1,4 +1,4 @@
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 
 import angularComponentPlugin from '@teleporthq/teleport-plugin-angular-base-component'
 import { createCSSPlugin } from '@teleporthq/teleport-plugin-css'

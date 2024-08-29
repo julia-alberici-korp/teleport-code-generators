@@ -20,7 +20,7 @@ import {
 } from '@teleporthq/teleport-types'
 import { elementNode } from '@teleporthq/teleport-uidl-builders'
 import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { basename } from 'path'
 
 export const createPageUIDLs = (uidl: ProjectUIDL, strategy: ProjectStrategy): ComponentUIDL[] => {

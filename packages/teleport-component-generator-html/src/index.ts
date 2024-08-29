@@ -9,7 +9,7 @@ import {
   GeneratorFactoryParams,
   GeneratorOptions,
 } from '@teleporthq/teleport-types'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { StringUtils } from '@teleporthq/teleport-shared'
 import { Parser } from '@teleporthq/teleport-uidl-validator'
 import { Resolver } from '@teleporthq/teleport-uidl-resolver'

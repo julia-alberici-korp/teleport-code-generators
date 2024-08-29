@@ -19,7 +19,7 @@ import {
 import { DEFAULT_GITIGNORE, DEFAULT_PACKAGE_JSON, DEFAULT_ROUTER_FILE_NAME } from './constants'
 import { PackageJSON } from './types'
 import { bootstrapGenerator } from './utils'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 
 export const createPage = async (
   pageUIDL: ComponentUIDL,

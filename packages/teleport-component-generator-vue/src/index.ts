@@ -1,4 +1,4 @@
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import vueComponentPlugin from '@teleporthq/teleport-plugin-vue-base-component'
 import { createCSSPlugin } from '@teleporthq/teleport-plugin-css'
 import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'

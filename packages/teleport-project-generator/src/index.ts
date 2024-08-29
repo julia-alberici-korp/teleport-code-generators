@@ -43,7 +43,7 @@ import { DEFAULT_TEMPLATE } from './constants'
 import ProjectAssemblyLine from './assembly-line'
 import { join } from 'path'
 import { resourceGenerator } from './resource'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'
 import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
 
