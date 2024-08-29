@@ -1,7 +1,7 @@
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'
 import nextImagePlugin from '@teleporthq/teleport-plugin-jsx-next-image'
 import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
-import { createProjectGenerator } from '@teleporthq/teleport-project-generator'
+import { createProjectGenerator } from '@viasoft/teleport-project-generator'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { createReactComponentGenerator } from '@teleporthq/teleport-component-generator-react'
 import { createJSXHeadConfigPlugin } from '@teleporthq/teleport-plugin-jsx-head-config'

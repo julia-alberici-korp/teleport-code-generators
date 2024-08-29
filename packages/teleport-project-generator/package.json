@@ -1,5 +1,5 @@
 {
-  "name": "@teleporthq/teleport-project-generator",
+  "name": "@viasoft/teleport-project-generator",
   "version": "0.36.1",
   "description": "Generic project generator that requires a specific strategy to run on custom configurations",
   "author": "teleportHQ",

@@ -6,9 +6,9 @@ Generic project generator that requires a specific strategy to run on custom con
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-project-generator
+npm install @viasoft/teleport-project-generator
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-project-generator
+yarn add @viasoft/teleport-project-generator
 ```

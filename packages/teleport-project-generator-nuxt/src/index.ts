@@ -1,4 +1,4 @@
-import { createProjectGenerator } from '@teleporthq/teleport-project-generator'
+import { createProjectGenerator } from '@viasoft/teleport-project-generator'
 import { createVueComponentGenerator } from '@teleporthq/teleport-component-generator-vue'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import vueHeadConfigPlugin from '@teleporthq/teleport-plugin-vue-head-config'

@@ -4,7 +4,7 @@ import { createAngularComponentGenerator } from '@teleporthq/teleport-component-
 import { createPrettierTSPostProcessor } from '@teleporthq/teleport-postprocessor-prettier-ts'
 import prettierHTML from '@teleporthq/teleport-postprocessor-prettier-html'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
-import { createProjectGenerator } from '@teleporthq/teleport-project-generator'
+import { createProjectGenerator } from '@viasoft/teleport-project-generator'
 import { Mapping, FileType } from '@teleporthq/teleport-types'
 import { createStyleSheetPlugin } from '@teleporthq/teleport-plugin-css'
 
