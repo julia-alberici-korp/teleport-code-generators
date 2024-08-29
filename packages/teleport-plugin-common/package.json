@@ -1,5 +1,5 @@
 {
-  "name": "@teleporthq/teleport-plugin-common",
+  "name": "@viasoft/teleport-plugin-common",
   "version": "0.36.0",
   "description": "Common building and modelating functions for ASTs and HASTs",
   "author": "teleportHQ",

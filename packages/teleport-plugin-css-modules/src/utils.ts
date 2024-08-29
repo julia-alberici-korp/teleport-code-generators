@@ -1,4 +1,4 @@
-import { StyleBuilders, StyleUtils } from '@teleporthq/teleport-plugin-common'
+import { StyleBuilders, StyleUtils } from '@viasoft/teleport-plugin-common'
 import { UIDLUtils } from '@viasoft/teleport-shared'
 import {
   UIDLStyleSetDefinition,

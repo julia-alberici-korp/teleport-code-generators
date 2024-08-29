@@ -8,7 +8,7 @@ import {
   HastText,
   UIDLElementNode,
 } from '@viasoft/teleport-types'
-import { HASTBuilders, HASTUtils } from '@teleporthq/teleport-plugin-common'
+import { HASTBuilders, HASTUtils } from '@viasoft/teleport-plugin-common'
 import { DEFAULT_COMPONENT_CHUNK_NAME } from './constants'
 import { generateHtmlSyntax } from './node-handlers'
 import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'

@@ -1,5 +1,5 @@
 import { UIDLUtils, StringUtils, GenericUtils } from '@viasoft/teleport-shared'
-import { HASTUtils, HASTBuilders } from '@teleporthq/teleport-plugin-common'
+import { HASTUtils, HASTBuilders } from '@viasoft/teleport-plugin-common'
 import {
   GeneratedFile,
   GeneratedFolder,

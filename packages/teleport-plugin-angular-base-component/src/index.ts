@@ -12,7 +12,7 @@ import {
   createHTMLTemplateSyntax,
   HTMLTemplateGenerationParams,
   HTMLTemplateSyntax,
-} from '@teleporthq/teleport-plugin-common'
+} from '@viasoft/teleport-plugin-common'
 
 import { generateExportAST } from './utils'
 

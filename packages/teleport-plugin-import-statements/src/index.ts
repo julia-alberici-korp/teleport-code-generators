@@ -1,4 +1,4 @@
-import { ASTBuilders } from '@teleporthq/teleport-plugin-common'
+import { ASTBuilders } from '@viasoft/teleport-plugin-common'
 import {
   ComponentPluginFactory,
   ComponentPlugin,

@@ -4,7 +4,7 @@ import {
   UIDLDynamicReference,
   UIDLStaticValue,
 } from '@viasoft/teleport-types'
-import { ASTBuilders, ASTUtils } from '@teleporthq/teleport-plugin-common'
+import { ASTBuilders, ASTUtils } from '@viasoft/teleport-plugin-common'
 import * as types from '@babel/types'
 
 interface JSXHeadPluginConfig {

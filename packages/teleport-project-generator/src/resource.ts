@@ -1,4 +1,4 @@
-import { ASTUtils } from '@teleporthq/teleport-plugin-common'
+import { ASTUtils } from '@viasoft/teleport-plugin-common'
 import {
   ChunkDefinition,
   ChunkType,

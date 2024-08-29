@@ -4,7 +4,7 @@ import {
   JSXGenerationOptions,
   ASTBuilders,
   ASTUtils,
-} from '@teleporthq/teleport-plugin-common'
+} from '@viasoft/teleport-plugin-common'
 
 import {
   ComponentPluginFactory,

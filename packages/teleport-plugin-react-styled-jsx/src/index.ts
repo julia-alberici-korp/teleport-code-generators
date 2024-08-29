@@ -1,5 +1,5 @@
 import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
-import { ASTUtils, StyleBuilders, ASTBuilders } from '@teleporthq/teleport-plugin-common'
+import { ASTUtils, StyleBuilders, ASTBuilders } from '@viasoft/teleport-plugin-common'
 import {
   ComponentPluginFactory,
   ComponentPlugin,

@@ -1,5 +1,5 @@
 import * as types from '@babel/types'
-import { ASTUtils } from '@teleporthq/teleport-plugin-common'
+import { ASTUtils } from '@viasoft/teleport-plugin-common'
 import {
   ComponentPlugin,
   ComponentPluginFactory,

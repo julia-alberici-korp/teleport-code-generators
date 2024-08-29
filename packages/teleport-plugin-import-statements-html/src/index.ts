@@ -5,7 +5,7 @@ import {
   HTMLComponentGeneratorError,
   HastNode,
 } from '@viasoft/teleport-types'
-import { HASTBuilders, HASTUtils } from '@teleporthq/teleport-plugin-common'
+import { HASTBuilders, HASTUtils } from '@viasoft/teleport-plugin-common'
 import { StringUtils } from '@viasoft/teleport-shared'
 
 export const createHTMLImportStatementsPlugin = () => {

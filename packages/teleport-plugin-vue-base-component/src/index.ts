@@ -11,7 +11,7 @@ import {
   createHTMLTemplateSyntax,
   HTMLTemplateGenerationParams,
   HTMLTemplateSyntax,
-} from '@teleporthq/teleport-plugin-common'
+} from '@viasoft/teleport-plugin-common'
 import { UIDLUtils } from '@viasoft/teleport-shared'
 
 import {

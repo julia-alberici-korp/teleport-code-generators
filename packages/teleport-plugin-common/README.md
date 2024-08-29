@@ -6,9 +6,9 @@ Common building and modelating functions for ASTs and HASTs.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-plugin-common
+npm install @viasoft/teleport-plugin-common
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-plugin-common
+yarn add @viasoft/teleport-plugin-common
 ```

@@ -14,7 +14,7 @@ import {
   ASTBuilders,
   ParsedASTNode,
   StyleBuilders,
-} from '@teleporthq/teleport-plugin-common'
+} from '@viasoft/teleport-plugin-common'
 import {
   ComponentPluginFactory,
   ComponentPlugin,

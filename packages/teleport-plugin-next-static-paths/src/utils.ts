@@ -1,5 +1,5 @@
 import * as types from '@babel/types'
-import { ASTUtils } from '@teleporthq/teleport-plugin-common'
+import { ASTUtils } from '@viasoft/teleport-plugin-common'
 import { UIDLInitialPathsData, PagePaginationOptions } from '@viasoft/teleport-types'
 
 export const generateInitialPathsAST = (

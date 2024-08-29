@@ -1,6 +1,6 @@
 import * as types from '@babel/types'
 import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
-import { ParsedASTNode, ASTBuilders, ASTUtils } from '@teleporthq/teleport-plugin-common'
+import { ParsedASTNode, ASTBuilders, ASTUtils } from '@viasoft/teleport-plugin-common'
 import { UIDLStyleSetDefinition, UIDLStyleValue } from '@viasoft/teleport-types'
 
 export const generateProjectStyleSheet = (params: {

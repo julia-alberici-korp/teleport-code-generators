@@ -1,6 +1,6 @@
 import * as types from '@babel/types'
 import { UIDLUtils } from '@viasoft/teleport-shared'
-import { ASTUtils, StyleBuilders } from '@teleporthq/teleport-plugin-common'
+import { ASTUtils, StyleBuilders } from '@viasoft/teleport-plugin-common'
 import { ComponentPluginFactory, ComponentPlugin } from '@viasoft/teleport-types'
 
 interface InlineStyleConfig {

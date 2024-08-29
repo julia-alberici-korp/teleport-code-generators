@@ -1,4 +1,4 @@
-import { StyleUtils, StyleBuilders } from '@teleporthq/teleport-plugin-common'
+import { StyleUtils, StyleBuilders } from '@viasoft/teleport-plugin-common'
 import {
   ComponentPlugin,
   ComponentPluginFactory,

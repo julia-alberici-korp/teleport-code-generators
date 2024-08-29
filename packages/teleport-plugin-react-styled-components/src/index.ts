@@ -9,7 +9,7 @@ import {
   UIDLElementNode,
 } from '@viasoft/teleport-types'
 import { UIDLUtils, StringUtils } from '@viasoft/teleport-shared'
-import { ASTUtils, StyleBuilders } from '@teleporthq/teleport-plugin-common'
+import { ASTUtils, StyleBuilders } from '@viasoft/teleport-plugin-common'
 import {
   generateStyledComponent,
   generateVariantsfromStyleSet,
