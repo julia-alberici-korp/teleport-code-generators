@@ -6,9 +6,9 @@ A plugin for handling import statements in JavaScript code.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-plugin-import-statements
+npm install @viasoft/teleport-plugin-import-statements
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-plugin-import-statements
+yarn add @viasoft/teleport-plugin-import-statements
 ```

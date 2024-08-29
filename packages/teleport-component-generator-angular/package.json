@@ -26,12 +26,12 @@
   "dependencies": {
     "@teleporthq/teleport-plugin-angular-base-component": "^0.36.0",
     "@teleporthq/teleport-plugin-css": "^0.36.0",
-    "@teleporthq/teleport-plugin-import-statements": "^0.36.0",
     "@teleporthq/teleport-postprocessor-prettier-html": "^0.36.0",
     "@teleporthq/teleport-postprocessor-prettier-ts": "^0.36.0",
     "@teleporthq/teleport-shared": "^0.36.0",
     "@teleporthq/teleport-types": "^0.36.0",
-    "@viasoft/teleport-component-generator": "^0.36.1"
+    "@viasoft/teleport-component-generator": "^0.36.1",
+    "@viasoft/teleport-plugin-import-statements": "^0.36.0"
   },
   "gitHead": "b185c3fdb7dc94ff8c7eed63f7edba055fffa8d0"
 }

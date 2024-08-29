@@ -19,7 +19,7 @@ import {
   UIDLRouteDefinitions,
 } from '@teleporthq/teleport-types'
 import { elementNode } from '@teleporthq/teleport-uidl-builders'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { basename } from 'path'
 

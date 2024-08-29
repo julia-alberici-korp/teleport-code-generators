@@ -45,7 +45,7 @@ import { join } from 'path'
 import { resourceGenerator } from './resource'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 
 type UpdateGeneratorCallback = (generator: ComponentGenerator) => void
 

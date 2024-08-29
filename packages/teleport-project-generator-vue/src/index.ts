@@ -3,7 +3,7 @@ import { createVueComponentGenerator } from '@teleporthq/teleport-component-gene
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import vueRoutingPlugin from '@teleporthq/teleport-plugin-vue-app-routing'
 import { createVueHeadConfigPlugin } from '@teleporthq/teleport-plugin-vue-head-config'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import prettierHTML from '@teleporthq/teleport-postprocessor-prettier-html'
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'
 import pluginCSS, { createStyleSheetPlugin } from '@teleporthq/teleport-plugin-css'

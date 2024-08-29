@@ -6,7 +6,7 @@ import { createCSSPlugin } from '@teleporthq/teleport-plugin-css'
 import reactStyledComponentsPlugin from '@teleporthq/teleport-plugin-react-styled-components'
 import { createReactStyledJSXPlugin } from '@teleporthq/teleport-plugin-react-styled-jsx'
 import propTypesPlugin from '@teleporthq/teleport-plugin-jsx-proptypes'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import prettierJSX from '@teleporthq/teleport-postprocessor-prettier-jsx'
 import {
   ComponentGenerator,
