@@ -22,6 +22,7 @@ import {
   UIDLComponentOutputOptions,
   UIDLElement,
   ElementsLookup,
+  UIDLConditionalNode,
 } from '@teleporthq/teleport-types'
 import { join, relative } from 'path'
 import { HASTBuilders, HASTUtils, ASTUtils } from '@teleporthq/teleport-plugin-common'
@@ -132,18 +133,13 @@ export const generateHtmlSyntax: NodeToHTML<UIDLNode, Promise<HastNode | HastTex
         'Conditional nodes are not supported in HTML'
       )
       const {
-        value,
+        value: staticValue,
         reference,
         condition: { conditions, matchingCriteria },
       } = node.content
 
       if (reference.type !== 'dynamic') {
         return conditionalNodeComment
-      }
-
-      if (value !== undefined) {
-        // This means the conditional node is using static values.
-        // So, we can do the same thing as we do in the dynamic node with prop.
       }
 
       const {
@@ -159,20 +155,15 @@ export const generateHtmlSyntax: NodeToHTML<UIDLNode, Promise<HastNode | HastTex
 
           // Since we know the operand and the default value from the prop.
           // We can try building the condition and check if the condition is true or false.
-          const dynamicConditions = conditions.map((condition) => {
-            const { operation, operand } = condition
-
-            if (operand === undefined) {
-              return `${ASTUtils.convertToUnaryOperator(operation)}${getValueType(operand)}`
-            }
-
-            return `${getValueType(usedProp.defaultValue)} ${ASTUtils.convertToBinaryOperator(
-              operation
-            )} ${getValueType(operand)}`
-          })
-
+          // @todo: You can only use a 'value' in UIDL or 'conditions' but not both.
+          // UIDL validations need to be improved on this aspect.
+          const dynamicConditions = createConditionalStatement(
+            staticValue !== undefined ? [{ operand: staticValue, operation: '===' }] : conditions,
+            usedProp.defaultValue
+          )
           const matchCondition = matchingCriteria && matchingCriteria === 'all' ? '&&' : '||'
           const conditionString = dynamicConditions.join(` ${matchCondition} `)
+
           try {
             // tslint:disable-next-line function-constructor
             const isConditionPassing = new Function(`return ${conditionString}`)()
@@ -195,8 +186,6 @@ export const generateHtmlSyntax: NodeToHTML<UIDLNode, Promise<HastNode | HastTex
         }
 
         case 'state':
-          return conditionalNodeComment
-
         default:
           return conditionalNodeComment
       }
@@ -210,6 +199,23 @@ export const generateHtmlSyntax: NodeToHTML<UIDLNode, Promise<HastNode | HastTex
         )} `
       )
   }
+}
+
+const createConditionalStatement = (
+  conditions: UIDLConditionalNode['content']['condition']['conditions'],
+  leftOperand: UIDLPropDefinition['defaultValue']
+) => {
+  return conditions.map((condition) => {
+    const { operation, operand } = condition
+
+    if (operand === undefined) {
+      return `${ASTUtils.convertToUnaryOperator(operation)}${getValueType(operand)}`
+    }
+
+    return `${getValueType(leftOperand)} ${ASTUtils.convertToBinaryOperator(
+      operation
+    )} ${getValueType(operand)}`
+  })
 }
 
 const getValueType = (value: UIDLPropDefinition['defaultValue']) => {
