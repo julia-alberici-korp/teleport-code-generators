@@ -77,7 +77,7 @@ const project = (params: {
 }) =>
   log(async () => {
     const { projectType, projectSlug, plugins = [], options = packerOptions, uidl } = params
-    await packProject((uidl ?? projectUIDL) as ProjectUIDL, {
+    const dist = await packProject((uidl ?? projectUIDL) as ProjectUIDL, {
       ...options,
       projectType,
       plugins,
@@ -87,7 +87,7 @@ const project = (params: {
       },
     })
 
-    return projectSlug
+    return JSON.stringify({ dist, slug: projectSlug }, null, 2)
   })
 
 const run = async () => {
