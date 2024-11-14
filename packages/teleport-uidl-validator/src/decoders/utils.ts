@@ -94,6 +94,7 @@ import {
   VUIDLCMSMixedTypeNode,
   UIDLLocalFontAsset,
   VUIDLPropDefinitions,
+  UIDLGlobalReference,
   UIDLObjectValue,
 } from '@teleporthq/teleport-types'
 import {
@@ -110,17 +111,30 @@ export const referenceTypeDecoder: Decoder<ReferenceType> = union(
   constant('attr'),
   constant('children'),
   constant('token'),
-  constant('expr')
+  constant('expr'),
+  constant('locale')
 )
 
-export const dynamicValueDecoder: Decoder<UIDLDynamicReference> = object({
+export const globalValueDecoder: Decoder<UIDLGlobalReference> = object({
   type: constant('dynamic'),
   content: object({
-    referenceType: referenceTypeDecoder,
+    referenceType: constant('global'),
+    id: union(constant('locale'), constant('locales')),
     refPath: optional(array(string())),
-    id: string(),
   }),
 })
+
+export const dynamicValueDecoder: Decoder<UIDLDynamicReference> = union(
+  object({
+    type: constant('dynamic'),
+    content: object({
+      referenceType: referenceTypeDecoder,
+      refPath: optional(array(string())),
+      id: string(),
+    }),
+  }),
+  globalValueDecoder
+)
 
 export const expressionValueDecoder: Decoder<UIDLExpressionValue> = object({
   type: constant('expr'),

@@ -205,8 +205,7 @@ const generateNode: NodeToJSX<UIDLNode, JSXASTReturnType[]> = (node, params, opt
 
     case 'inject':
       if (node?.dependency) {
-        /* tslint:disable:no-string-literal */
-        params.dependencies['Script'] = node.dependency
+        params.dependencies.Script = node.dependency
       }
       return [node.content.toString()]
 
@@ -214,35 +213,65 @@ const generateNode: NodeToJSX<UIDLNode, JSXASTReturnType[]> = (node, params, opt
       return [StringUtils.encode(node.content.toString())]
 
     case 'dynamic':
-      // If the dynamic node is a prop and has a default value,
-      // we should use it with a logical expression. And the most used case is for named-slots.
-      const prop = params.propDefinitions[node.content.id]
-      if (prop?.type === 'element' && prop.defaultValue) {
-        const prefix =
-          options.dynamicReferencePrefixMap[
-            node.content.referenceType as 'prop' | 'state' | 'local'
-          ] || ''
+      switch (node.content.referenceType) {
+        case 'prop': {
+          // If the dynamic node is a prop and has a default value of type UIDLElementNode,
+          // we should use it with a logical expression.
+          const prop = params.propDefinitions[node.content.id]
+          if (prop?.type === 'element' && prop.defaultValue) {
+            const prefix = options.dynamicReferencePrefixMap[node.content.referenceType] || ''
 
-        const propDefault = prop.defaultValue as UIDLElementNode
-        const jsxNode = params.nodesLookup[propDefault.content.key]
+            const propDefault = prop.defaultValue as UIDLElementNode
+            const jsxNode = params.nodesLookup[propDefault.content.key]
 
-        if (jsxNode === undefined) {
-          throw Error(`Prop ${node.content.id} is of type element \n
-            The JSXNode of the prop-${node.content.id} is missing from the nodesLookup`)
+            if (jsxNode === undefined) {
+              throw Error(`Prop ${node.content.id} is of type element \n
+              The JSXNode of the prop-${node.content.id} is missing from the nodesLookup`)
+            }
+
+            return [
+              types.logicalExpression(
+                '??',
+                prefix === ''
+                  ? types.identifier(node.content.id)
+                  : types.memberExpression(
+                      types.identifier(prefix),
+                      types.identifier(node.content.id)
+                    ),
+                jsxNode as types.JSXElement
+              ),
+            ]
+          }
+
+          return [createDynamicValueExpression(node, options)]
         }
 
-        return [
-          types.logicalExpression(
-            '??',
-            prefix === ''
-              ? types.identifier(node.content.id)
-              : types.memberExpression(types.identifier(prefix), types.identifier(node.content.id)),
-            jsxNode as types.JSXElement
-          ),
-        ]
-      }
+        case 'locale': {
+          // Locale is not handled the same in all frameworks.
+          // So, we need to handle it differently using individual plugins for each framework.
+          const emptyExpression = types.jsxEmptyExpression()
+          emptyExpression.innerComments = [
+            {
+              type: 'CommentBlock',
+              value: `locale-${node.content.id}`,
+            },
+          ]
+          const expression = types.jsxExpressionContainer(emptyExpression)
+          const jsxTag = createJSXTag('span')
+          addChildJSXTag(jsxTag, expression)
 
-      return [createDynamicValueExpression(node, options)]
+          params.localeReferences.push(jsxTag)
+          return [jsxTag]
+        }
+
+        case 'global': {
+          params.globalReferences.push(node.content.id)
+          return [createDynamicValueExpression(node, options)]
+        }
+
+        default:
+          return [createDynamicValueExpression(node, options)]
+      }
 
     case 'cms-item':
     case 'cms-list':

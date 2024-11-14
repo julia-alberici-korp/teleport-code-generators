@@ -1,6 +1,6 @@
 {
   "name": "@teleporthq/teleport-types",
-  "version": "0.36.6",
+  "version": "0.37.2",
   "description": "The collection of reusable types across the entire teleport ecosystem",
   "author": "teleportHQ",
   "license": "MIT",
@@ -22,6 +22,9 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.json --module commonjs --outDir dist/cjs"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.5.5"
   },
   "gitHead": "b185c3fdb7dc94ff8c7eed63f7edba055fffa8d0"
 }

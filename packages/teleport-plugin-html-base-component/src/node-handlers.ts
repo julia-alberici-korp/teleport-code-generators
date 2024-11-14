@@ -190,6 +190,9 @@ export const generateHtmlSyntax: NodeToHTML<UIDLNode, Promise<HastNode | HastTex
           return conditionalNodeComment
       }
 
+    case 'expr':
+      return HASTBuilders.createComment('Expressions are not supported in HTML')
+
     default:
       throw new HTMLComponentGeneratorError(
         `generateHtmlSyntax encountered a node of unsupported type: ${JSON.stringify(
@@ -618,6 +621,13 @@ const generateDynamicNode: NodeToHTML<UIDLDynamicReference, Promise<HastNode | H
   propDefinitions,
   stateDefinitions
 ): Promise<HastNode | HastText> => {
+  if (node.content.referenceType === 'locale') {
+    const localeTag = HASTBuilders.createHTMLNode('span')
+    const commentNode = HASTBuilders.createComment(`Content for locale ${node.content.id}`)
+    HASTUtils.addChildNode(localeTag, commentNode)
+    return localeTag
+  }
+
   const usedReferenceValue = getValueFromReference(
     node.content.id,
     node.content.referenceType === 'prop' ? propDefinitions : stateDefinitions

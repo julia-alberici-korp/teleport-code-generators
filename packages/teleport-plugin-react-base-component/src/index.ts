@@ -4,6 +4,7 @@ import {
   JSXGenerationOptions,
   ASTBuilders,
   ASTUtils,
+  JSXGenerationParams,
 } from '@teleporthq/teleport-plugin-common'
 
 import {
@@ -50,12 +51,14 @@ export const createReactComponentPlugin: ComponentPluginFactory<ReactPluginConfi
     // The structure will be populated as the AST is being created
     const nodesLookup = {}
     const windowImports: Record<string, types.ExpressionStatement> = {}
-    const jsxParams = {
+    const jsxParams: JSXGenerationParams = {
       propDefinitions,
       stateDefinitions,
       nodesLookup,
       dependencies,
       windowImports,
+      localeReferences: [],
+      globalReferences: [],
     }
 
     const jsxOptions: JSXGenerationOptions = {
@@ -116,6 +119,8 @@ export const createReactComponentPlugin: ComponentPluginFactory<ReactPluginConfi
       meta: {
         nodesLookup,
         dynamicRefPrefix: jsxOptions.dynamicReferencePrefixMap,
+        localeReferences: jsxParams.localeReferences,
+        globalReferences: jsxParams.globalReferences,
       },
       content: pureComponent,
       linkAfter: [importChunkName],
