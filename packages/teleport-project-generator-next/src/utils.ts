@@ -11,7 +11,7 @@ import {
 } from '@teleporthq/teleport-types'
 
 export const createDocumentFileChunks = (uidl: ProjectUIDL, options: EntryFileOptions) => {
-  const { settings, meta, assets, manifest, customCode } = uidl.globals
+  const { meta, assets, manifest, customCode } = uidl.globals
 
   const htmlNode = ASTBuilders.createJSXTag('Html')
   const headNode = ASTBuilders.createJSXTag('Head')
@@ -25,12 +25,7 @@ export const createDocumentFileChunks = (uidl: ProjectUIDL, options: EntryFileOp
   ASTUtils.addChildJSXTag(htmlNode, headNode)
   ASTUtils.addChildJSXTag(htmlNode, bodyNode)
 
-  if (settings.language) {
-    ASTUtils.addAttributeToJSXTag(htmlNode, 'lang', settings.language)
-  }
-
   // NOTE: Title is added in per page, not in the layout file
-
   if (manifest) {
     const linkTag = ASTBuilders.createJSXTag('link')
     ASTUtils.addAttributeToJSXTag(linkTag, 'rel', 'manifest')
