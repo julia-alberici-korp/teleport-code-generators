@@ -86,6 +86,8 @@ export const createNextInternationalizationPlugin: ComponentPluginFactory<{}> = 
     }
 
     const reactHooks: types.VariableDeclaration[] = []
+    structure.dependencies.useTranslations = USE_TRANSLATIONS_HOOK
+
     if (jsxComponent.meta?.localeReferences?.length > 0 && !useTranslationsInBody) {
       const translationsAST = types.variableDeclaration('const', [
         types.variableDeclarator(
@@ -94,7 +96,6 @@ export const createNextInternationalizationPlugin: ComponentPluginFactory<{}> = 
         ),
       ])
       reactHooks.push(translationsAST)
-      structure.dependencies.useTranslations = USE_TRANSLATIONS_HOOK
       useTranslationsInBody = true
     }
 
