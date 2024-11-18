@@ -146,7 +146,7 @@ export class NextProjectPlugini18nConfig implements ProjectPlugin {
       path: [],
       files: [
         {
-          name: 'global-context.js',
+          name: 'global-context',
           content: globalContextFile,
           fileType: FileType.JS,
         },
