@@ -7,6 +7,8 @@ Object {
   "content": "import React, { useEffect } from 'react'
 import Head from 'next/head'
 
+import { useTranslations } from 'next-intl'
+
 import AppComponent from '../components/component'
 import Hero from '../components/hero'
 import Footer from '../components/footer'
@@ -103,6 +105,7 @@ Object {
   "content": "import React from 'react'
 
 import PropTypes from 'prop-types'
+import { useTranslations } from 'next-intl'
 
 const Hero = (props) => {
   return (
