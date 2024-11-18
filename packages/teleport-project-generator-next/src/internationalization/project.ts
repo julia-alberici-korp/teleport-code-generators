@@ -148,6 +148,7 @@ export class NextProjectPlugini18nConfig implements ProjectPlugin {
         {
           name: 'global-context.js',
           content: globalContextFile,
+          fileType: FileType.JS,
         },
       ],
     })
