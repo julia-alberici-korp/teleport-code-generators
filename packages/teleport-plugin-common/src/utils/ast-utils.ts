@@ -324,7 +324,7 @@ export const objectToObjectExpression = (
     const value = objectMap[key]
     let computedLiteralValue = null
 
-    if (!value) {
+    if (value === undefined) {
       return acc
     }
 
