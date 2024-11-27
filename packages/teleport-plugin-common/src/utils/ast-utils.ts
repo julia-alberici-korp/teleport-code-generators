@@ -324,9 +324,13 @@ export const objectToObjectExpression = (
     const value = objectMap[key]
     let computedLiteralValue = null
 
-    // TODO: Is this safe? This is for function props
-    if (value?.constructor?.name === 'Node') {
-      computedLiteralValue = value
+    if (!value) {
+      return acc
+    }
+
+    // This is for function props that have successfully been parsed
+    if (typeof value === 'object' && 'functionExpressionParseResult' in value) {
+      computedLiteralValue = value.functionExpressionParseResult
     } else if (value instanceof ParsedASTNode || value.constructor.name === 'ParsedASTNode') {
       computedLiteralValue = (value as ParsedASTNode).ast
     } else if (typeof value === 'boolean') {

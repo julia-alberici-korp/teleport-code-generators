@@ -29,7 +29,7 @@ export const buildDefaultPropsAst = (
           }
           const parseResult = parse(defaultValue.toString(), options)?.program?.body?.[0]
           if (parseResult.type === 'ExpressionStatement') {
-            parsedFunction = parseResult.expression
+            parsedFunction = { functionExpressionParseResult: parseResult.expression }
           }
         } catch (err) {
           // silet fail.
