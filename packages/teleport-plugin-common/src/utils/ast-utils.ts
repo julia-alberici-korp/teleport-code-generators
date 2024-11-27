@@ -328,7 +328,7 @@ export const objectToObjectExpression = (
       return acc
     }
 
-    // This is for function props that have successfully been parsed
+    // This is for function props that have successfully been parsed.
     if (typeof value === 'object' && 'functionExpressionParseResult' in value) {
       computedLiteralValue = value.functionExpressionParseResult
     } else if (value instanceof ParsedASTNode || value.constructor.name === 'ParsedASTNode') {
