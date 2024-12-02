@@ -52,10 +52,10 @@ const createNextProjectGenerator = () => {
       plugins: [
         nextImagePlugin,
         headConfigPlugin,
-        nextPageInlineFetchPlugin,
-        nextInternationalizationPlugin,
         getStaticPropsPlugin,
         getStaticPathsPlugin,
+        nextInternationalizationPlugin,
+        nextPageInlineFetchPlugin,
         nextLocaleFetcherPlugin,
       ],
       mappings: [NextProjectMapping],
