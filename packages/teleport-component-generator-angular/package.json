@@ -24,12 +24,12 @@
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.json --module commonjs --outDir dist/cjs"
   },
   "dependencies": {
-    "@viasoft/teleport-component-generator": "^0.38.3",
     "@teleporthq/teleport-plugin-angular-base-component": "^0.38.3",
     "@teleporthq/teleport-plugin-css": "^0.38.3",
     "@teleporthq/teleport-plugin-import-statements": "^0.38.3",
     "@teleporthq/teleport-postprocessor-prettier-html": "^0.38.3",
     "@teleporthq/teleport-postprocessor-prettier-ts": "^0.38.3",
+    "@viasoft/teleport-component-generator": "^0.38.3",
     "@viasoft/teleport-shared": "^0.38.3",
     "@viasoft/teleport-types": "^0.38.3"
   },
