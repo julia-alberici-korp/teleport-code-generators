@@ -11,7 +11,9 @@ import {
   UIDLPageOptions,
   UIDLResources,
   UIDLLocalFontAsset,
+  UIDLGlobalReference,
 } from './uidl'
+import type { JSXElement } from '@babel/types'
 
 export enum FileType {
   SCSS = 'scss',
@@ -46,6 +48,8 @@ export interface ChunkDefinition {
       container?: Record<string, unknown>
     } & Record<string, unknown>
     dynamicRefPrefix?: Record<string, unknown>
+    localeReferences?: JSXElement[]
+    globalReferences?: Array<UIDLGlobalReference['content']['id']>
   } & Record<string, unknown>
   content: ChunkContent
   linkAfter: string[]

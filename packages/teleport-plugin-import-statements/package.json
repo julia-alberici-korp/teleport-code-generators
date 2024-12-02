@@ -1,6 +1,6 @@
 {
   "name": "@viasoft/teleport-plugin-import-statements",
-  "version": "0.36.0",
+  "version": "0.38.3",
   "description": "A plugin for handling import statements in JavaScript code",
   "author": "teleportHQ",
   "license": "MIT",
@@ -24,8 +24,8 @@
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.json --module commonjs --outDir dist/cjs"
   },
   "dependencies": {
-    "@viasoft/teleport-plugin-common": "^0.36.0",
-    "@viasoft/teleport-types": "^0.36.0"
+    "@viasoft/teleport-plugin-common": "^0.38.3",
+    "@viasoft/teleport-types": "^0.38.3"
   },
   "gitHead": "b185c3fdb7dc94ff8c7eed63f7edba055fffa8d0"
 }

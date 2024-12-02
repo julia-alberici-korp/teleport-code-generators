@@ -13,6 +13,9 @@ import {
   getContentOfStyleObject,
   getCSSVariablesContentFromTokenStyles,
 } from '../utils/style-utils'
+import { isJSXElement } from '../utils/ast-utils'
+import { isHastElement } from '../utils/hast-utils'
+
 jss.setup(preset())
 
 export const createCSSClass = (key: string, styleObject: Record<string, string | number>) => {
@@ -204,45 +207,28 @@ export const generateStylesFromStyleSetDefinitions = (
 
 export const setPropValueForCompStyle = (params: {
   attrs: Record<string, UIDLAttributeValue>
-  key: string
-  jsxNodesLookup: Record<string, types.JSXElement | HastNode>
+  root: types.JSXElement | HastNode
   templateStyle?: 'jsx' | 'html'
   getClassName: (str: string) => string
 }) => {
-  const { attrs, jsxNodesLookup, key, templateStyle = 'jsx', getClassName } = params
-  Object.keys(attrs).forEach((attr) => {
-    if (attrs[attr].type !== 'comp-style') {
-      return
-    }
-
-    if (templateStyle === 'jsx') {
-      const compInstanceNode = jsxNodesLookup[key]
-      if (
-        compInstanceNode.type !== 'JSXElement' ||
-        'openingElement' in compInstanceNode === false
-      ) {
-        return
-      }
-
-      ;(compInstanceNode as types.JSXElement).openingElement?.attributes.forEach(
-        (attribute: types.JSXAttribute) => {
+  const { attrs, root, templateStyle = 'jsx', getClassName } = params
+  Object.keys(attrs)
+    .filter((attr) => attrs[attr].type === 'comp-style')
+    .forEach((attr) => {
+      if (templateStyle === 'jsx' && isJSXElement(root)) {
+        root.openingElement?.attributes.forEach((attribute: types.JSXAttribute) => {
           if (
-            attribute.name?.name === attr &&
             attribute.value.type === 'StringLiteral' &&
-            attribute.value?.value
+            attribute.value?.value &&
+            attribute.name.name === attr
           ) {
             attribute.value.value = getClassName(attribute.value.value)
           }
-        }
-      )
-    }
-
-    if (templateStyle === 'html') {
-      const compInstanceNode = jsxNodesLookup[key] as HastNode
-      if (!compInstanceNode?.properties[attr]) {
-        return
+        })
       }
-      compInstanceNode.properties[attr] = getClassName(String(compInstanceNode.properties[attr]))
-    }
-  })
+
+      if (templateStyle === 'html' && isHastElement(root)) {
+        root.properties[attr] = getClassName(String(root.properties[attr]))
+      }
+    })
 }

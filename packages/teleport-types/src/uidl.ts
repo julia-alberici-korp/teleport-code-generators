@@ -30,6 +30,7 @@ export interface UIDLPropValue {
   type: 'dynamic'
   content: {
     referenceType: 'prop'
+    refPath?: string[]
     id: string
   }
 }
@@ -38,6 +39,7 @@ export interface UIDLStateValue {
   type: 'dynamic'
   content: {
     referenceType: 'state'
+    refPath?: string[]
     id: string
   }
 }
@@ -87,6 +89,14 @@ export interface ProjectUIDL {
   root: UIDLRootComponent
   components?: Record<string, ComponentUIDL>
   resources?: UIDLResources
+  internationalization?: {
+    main: {
+      name: string
+      locale: string
+    }
+    languages: Record<string, string>
+    translations: Record<string, Record<string, UIDLElementNode | UIDLStaticValue>>
+  }
 }
 
 export interface UIDLGlobalProjectValues {
@@ -256,9 +266,18 @@ export interface UIDLComponentSEO {
 
 export type UIDLMetaTag = Record<string, string | UIDLStaticValue | UIDLDynamicReference>
 
+export type PropDefaultValueTypes =
+  | string
+  | number
+  | boolean
+  | unknown[]
+  | object
+  | (() => void)
+  | UIDLElementNode
+
 export interface UIDLPropDefinition {
   type: string
-  defaultValue?: string | number | boolean | unknown[] | object | (() => void) | UIDLElementNode
+  defaultValue?: PropDefaultValueTypes
   isRequired?: boolean
   id?: string
   meta?: {
@@ -300,14 +319,38 @@ export interface UIDLPageOptions {
   stateDefinitions?: Record<string, UIDLStateDefinition>
 }
 
-export type ReferenceType = 'prop' | 'state' | 'local' | 'attr' | 'children' | 'token' | 'expr'
+export type ReferenceType =
+  | 'prop'
+  | 'state'
+  | 'local'
+  | 'attr'
+  | 'children'
+  | 'token'
+  | 'expr'
+  | 'locale'
 
-export interface UIDLDynamicReference {
+export type UIDLDynamicReference = UIDLReferenValues | UIDLGlobalReference
+
+interface UIDLReferenValues {
   type: 'dynamic'
   content: {
     referenceType: ReferenceType
     refPath?: string[]
     id: string
+  }
+}
+
+/*
+  The id value refers to the global values that needs to be represented.
+  These values are fixed and each framework can make its own decision of how to import and pass these values.
+  Eg: link can come from router, locale can come from i18 etc
+ */
+export interface UIDLGlobalReference {
+  type: 'dynamic'
+  content: {
+    referenceType: 'global'
+    id: 'locale' | 'locales'
+    refPath?: string[]
   }
 }
 
@@ -318,7 +361,7 @@ export interface UIDLExpressionValue {
 
 export interface UIDLStaticValue {
   type: 'static'
-  content: string | number | boolean | unknown[] // unknown[] for data sources
+  content: string | number | boolean | Record<string, unknown> | unknown[] // unknown[] for data sources
 }
 
 export interface UIDLRawValue {
@@ -348,6 +391,11 @@ export interface UIDLCMSListNode {
 export interface UIDLCMSItemNode {
   type: 'cms-item'
   content: UIDLCMSItemNodeContent
+}
+
+export interface UIDLObjectValue {
+  type: 'object'
+  content: unknown
 }
 
 export interface UIDLCMSMixedTypeNode {
@@ -487,6 +535,8 @@ export interface UIDLConditionalExpression {
     operation: string
     operand?: string | boolean | number
   }>
+  // In the code generation phase, we are only supporting 'all' or '||'
+  // Maybe the type checking for this can be improved.
   matchingCriteria?: string
 }
 
@@ -548,6 +598,7 @@ export type UIDLAttributeValue =
   | UIDLComponentStyleReference
   | UIDLRawValue
   | UIDLElementNode
+  | UIDLObjectValue
 
 export type UIDLStyleValue = UIDLDynamicReference | UIDLStaticValue
 
@@ -723,6 +774,7 @@ export type UIDLCompDynamicReference = {
   type: 'dynamic'
   content: {
     referenceType: 'prop' | 'comp'
+    refPath?: string[]
     id: string
   }
 }

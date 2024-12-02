@@ -1,13 +1,20 @@
 import * as types from '@babel/types'
 
-import { UIDLPropDefinition, UIDLDependency, UIDLStateDefinition } from '@viasoft/teleport-types'
+import {
+  UIDLPropDefinition,
+  UIDLDependency,
+  UIDLStateDefinition,
+  UIDLGlobalReference,
+} from '@viasoft/teleport-types'
 
 export interface JSXGenerationParams {
   propDefinitions: Record<string, UIDLPropDefinition>
   stateDefinitions: Record<string, UIDLStateDefinition>
-  nodesLookup: Record<string, types.JSXElement>
+  nodesLookup: Record<string, types.JSXElement | types.JSXExpressionContainer>
   dependencies: Record<string, UIDLDependency>
   windowImports: Record<string, types.ExpressionStatement>
+  localeReferences: types.JSXElement[]
+  globalReferences: Array<UIDLGlobalReference['content']['id']>
 }
 
 export interface JSXGenerationOptions {
@@ -64,32 +71,6 @@ export type JSXASTReturnType =
   | types.LogicalExpression
   | types.Identifier
   | types.MemberExpression
-
-export type BinaryOperator =
-  | '==='
-  | '+'
-  | '-'
-  | '/'
-  | '%'
-  | '*'
-  | '**'
-  | '&'
-  | '|'
-  | '>>'
-  | '>>>'
-  | '<<'
-  | '^'
-  | '=='
-  | '!='
-  | '!=='
-  | 'in'
-  | 'instanceof'
-  | '>'
-  | '<'
-  | '>='
-  | '<='
-
-export type UnaryOperation = '+' | '-' | 'void' | 'throw' | 'delete' | '!' | '~' | 'typeof'
 
 export interface ConditionalIdentifier {
   key: string

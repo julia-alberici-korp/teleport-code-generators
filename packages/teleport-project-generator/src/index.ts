@@ -167,6 +167,7 @@ export class ProjectGenerator implements ProjectGeneratorType {
     const rootFolder = UIDLUtils.cloneObject(template || DEFAULT_TEMPLATE)
     const schemaValidationResult = this.validator.validateProjectSchema(input)
     const { valid, projectUIDL } = schemaValidationResult
+
     if (valid && projectUIDL) {
       cleanedUIDL = projectUIDL as unknown as Record<string, unknown>
     } else {
@@ -546,6 +547,7 @@ export class ProjectGenerator implements ProjectGeneratorType {
         configContentGenerator,
         generator,
         plugins: frameworkConfigPlugins,
+        postprocessors: frameworkConfigPostprocessors,
       } = framework.config
 
       if (configContentGenerator && generator) {
@@ -575,10 +577,10 @@ export class ProjectGenerator implements ProjectGeneratorType {
         if (Object.keys(result?.chunks).length > 0) {
           const configGenerator: (params: GeneratorFactoryParams) => ComponentGenerator =
             framework.config.generator
-          const files = configGenerator({ plugins: frameworkConfigPlugins }).linkCodeChunks(
-            result.chunks,
-            framework.config.fileName
-          )
+          const files = configGenerator({
+            plugins: frameworkConfigPlugins,
+            postprocessors: frameworkConfigPostprocessors,
+          }).linkCodeChunks(result.chunks, framework.config.fileName)
 
           inMemoryFilesMap.set(fileName, {
             path: this.strategy.framework.config.path,
@@ -674,9 +676,10 @@ export class ProjectGenerator implements ProjectGeneratorType {
       collectedDependencies = { ...collectedDependencies, ...runAfterResult.dependencies }
       collectedDevDependencies = { ...collectedDevDependencies, ...runAfterResult.devDependencies }
       inMemoryFilesMap = runAfterResult.files
-    } catch (e) {
-      console.trace(e)
-      throw new TeleportError(`Error in generating project after runAfter - ${e}`)
+    } catch (error) {
+      /* tslint:disable no-console */
+      console.error(error)
+      throw new TeleportError(`Error in generating project after runAfter - ${error}`)
     }
 
     inMemoryFilesMap.forEach((stage) => {

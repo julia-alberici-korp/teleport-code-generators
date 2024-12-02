@@ -12,8 +12,10 @@ import {
   UIDLPropValue,
   UIDLExpressionValue,
   UIDLStateValue,
+  HastNode,
 } from '@viasoft/teleport-types'
 import babelPresetReact from '@babel/preset-react'
+import { UnaryOperation, BinaryOperator } from './types'
 
 /**
  * Adds a class definition string to an existing string of classes
@@ -322,7 +324,14 @@ export const objectToObjectExpression = (
     const value = objectMap[key]
     let computedLiteralValue = null
 
-    if (value instanceof ParsedASTNode || value.constructor.name === 'ParsedASTNode') {
+    if (value === undefined) {
+      return acc
+    }
+
+    // This is for function props that have successfully been parsed.
+    if (typeof value === 'object' && 'functionExpressionParseResult' in value) {
+      computedLiteralValue = value.functionExpressionParseResult
+    } else if (value instanceof ParsedASTNode || value.constructor.name === 'ParsedASTNode') {
       computedLiteralValue = (value as ParsedASTNode).ast
     } else if (typeof value === 'boolean') {
       computedLiteralValue = t.booleanLiteral(value)
@@ -420,7 +429,7 @@ export const getTSAnnotationForType = (type: any, t = types) => {
     case 'any':
       return t.tsAnyKeyword()
     default:
-      return t.tsUnknownKeyword()
+      return t.tsAnyKeyword()
   }
 }
 
@@ -1085,4 +1094,29 @@ export const getExpressionFromUIDLExpressionNode = (
   }
 
   return theStatementOnlyWihtoutTheProgram.expression
+}
+
+export const isJSXElement = (value: types.JSXElement | HastNode): value is types.JSXElement =>
+  value.type === 'JSXElement'
+
+/**
+ * Because of the restrictions of the AST Types we need to have a clear subset of binary operators we can use
+ * @param operation - the operation defined in the UIDL for the current state branch
+ */
+export const convertToBinaryOperator = (operation: string): BinaryOperator => {
+  const allowedOperations = ['===', '!==', '>=', '<=', '>', '<']
+  if (allowedOperations.includes(operation)) {
+    return operation as BinaryOperator
+  } else {
+    return '==='
+  }
+}
+
+export const convertToUnaryOperator = (operation: string): UnaryOperation => {
+  const allowedOperations = ['!']
+  if (allowedOperations.includes(operation)) {
+    return operation as UnaryOperation
+  } else {
+    return '!'
+  }
 }

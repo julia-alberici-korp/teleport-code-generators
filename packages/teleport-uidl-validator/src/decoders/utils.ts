@@ -14,6 +14,7 @@ import {
   intersection,
   withDefault,
   anyJson,
+  unknownJson,
 } from '@mojotech/json-type-validation'
 import {
   UIDLStaticValue,
@@ -93,6 +94,8 @@ import {
   VUIDLCMSMixedTypeNode,
   UIDLLocalFontAsset,
   VUIDLPropDefinitions,
+  UIDLGlobalReference,
+  UIDLObjectValue,
 } from '@viasoft/teleport-types'
 import {
   isValidElementName,
@@ -108,17 +111,30 @@ export const referenceTypeDecoder: Decoder<ReferenceType> = union(
   constant('attr'),
   constant('children'),
   constant('token'),
-  constant('expr')
+  constant('expr'),
+  constant('locale')
 )
 
-export const dynamicValueDecoder: Decoder<UIDLDynamicReference> = object({
+export const globalValueDecoder: Decoder<UIDLGlobalReference> = object({
   type: constant('dynamic'),
   content: object({
-    referenceType: referenceTypeDecoder,
+    referenceType: constant('global'),
+    id: union(constant('locale'), constant('locales')),
     refPath: optional(array(string())),
-    id: string(),
   }),
 })
+
+export const dynamicValueDecoder: Decoder<UIDLDynamicReference> = union(
+  object({
+    type: constant('dynamic'),
+    content: object({
+      referenceType: referenceTypeDecoder,
+      refPath: optional(array(string())),
+      id: string(),
+    }),
+  }),
+  globalValueDecoder
+)
 
 export const expressionValueDecoder: Decoder<UIDLExpressionValue> = object({
   type: constant('expr'),
@@ -127,7 +143,7 @@ export const expressionValueDecoder: Decoder<UIDLExpressionValue> = object({
 
 export const staticValueDecoder: Decoder<UIDLStaticValue> = object({
   type: constant('static'),
-  content: union(string(), number(), boolean(), array()),
+  content: union(string(), number(), boolean(), array(), object()),
 })
 
 export const rawValueDecoder: Decoder<UIDLRawValue> = object({
@@ -512,7 +528,8 @@ export const attributeValueDecoder: Decoder<VUIDLAttributeValue> = union(
   importReferenceDecoder,
   rawValueDecoder,
   lazy(() => uidlComponentStyleReference),
-  lazy(() => elementNodeDecoder)
+  lazy(() => elementNodeDecoder),
+  lazy(() => objectValueDecoder)
 )
 
 export const uidlComponentStyleReference: Decoder<UIDLComponentStyleReference> = object({
@@ -688,6 +705,11 @@ export const designTokensDecoder: Decoder<VUIDLDesignTokens> = dict(
   union(staticValueDecoder, string(), number())
 )
 
+export const objectValueDecoder: Decoder<UIDLObjectValue> = object({
+  type: constant('object'),
+  content: unknownJson(),
+})
+
 export const elementDecoder: Decoder<VUIDLElement> = object({
   elementType: string(),
   semanticType: optional(string()),
@@ -763,7 +785,7 @@ export const conditionalNodeDecoder: Decoder<VUIDLConditionalNode> = object({
     node: lazy(() => uidlNodeDecoder),
     reference: union(dynamicValueDecoder, expressionValueDecoder),
     importDefinitions: optional(dict(externaldependencyDecoder)),
-    value: union(string(), number(), boolean()),
+    value: optional(union(string(), number(), boolean())),
     condition: optional(
       object({
         conditions: array(

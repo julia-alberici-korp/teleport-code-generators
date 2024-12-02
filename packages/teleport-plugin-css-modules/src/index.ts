@@ -32,6 +32,7 @@ import {
 } from '@viasoft/teleport-types'
 import { createStyleSheetPlugin } from './style-sheet'
 import { generateStyledFromStyleContent } from './utils'
+import { isJSXElement } from '@teleporthq/teleport-plugin-common/dist/cjs/utils/ast-utils'
 
 interface CSSModulesConfig {
   componentChunkName?: string
@@ -108,27 +109,32 @@ export const createCSSModulesPlugin: ComponentPluginFactory<CSSModulesConfig> = 
 
     const generateStylesForElementNode = (element: UIDLElement) => {
       const { style, key, referencedStyles, dependency, attrs = {}, elementType } = element
-      const jsxTag = astNodesLookup[key] as types.JSXElement
+      const jsxTag = astNodesLookup[key]
       const classNamesToAppend: Set<
         types.MemberExpression | types.Identifier | types.StringLiteral
       > = new Set()
 
+      if (!jsxTag || !isJSXElement(jsxTag)) {
+        return
+      }
+
       if (dependency?.type === 'local') {
         StyleBuilders.setPropValueForCompStyle({
           attrs,
-          key,
-          jsxNodesLookup: astNodesLookup,
+          root: jsxTag,
           getClassName: (styleName: string) =>
             StringUtils.camelCaseToDashCase(elementType + styleName),
         })
       }
 
-      if (!jsxTag) {
+      if (!style && !referencedStyles) {
         return
       }
 
-      if (!style && !referencedStyles) {
-        return
+      if (!key) {
+        throw new PluginCssModules(
+          'Element node does not have a key \n' + JSON.stringify(element, null, 2)
+        )
       }
 
       const className = StringUtils.camelCaseToDashCase(key)

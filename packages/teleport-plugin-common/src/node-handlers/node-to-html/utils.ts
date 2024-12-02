@@ -78,8 +78,15 @@ export const handleAttribute = (
       hastUtils.addChildNode(htmlNode, templateNode)
       break
 
-    // @todo: expression nodes are not supported in vueJS. They are used for cms integrations.
+    case 'object': {
+      dataObject[attrKey] = attrValue.content
+      hastUtils.addAttributeToNode(htmlNode, dynamicAttrKey, attrKey)
+      break
+    }
+
     case 'expr':
+      // TODO: Check this in the future. Not throwing an error for now
+      console.info(`Expressions are not supported in HTML templates`)
       break
 
     default:
@@ -175,6 +182,9 @@ const createConditional = (
   }
 
   const stringConditions = conditions.map(({ operation, operand }) => {
+    // @todo
+    // unlike jsx code generation, we are not converting the operand to binary or unary operation.
+    // Please refer to https://github.com/teleporthq/teleport-code-generators/blob/development/packages/teleport-plugin-common/src/node-handlers/node-to-jsx/utils.ts#L303-L319
     return `(${stringifyConditionalExpression(conditionalKey, operation, operand)})`
   })
 

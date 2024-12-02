@@ -1,7 +1,11 @@
 import * as types from '@babel/types'
 
-import { convertValueToLiteral } from '../../utils/ast-utils'
-import { StringUtils } from '@viasoft/teleport-shared'
+import {
+  convertToBinaryOperator,
+  convertToUnaryOperator,
+  convertValueToLiteral,
+} from '../../utils/ast-utils'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import {
   UIDLPropDefinition,
   UIDLAttributeValue,
@@ -12,16 +16,16 @@ import {
   UIDLPropCallEvent,
   UIDLStateModifierEvent,
   UIDLExpressionValue,
+  UIDLGlobalReference,
 } from '@viasoft/teleport-types'
 
 import {
-  BinaryOperator,
-  UnaryOperation,
   JSXASTReturnType,
   ConditionalIdentifier,
   JSXGenerationParams,
   JSXGenerationOptions,
 } from './types'
+import { generateIdWithRefPath } from '@viasoft/teleport-shared/dist/cjs/utils/uidl-utils'
 
 // Adds all the event handlers and all the instructions for each event handler
 // in case there is more than one specified in the UIDL
@@ -144,12 +148,15 @@ const createStateChangeStatement = (
 }
 
 export const createDynamicValueExpression = (
-  identifier: UIDLDynamicReference,
+  identifier: UIDLDynamicReference | UIDLGlobalReference,
   options: JSXGenerationOptions,
   t = types
 ) => {
   const identifierContent = identifier.content
+  const refPath = identifier.content.refPath || []
   const { referenceType, id } = identifierContent
+
+  const idWithPath = generateIdWithRefPath(id, refPath)
 
   if (referenceType === 'attr' || referenceType === 'children' || referenceType === 'token') {
     throw new Error(`Dynamic reference type "${referenceType}" is not supported yet`)
@@ -159,8 +166,8 @@ export const createDynamicValueExpression = (
     options.dynamicReferencePrefixMap[referenceType as 'prop' | 'state' | 'local'] || ''
 
   return prefix === ''
-    ? t.identifier(id)
-    : t.memberExpression(t.identifier(prefix), t.identifier(id))
+    ? t.identifier(idWithPath)
+    : t.memberExpression(t.identifier(prefix), t.identifier(idWithPath))
 }
 
 // Prepares an identifier (from props or state or an expr) to be used as a conditional rendering identifier
@@ -177,22 +184,35 @@ export const createConditionIdentifier = (
     }
   }
 
-  const { id, referenceType } = dynamicReference.content
+  const { id, referenceType, refPath } = dynamicReference.content
 
   // in case the id is a member expression: eg: fields.name
   const referenceRoot = id.split('.')[0]
+  const currentType =
+    referenceType === 'prop'
+      ? params.propDefinitions[referenceRoot]?.type
+      : params.stateDefinitions[referenceRoot]?.type
+
+  let type = currentType
+  if (refPath?.length) {
+    let currentValue = params.propDefinitions[referenceRoot].defaultValue as Record<string, unknown>
+    for (const path of refPath) {
+      currentValue = currentValue?.[path] as Record<string, unknown>
+      type = currentValue ? typeof currentValue : currentType
+    }
+  }
 
   switch (referenceType) {
     case 'prop':
       return {
-        key: id,
-        type: params.propDefinitions[referenceRoot].type,
+        key: UIDLUtils.generateIdWithRefPath(id, refPath),
+        type,
         prefix: options.dynamicReferencePrefixMap.prop,
       }
     case 'state':
       return {
-        key: id,
-        type: params.stateDefinitions[referenceRoot].type,
+        key: UIDLUtils.generateIdWithRefPath(id, refPath),
+        type,
         prefix: options.dynamicReferencePrefixMap.state,
       }
 
@@ -293,28 +313,6 @@ export const createBinaryExpression = (
     return t.binaryExpression(convertToBinaryOperator(operation), identifier, stateValueIdentifier)
   } else {
     return operation ? t.unaryExpression(convertToUnaryOperator(operation), identifier) : identifier
-  }
-}
-
-/**
- * Because of the restrictions of the AST Types we need to have a clear subset of binary operators we can use
- * @param operation - the operation defined in the UIDL for the current state branch
- */
-const convertToBinaryOperator = (operation: string): BinaryOperator => {
-  const allowedOperations = ['===', '!==', '>=', '<=', '>', '<']
-  if (allowedOperations.includes(operation)) {
-    return operation as BinaryOperator
-  } else {
-    return '==='
-  }
-}
-
-const convertToUnaryOperator = (operation: string): UnaryOperation => {
-  const allowedOperations = ['!']
-  if (allowedOperations.includes(operation)) {
-    return operation as UnaryOperation
-  } else {
-    return '!'
   }
 }
 

@@ -22,10 +22,12 @@ import {
   UIDLComponentOutputOptions,
   UIDLElement,
   ElementsLookup,
+  UIDLConditionalNode,
+  PropDefaultValueTypes,
 } from '@viasoft/teleport-types'
 import { join, relative } from 'path'
-import { HASTBuilders, HASTUtils } from '@viasoft/teleport-plugin-common'
-import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
+import { HASTBuilders, HASTUtils, ASTUtils } from '@viasoft/teleport-plugin-common'
+import { GenericUtils, StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import { staticNode } from '@teleporthq/teleport-uidl-builders'
 import { createCSSPlugin } from '@teleporthq/teleport-plugin-css'
 import { generateUniqueKeys, createNodesLookup } from '@teleporthq/teleport-uidl-resolver'
@@ -42,6 +44,7 @@ const isValidURL = (url: string) => {
 }
 
 const addNodeToLookup = (
+  key: string,
   node: UIDLElementNode,
   tag: HastNode | HastText,
   nodesLoookup: Record<string, HastNode | HastText>,
@@ -50,18 +53,18 @@ const addNodeToLookup = (
   // In html code-generation we combine the nodes of the component that is being consumed with the current component.
   // As html can't load the component at runtime like react or any other frameworks. So, we merge the component as a standalone
   // component in the current component.
-  if (nodesLoookup[node.content.key]) {
+  if (nodesLoookup[key]) {
     throw new HTMLComponentGeneratorError(
       `\n${hierarchy.join(' -> ')} \n
 Duplicate key found in nodesLookup: ${node.content.key} \n
 
 A node with the same key already exists\n
 Received \n\n ${JSON.stringify(tag)}\n ${JSON.stringify(node)}
-Existing \n\n ${JSON.stringify(nodesLoookup[node.content.key])} \n\n`
+Existing \n\n ${JSON.stringify(nodesLoookup[key])} \n\n`
     )
   }
 
-  nodesLoookup[node.content.key] = tag
+  nodesLoookup[key] = tag
 }
 
 type NodeToHTML<NodeType, ReturnType> = (
@@ -126,6 +129,81 @@ export const generateHtmlSyntax: NodeToHTML<UIDLNode, Promise<HastNode | HastTex
       )
       return dynamicNode
 
+    case 'conditional':
+      const conditionalNodeComment = HASTBuilders.createComment(
+        'Conditional nodes are not supported in HTML'
+      )
+      const {
+        value: staticValue,
+        reference,
+        condition: { conditions, matchingCriteria },
+      } = node.content
+
+      if (reference.type !== 'dynamic') {
+        return conditionalNodeComment
+      }
+
+      const {
+        content: { referenceType, id, refPath },
+      } = reference
+
+      switch (referenceType) {
+        case 'prop': {
+          const usedProp = propDefinitions[id]
+          if (usedProp === undefined || usedProp.defaultValue === undefined) {
+            return conditionalNodeComment
+          }
+
+          let defaultValue = usedProp.defaultValue
+          for (const path of refPath) {
+            defaultValue = (defaultValue as Record<string, unknown[]>)?.[path]
+          }
+
+          // Safety measure in case no value is found
+          if (!defaultValue) {
+            defaultValue = usedProp.defaultValue
+          }
+
+          // Since we know the operand and the default value from the prop.
+          // We can try building the condition and check if the condition is true or false.
+          // @todo: You can only use a 'value' in UIDL or 'conditions' but not both.
+          // UIDL validations need to be improved on this aspect.
+          const dynamicConditions = createConditionalStatement(
+            staticValue !== undefined ? [{ operand: staticValue, operation: '===' }] : conditions,
+            defaultValue
+          )
+          const matchCondition = matchingCriteria && matchingCriteria === 'all' ? '&&' : '||'
+          const conditionString = dynamicConditions.join(` ${matchCondition} `)
+
+          try {
+            // tslint:disable-next-line function-constructor
+            const isConditionPassing = new Function(`return ${conditionString}`)()
+            if (isConditionPassing) {
+              return generateHtmlSyntax(
+                node.content.node,
+                compName,
+                nodesLookup,
+                propDefinitions,
+                stateDefinitions,
+                subComponentOptions,
+                structure
+              )
+            }
+          } catch (error) {
+            return conditionalNodeComment
+          }
+
+          return conditionalNodeComment
+        }
+
+        case 'state':
+        default:
+          return conditionalNodeComment
+      }
+
+    case 'expr':
+      return HASTBuilders.createComment('Expressions are not supported in HTML')
+
     default:
       throw new HTMLComponentGeneratorError(
         `generateHtmlSyntax encountered a node of unsupported type: ${JSON.stringify(
@@ -133,6 +211,40 @@ export const generateHtmlSyntax: NodeToHTML<UIDLNode, Promise<HastNode | HastTex
           null,
           2
         )} `
+      )
+  }
+}
+
+const createConditionalStatement = (
+  conditions: UIDLConditionalNode['content']['condition']['conditions'],
+  leftOperand: UIDLPropDefinition['defaultValue']
+) => {
+  return conditions.map((condition) => {
+    const { operation, operand } = condition
+
+    if (operand === undefined) {
+      return `${ASTUtils.convertToUnaryOperator(operation)}${getValueType(operand)}`
+    }
+
+    return `${getValueType(leftOperand)} ${ASTUtils.convertToBinaryOperator(
+      operation
+    )} ${getValueType(operand)}`
+  })
+}
+
+const getValueType = (value: UIDLPropDefinition['defaultValue']) => {
+  const valueType = typeof value
+  switch (valueType) {
+    case 'string':
+      return `"${value}"`
+    case 'number':
+      return value
+    case 'boolean':
+      return value
+    default:
+      throw new HTMLComponentGeneratorError(
+        `Conditional node received an operand of type ${valueType} \n
+          Received ${JSON.stringify(value)}`
       )
   }
 }
@@ -155,15 +267,7 @@ const generateElementNode: NodeToHTML<UIDLElementNode, Promise<HastNode | HastTe
     dependency,
   } = node.content
   const { dependencies } = structure
-  if (dependency && (dependency as UIDLDependency)?.type !== 'local') {
-    dependencies[dependency.path] = dependency
-  }
-
   if (dependency && (dependency as UIDLDependency)?.type === 'local') {
-    if (nodesLookup[node.content.key]) {
-      return nodesLookup[node.content.key]
-    }
-
     const compTag = await generateComponentContent(
       node,
       compName,
@@ -179,6 +283,10 @@ const generateElementNode: NodeToHTML<UIDLElementNode, Promise<HastNode | HastTe
     }
 
     return compTag
+  }
+
+  if (dependency && (dependency as UIDLDependency)?.type !== 'local') {
+    dependencies[dependency.path] = dependency
   }
 
   const elementNode = HASTBuilders.createHTMLNode(elementType)
@@ -226,7 +334,7 @@ const generateElementNode: NodeToHTML<UIDLElementNode, Promise<HastNode | HastTe
     structure.outputOptions
   )
 
-  addNodeToLookup(node, elementNode, nodesLookup, [compName])
+  addNodeToLookup(node.content.key, node, elementNode, nodesLookup, [compName])
   return elementNode
 }
 
@@ -274,9 +382,7 @@ const generateComponentContent = async (
 
   const componentClone = UIDLUtils.cloneObject<ComponentUIDL>(component)
 
-  let compHasSlots: boolean = false
   if (children.length) {
-    compHasSlots = true
     UIDLUtils.traverseNodes(componentClone.node, (childNode, parentNode) => {
       if (childNode.type === 'slot' && parentNode.type === 'element') {
         const nonSlotNodes = parentNode.content?.children?.filter((n) => n.type !== 'slot')
@@ -341,10 +447,15 @@ const generateComponentContent = async (
   const combinedStates = { ...stateDefinitions, ...(componentClone?.stateDefinitions || {}) }
   const statesForInstance = Object.keys(combinedStates).reduce(
     (acc: Record<string, UIDLStateDefinition>, propKey) => {
-      if (attrs[propKey]) {
+      const attr = attrs[propKey]
+      if (attr.type === 'object') {
+        throw new Error(`Object attributes are not supported in html exports`)
+      }
+
+      if (attr) {
         acc[propKey] = {
           ...combinedStates[propKey],
-          defaultValue: attrs[propKey]?.content || combinedStates[propKey]?.defaultValue,
+          defaultValue: attr?.content || combinedStates[propKey]?.defaultValue,
         }
       } else {
         acc[propKey] = combinedStates[propKey]
@@ -360,8 +471,9 @@ const generateComponentContent = async (
   // We check if we are passing any props and pick the value from the atrrs, if not we pick the value from the propDefinitions of
   // the component instance that we are using here.
   for (const propKey of Object.keys(combinedProps)) {
-    const prop = attrs[propKey]
-    if (prop?.type === 'element') {
+    const attribute = attrs[propKey]
+
+    if (attribute?.type === 'element') {
       propsForInstance[propKey] = {
         ...combinedProps[propKey],
         defaultValue: attrs[propKey],
@@ -375,13 +487,15 @@ const generateComponentContent = async (
         subComponentOptions,
         structure
       )
-    } else if (prop?.type === 'dynamic') {
+    }
+
+    if (attribute?.type === 'dynamic') {
       // When we are using a component instance in a component and the attribute
       // that is passed to the component is of dynamic reference.
       // If means, the component is redirecting the prop that is received to the prop of the component that it is consuming.
       // In this case, we need to pass the value of the prop that is received to the prop of the component that it is consuming.
       // And similary we do the same for the states.
-      switch (prop.content.referenceType) {
+      switch (attribute.content.referenceType) {
         case 'prop':
           propsForInstance[propKey] = combinedProps[propKey]
           break
@@ -390,15 +504,30 @@ const generateComponentContent = async (
           break
         default:
           throw new Error(
-            `ReferenceType ${prop.content.referenceType} is not supported in HTML Export.`
+            `ReferenceType ${attribute.content.referenceType} is not supported in HTML Export.`
           )
       }
-    } else if (prop) {
+    }
+
+    if (attribute?.type === 'object') {
       propsForInstance[propKey] = {
         ...combinedProps[propKey],
-        defaultValue: attrs[propKey]?.content || combinedProps[propKey]?.defaultValue,
+        defaultValue: (attribute?.content as object) || combinedProps[propKey]?.defaultValue,
       }
-    } else {
+    }
+
+    if (
+      attribute?.type !== 'dynamic' &&
+      attribute?.type !== 'element' &&
+      attribute?.type !== 'object'
+    ) {
+      propsForInstance[propKey] = {
+        ...combinedProps[propKey],
+        defaultValue: attribute?.content || combinedProps[propKey]?.defaultValue,
+      }
+    }
+
+    if (attribute === undefined) {
       const propFromCurrentComponent = combinedProps[propKey]
       if (propFromCurrentComponent.type === 'element' && propFromCurrentComponent.defaultValue) {
         await generateHtmlSyntax(
@@ -485,56 +614,73 @@ const generateComponentContent = async (
     Promise.resolve(initialStructure)
   )
 
-  if (compHasSlots) {
-    result.chunks.forEach((chunk) => {
-      if (chunk.fileType === FileType.CSS) {
-        chunks.push(chunk)
-      }
-    })
-  } else {
-    const chunk = chunks.find((item) => item.name === componentClone.name)
-    if (!chunk) {
-      const styleChunk = result.chunks.find(
-        (item: ChunkDefinition) => item.fileType === FileType.CSS
-      )
-      if (!styleChunk) {
-        return
-      }
-      chunks.push(styleChunk)
+  result.chunks.forEach((chunk) => {
+    if (chunk.fileType === FileType.CSS) {
+      chunks.push(chunk)
     }
-  }
+  })
 
-  addNodeToLookup(node, compTag, nodesLookup, [compName, component.name])
+  addNodeToLookup(node.content.key, node, compTag, nodesLookup, [compName, component.name])
   return compTag
 }
 
 const generateDynamicNode: NodeToHTML<UIDLDynamicReference, Promise<HastNode | HastText>> = async (
   node,
-  /* tslint:disable variable-name */
-  _compName,
+  compName,
   nodesLookup,
   propDefinitions,
-  stateDefinitions
+  stateDefinitions,
+  subComponentOptions,
+  structure
 ): Promise<HastNode | HastText> => {
+  if (node.content.referenceType === 'locale') {
+    const localeTag = HASTBuilders.createHTMLNode('span')
+    const commentNode = HASTBuilders.createComment(`Content for locale ${node.content.id}`)
+    HASTUtils.addChildNode(localeTag, commentNode)
+    return localeTag
+  }
+
   const usedReferenceValue = getValueFromReference(
     node.content.id,
     node.content.referenceType === 'prop' ? propDefinitions : stateDefinitions
   )
 
-  if (usedReferenceValue.type === 'element' && usedReferenceValue.defaultValue) {
-    const elementNode = usedReferenceValue.defaultValue as UIDLElementNode
-
-    if (elementNode.content.key in nodesLookup) {
-      return nodesLookup[elementNode.content.key]
-    }
-
-    const spanTagWrapper = HASTBuilders.createHTMLNode('span')
-    const commentNode = HASTBuilders.createComment(`Content for slot ${node.content.id}`)
-    HASTUtils.addChildNode(spanTagWrapper, commentNode)
-    return spanTagWrapper
+  if (
+    (usedReferenceValue.type === 'object' || usedReferenceValue.type === 'array') &&
+    usedReferenceValue.defaultValue
+  ) {
+    // Let's say users are biding the prop to a node using something like this "fields.Title"
+    // But the fields in the object is the value where the object is defined either in propDefinitions
+    // or on the attrs. So, we just need to parsed the rest of the object path and get the value from the object.
+    return HASTBuilders.createTextNode(
+      String(
+        extractDefaultValueFromRefPath(
+          usedReferenceValue.defaultValue as Record<string, UIDLPropDefinition>,
+          node.content.refPath
+        )
+      )
+    )
   }
 
-  if (usedReferenceValue.type === 'element' && usedReferenceValue.defaultValue === undefined) {
+  if (usedReferenceValue.type === 'element') {
+    const elementNode = usedReferenceValue.defaultValue as UIDLElementNode
+    if (elementNode) {
+      if (elementNode.content.key in nodesLookup) {
+        return nodesLookup[elementNode.content.key]
+      } else {
+        const elementTag = await generateHtmlSyntax(
+          elementNode,
+          compName,
+          nodesLookup,
+          propDefinitions,
+          stateDefinitions,
+          subComponentOptions,
+          structure
+        )
+        return elementTag
+      }
+    }
+
     const spanTagWrapper = HASTBuilders.createHTMLNode('span')
     const commentNode = HASTBuilders.createComment(`Content for slot ${node.content.id}`)
     HASTUtils.addChildNode(spanTagWrapper, commentNode)
@@ -560,7 +706,9 @@ const handleStyles = (
         style.content.referenceType === 'prop' ? propDefinitions : stateDefinitions
       )
       if (referencedValue.type === 'string' || referencedValue.type === 'number') {
-        style = String(referencedValue.defaultValue)
+        style = String(
+          extractDefaultValueFromRefPath(referencedValue.defaultValue, style?.content?.refPath)
+        )
       }
       node.content.style[styleKey] = typeof style === 'string' ? staticNode(style) : style
     }
@@ -654,7 +802,11 @@ const handleAttributes = (
           content.referenceType === 'prop' ? propDefinitions : stateDefinitions
         )
 
-        HASTUtils.addAttributeToNode(htmlNode, attrKey, String(value.defaultValue))
+        HASTUtils.addAttributeToNode(
+          htmlNode,
+          attrKey,
+          String(extractDefaultValueFromRefPath(value.defaultValue, content.refPath))
+        )
         break
       }
 
@@ -666,6 +818,7 @@ const handleAttributes = (
       case 'element':
       case 'import':
       case 'expr':
+      case 'object':
         break
 
       default: {
@@ -681,7 +834,7 @@ const getValueFromReference = (
   key: string,
   definitions: Record<string, UIDLPropDefinition>
 ): UIDLPropDefinition | undefined => {
-  const usedReferenceValue = definitions[key.includes('.') ? key.split('.')[0] : key]
+  const usedReferenceValue = definitions[key.includes('?.') ? key.split('?.')[0] : key]
 
   if (!usedReferenceValue) {
     throw new HTMLComponentGeneratorError(
@@ -689,7 +842,9 @@ const getValueFromReference = (
     )
   }
 
-  if (['string', 'number', 'object', 'element'].includes(usedReferenceValue?.type) === false) {
+  if (
+    ['string', 'number', 'object', 'element', 'array'].includes(usedReferenceValue?.type) === false
+  ) {
     throw new HTMLComponentGeneratorError(
       `Attribute is using dynamic value, but received of type ${JSON.stringify(
         usedReferenceValue,
@@ -713,4 +868,15 @@ const getValueFromReference = (
   }
 
   return usedReferenceValue
+}
+
+const extractDefaultValueFromRefPath = (
+  propDefaultValue: PropDefaultValueTypes,
+  refPath?: string[]
+) => {
+  if (typeof propDefaultValue !== 'object' || !refPath?.length) {
+    return propDefaultValue
+  }
+
+  return GenericUtils.getValueFromPath(refPath.join('.'), propDefaultValue) as PropDefaultValueTypes
 }

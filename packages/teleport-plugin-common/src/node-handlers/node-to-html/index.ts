@@ -122,6 +122,9 @@ const generateNode: NodeToHTML<UIDLNode, HastNode | HastText | string> = (
     case 'slot':
       return generateSlotNode(node, params, templateSyntax)
 
+    case 'expr':
+      return 'Expression nodes are not supported'
+
     default:
       throw new Error(
         `generateHTMLSyntax encountered a node of unsupported type: ${JSON.stringify(
@@ -138,6 +141,13 @@ const generateDynamicNode: NodeToHTML<UIDLDynamicReference, HastNode | HastText 
   params,
   templateSyntax
 ) => {
+  if (node.content.referenceType === 'global') {
+    // TODO: Check this in the future. Not throwing an error for now
+    console.info(`Global dynamic values are not supported in the HTML generator`)
+    const spanNode = createHTMLNode('span')
+    return spanNode
+  }
+
   const usedPropType = params.propDefinitions[node.content.id]
   if (usedPropType && usedPropType.type === 'element') {
     let slotNode = createHTMLNode('slot')
