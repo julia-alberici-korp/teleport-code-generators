@@ -1,6 +1,6 @@
 import { createAngularModulePlugin } from '@teleporthq/teleport-plugin-angular-module'
 import { createImportPlugin } from '@viasoft/teleport-plugin-import-statements'
-import { createAngularComponentGenerator } from '@teleporthq/teleport-component-generator-angular'
+import { createAngularComponentGenerator } from '@viasoft/teleport-component-generator-angular'
 import { createPrettierTSPostProcessor } from '@teleporthq/teleport-postprocessor-prettier-ts'
 import prettierHTML from '@teleporthq/teleport-postprocessor-prettier-html'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'

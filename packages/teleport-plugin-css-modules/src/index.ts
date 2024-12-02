@@ -32,7 +32,7 @@ import {
 } from '@viasoft/teleport-types'
 import { createStyleSheetPlugin } from './style-sheet'
 import { generateStyledFromStyleContent } from './utils'
-import { isJSXElement } from '@teleporthq/teleport-plugin-common/dist/cjs/utils/ast-utils'
+import { isJSXElement } from '@viasoft/teleport-plugin-common/dist/cjs/utils/ast-utils'
 
 interface CSSModulesConfig {
   componentChunkName?: string

@@ -1,5 +1,5 @@
 import { createProjectGenerator } from '@viasoft/teleport-project-generator'
-import { createReactComponentGenerator } from '@teleporthq/teleport-component-generator-react'
+import { createReactComponentGenerator } from '@viasoft/teleport-component-generator-react'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import reactAppRoutingPlugin from '@teleporthq/teleport-plugin-react-app-routing'
 import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'

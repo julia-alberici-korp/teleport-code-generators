@@ -24,28 +24,28 @@ import {
   ReactTemplate,
   createReactProjectGenerator,
   ReactProjectMapping,
-} from '@teleporthq/teleport-project-generator-react'
+} from '@viasoft/teleport-project-generator-react'
 import {
   createNextProjectGenerator,
   NextTemplate,
   NextProjectPlugini18nConfig,
-} from '@teleporthq/teleport-project-generator-next'
+} from '@viasoft/teleport-project-generator-next'
 import {
   VueTemplate,
   createVueProjectGenerator,
   VueProjectMapping,
-} from '@teleporthq/teleport-project-generator-vue'
+} from '@viasoft/teleport-project-generator-vue'
 import {
   NuxtTemplate,
   createNuxtProjectGenerator,
   nuxtErrorPageMapper,
-} from '@teleporthq/teleport-project-generator-nuxt'
+} from '@viasoft/teleport-project-generator-nuxt'
 
 import {
   createAngularProjectGenerator,
   AngularTemplate,
   AngularProjectMapping,
-} from '@teleporthq/teleport-project-generator-angular'
+} from '@viasoft/teleport-project-generator-angular'
 
 import {
   createHTMLProjectGenerator,
@@ -53,7 +53,7 @@ import {
   pluginHomeReplace,
   htmlErrorPageMapping,
   ProjectPluginCloneGlobals,
-} from '@teleporthq/teleport-project-generator-html'
+} from '@viasoft/teleport-project-generator-html'
 
 import { createZipPublisher } from '@teleporthq/teleport-publisher-zip'
 import { createVercelPublisher } from '@teleporthq/teleport-publisher-vercel'
@@ -61,13 +61,13 @@ import { createNetlifyPublisher } from '@teleporthq/teleport-publisher-netlify'
 import { createGithubPublisher } from '@teleporthq/teleport-publisher-github'
 import { createCodesandboxPublisher } from '@teleporthq/teleport-publisher-codesandbox'
 
-import { createReactComponentGenerator } from '@teleporthq/teleport-component-generator-react'
-import { createVueComponentGenerator } from '@teleporthq/teleport-component-generator-vue'
-import { createAngularComponentGenerator } from '@teleporthq/teleport-component-generator-angular'
+import { createReactComponentGenerator } from '@viasoft/teleport-component-generator-react'
+import { createVueComponentGenerator } from '@viasoft/teleport-component-generator-vue'
+import { createAngularComponentGenerator } from '@viasoft/teleport-component-generator-angular'
 import {
   createHTMLComponentGenerator,
   PlainHTMLMapping,
-} from '@teleporthq/teleport-component-generator-html'
+} from '@viasoft/teleport-component-generator-html'
 import { ProjectPlugini18nFiles } from '@teleporthq/teleport-project-plugin-i18n-files'
 import { isNodeProcess } from './utils'
 

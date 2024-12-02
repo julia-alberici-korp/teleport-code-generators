@@ -7,16 +7,12 @@ import {
   ProjectPluginStructure,
   ProjectType,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
-import {
-  createJSXSyntax,
-  ASTBuilders,
-  JSXGenerationParams,
-} from '@teleporthq/teleport-plugin-common'
+} from '@viasoft/teleport-types'
+import { createJSXSyntax, ASTBuilders, JSXGenerationParams } from '@viasoft/teleport-plugin-common'
 import { CodeGenerator } from '@babel/generator'
 import * as types from '@babel/types'
 import { Resolver } from '@teleporthq/teleport-uidl-resolver'
-import { ReactMapping } from '@teleporthq/teleport-component-generator-react'
+import { ReactMapping } from '@viasoft/teleport-component-generator-react'
 import { createCSSPlugin } from '@teleporthq/teleport-plugin-css'
 
 export class ProjectPlugini18nFiles implements ProjectPlugin {

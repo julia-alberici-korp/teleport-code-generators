@@ -6,16 +6,16 @@ Component generator customization, capable of creating Angular components with s
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-component-generator-angular
+npm install @viasoft/teleport-component-generator-angular
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-component-generator-angular
+yarn add @viasoft/teleport-component-generator-angular
 ```
 
 ## Usage
 ```javascript
-import { createAngularComponentGenerator } from '@teleporthq/teleport-component-generator-angular'
+import { createAngularComponentGenerator } from '@viasoft/teleport-component-generator-angular'
 
 const angularGenerator = createAngularComponentGenerator()
 

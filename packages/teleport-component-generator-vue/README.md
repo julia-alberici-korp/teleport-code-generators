@@ -6,16 +6,16 @@ Component generator customization, capable of creating Vue components.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-component-generator-vue
+npm install @viasoft/teleport-component-generator-vue
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-component-generator-vue
+yarn add @viasoft/teleport-component-generator-vue
 ```
 
 ## Usage
 ```javascript
-import { createVueComponentGenerator } from '@teleporthq/teleport-component-generator-vue'
+import { createVueComponentGenerator } from '@viasoft/teleport-component-generator-vue'
 
 const vueGenerator = createVueComponentGenerator()
 

@@ -6,16 +6,16 @@ Component generator customization, capable of creating Stencil components
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-component-generator-html
+npm install @viasoft/teleport-component-generator-html
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-component-generator-html
+yarn add @viasoft/teleport-component-generator-html
 ```
 
 ## Usage
 ```javascript
-import { createHTMLComponentGenerator } from '@teleporthq/teleport-component-generator-html'
+import { createHTMLComponentGenerator } from '@viasoft/teleport-component-generator-html'
 
 const htmlGenerator = createHTMLComponentGenerator(')
 

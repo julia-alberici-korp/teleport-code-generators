@@ -1,4 +1,4 @@
-import { UIDLPropDefinition, UIDLStateDefinition } from '@teleporthq/teleport-types'
+import { UIDLPropDefinition, UIDLStateDefinition } from '@viasoft/teleport-types'
 
 export const generateLocalDependenciesPrefix = (fromPath: string[], toPath: string[]): string => {
   /*

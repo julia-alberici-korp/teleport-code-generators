@@ -3,7 +3,7 @@ import {
   ComponentPlugin,
   ComponentPluginFactory,
   FileType,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import * as types from '@babel/types'
 
 // This plugin is responsible for adding the locale fetcher to the getStaticProps function

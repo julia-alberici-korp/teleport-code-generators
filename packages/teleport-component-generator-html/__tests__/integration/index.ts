@@ -1,6 +1,6 @@
 import { createHTMLComponentGenerator } from '../../src'
 import componentUIDL from '../../../../examples/uidl-samples/component.json'
-import { FileType } from '@teleporthq/teleport-types'
+import { FileType } from '@viasoft/teleport-types'
 import { component, elementNode } from '@teleporthq/teleport-uidl-builders'
 
 describe('declares a propDefinitions with type object and use it', () => {

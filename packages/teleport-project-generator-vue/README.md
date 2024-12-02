@@ -6,9 +6,9 @@ Project generator using Vue and Vue-Router.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-project-generator-vue
+npm install @viasoft/teleport-project-generator-vue
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-project-generator-vue
+yarn add @viasoft/teleport-project-generator-vue
 ```

@@ -1,5 +1,5 @@
 import { createProjectGenerator } from '@viasoft/teleport-project-generator'
-import { createVueComponentGenerator } from '@teleporthq/teleport-component-generator-vue'
+import { createVueComponentGenerator } from '@viasoft/teleport-component-generator-vue'
 import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import vueRoutingPlugin from '@teleporthq/teleport-plugin-vue-app-routing'
 import { createVueHeadConfigPlugin } from '@teleporthq/teleport-plugin-vue-head-config'

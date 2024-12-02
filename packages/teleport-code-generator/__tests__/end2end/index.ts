@@ -1,7 +1,4 @@
-import {
-  createNextProjectGenerator,
-  NextTemplate,
-} from '@teleporthq/teleport-project-generator-next'
+import { createNextProjectGenerator, NextTemplate } from '@viasoft/teleport-project-generator-next'
 import { ProjectPluginCSSModules } from '../../../teleport-project-plugin-css-modules'
 import { ProjectPluginStyledComponents } from '../../../teleport-project-plugin-styled-components'
 import projectUIDL from '../../../../examples/test-samples/project-with-import-global-styles.json'

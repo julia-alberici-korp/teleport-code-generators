@@ -5,7 +5,7 @@ import {
   InMemoryFileRecord,
   ProjectPlugin,
   ProjectPluginStructure,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 const findFileInBuild = (
   name: string,

@@ -1,6 +1,6 @@
 import { createAngularComponentGenerator } from '../../src'
 import componentUIDL from '../../../../examples/uidl-samples/component.json'
-import { FileType } from '@teleporthq/teleport-types'
+import { FileType } from '@viasoft/teleport-types'
 
 describe('declares a propDefinitions with type object and use it', () => {
   test('use the value from the object in prop', async () => {

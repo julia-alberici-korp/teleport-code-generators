@@ -6,10 +6,10 @@ Project generator using Angular, on top of a boilerplate generated using angular
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-project-generator-angular
+npm install @viasoft/teleport-project-generator-angular
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-project-generator-angular
+yarn add @viasoft/teleport-project-generator-angular
 ```
 

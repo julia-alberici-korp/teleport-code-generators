@@ -9,7 +9,7 @@ import {
   createNextProjectGenerator,
   NextProjectMapping,
   NextTemplate,
-} from '@teleporthq/teleport-project-generator-next'
+} from '@viasoft/teleport-project-generator-next'
 import projectUIDL from '../../../examples/uidl-samples/tests.json'
 
 describe('Plugin to add custom files at the end of project generation', () => {

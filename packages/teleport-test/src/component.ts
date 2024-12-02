@@ -1,8 +1,8 @@
 import { join } from 'path'
 import { writeFile } from 'fs'
-import { createVueComponentGenerator } from '@teleporthq/teleport-component-generator-vue'
-import { createReactComponentGenerator } from '@teleporthq/teleport-component-generator-react'
-import { createAngularComponentGenerator } from '@teleporthq/teleport-component-generator-angular'
+import { createVueComponentGenerator } from '@viasoft/teleport-component-generator-vue'
+import { createReactComponentGenerator } from '@viasoft/teleport-component-generator-react'
+import { createAngularComponentGenerator } from '@viasoft/teleport-component-generator-angular'
 import { GeneratedFile } from '@viasoft/teleport-types'
 import uidlSample from '../../../examples/uidl-samples/component.json'
 

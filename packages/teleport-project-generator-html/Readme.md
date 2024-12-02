@@ -6,9 +6,9 @@ Project generator for a standard Next.js project.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-project-generator-html
+npm install @viasoft/teleport-project-generator-html
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-project-generator-html
+yarn add @viasoft/teleport-project-generator-html
 ```

@@ -6,9 +6,9 @@ Project generator using React and React-Router, on top of a standard create-reac
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-project-generator-react
+npm install @viasoft/teleport-project-generator-react
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-project-generator-react
+yarn add @viasoft/teleport-project-generator-react
 ```

@@ -6,16 +6,16 @@ Component generator customization, capable of creating React components with a n
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-component-generator-react
+npm install @viasoft/teleport-component-generator-react
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-component-generator-react
+yarn add @viasoft/teleport-component-generator-react
 ```
 
 ## Usage
 ```javascript
-import { createReactComponentGenerator, ReactStyleVariation } from '@teleporthq/teleport-component-generator-react'
+import { createReactComponentGenerator, ReactStyleVariation } from '@viasoft/teleport-component-generator-react'
 
 // other style options: "CSS", "InlineStyles", "StyledComponents", "StyledJSX", "ReactJSS"
 const reactGenerator = createReactComponentGenerator(ReactStyleVariation.CSSModules)

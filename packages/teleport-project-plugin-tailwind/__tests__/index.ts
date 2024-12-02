@@ -8,7 +8,7 @@ import {
 } from '@viasoft/teleport-types'
 import { ProjectPluginTailwind } from '../src'
 import projectUIDL from '../../../examples/test-samples/project-sample.json'
-import { NextTemplate } from '@teleporthq/teleport-project-generator-next'
+import { NextTemplate } from '@viasoft/teleport-project-generator-next'
 
 describe('Plugins adds tailwind as devDependnecy when used with Next', () => {
   const structure: ProjectPluginStructure = {

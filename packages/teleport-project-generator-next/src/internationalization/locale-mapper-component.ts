@@ -3,7 +3,7 @@ import {
   ComponentPluginFactory,
   UIDLDependency,
   UIDLExternalDependency,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import * as types from '@babel/types'
 
 export const USE_TRANSLATIONS_HOOK: UIDLExternalDependency = {

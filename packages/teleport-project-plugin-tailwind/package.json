@@ -27,6 +27,6 @@
     "@teleporthq/teleport-plugin-css": "^0.38.3",
     "@teleporthq/teleport-plugin-import-statements": "^0.38.3",
     "@teleporthq/teleport-plugin-react-app-routing": "^0.38.3",
-    "@teleporthq/teleport-types": "^0.38.3"
+    "@viasoft/teleport-types": "^0.38.3"
   }
 }

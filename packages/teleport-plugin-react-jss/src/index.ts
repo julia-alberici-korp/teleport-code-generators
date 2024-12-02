@@ -32,7 +32,7 @@ import {
   convertMediaAndStylesToObject,
 } from './utils'
 import { createStyleSheetPlugin } from './style-sheet'
-import { isJSXElement } from '@teleporthq/teleport-plugin-common/dist/cjs/utils/ast-utils'
+import { isJSXElement } from '@viasoft/teleport-plugin-common/dist/cjs/utils/ast-utils'
 
 interface JSSConfig {
   styleChunkName?: string

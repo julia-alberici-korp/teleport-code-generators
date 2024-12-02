@@ -57,15 +57,15 @@ Read more about the [UIDL Standard](https://docs.teleporthq.io/uidl/).
 
 The easiest way to jump into the **teleport ecosystem** is to try out one of the pre-configured **component generators**:
 ```bash
-npm install @teleporthq/teleport-component-generator-react
-npm install @teleporthq/teleport-component-generator-vue
-npm install @teleporthq/teleport-component-generator-angular
+npm install @viasoft/teleport-component-generator-react
+npm install @viasoft/teleport-component-generator-vue
+npm install @viasoft/teleport-component-generator-angular
 ```
 or using yarn:
 ```bash
-yarn add @teleporthq/teleport-component-generator-react
-yarn add @teleporthq/teleport-component-generator-vue
-yarn add @teleporthq/teleport-component-generator-angular
+yarn add @viasoft/teleport-component-generator-react
+yarn add @viasoft/teleport-component-generator-vue
+yarn add @viasoft/teleport-component-generator-angular
 ```
 
 For generating a simple component, you have to start from a **component UIDL**:
@@ -91,7 +91,7 @@ For generating a simple component, you have to start from a **component UIDL**:
 Using the pre-configured component generators is as easy as calling an *async* function:
 
 ```javascript
-import ReactGenerator from '@teleporthq/teleport-component-generator-react'
+import ReactGenerator from '@viasoft/teleport-component-generator-react'
 
 const uidl = { ... } // your sample here
 
@@ -111,7 +111,7 @@ export default MyFirstComponent
 
 For other frameworks, just switch the package:
 ```javascript
-import VueGenerator from '@teleporthq/teleport-component-generator-vue'
+import VueGenerator from '@viasoft/teleport-component-generator-vue'
 
 const uidl = { ... } // your sample here
 

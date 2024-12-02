@@ -6,9 +6,9 @@ Project generator for a standard Nuxt.js project.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-project-generator-nuxt
+npm install @viasoft/teleport-project-generator-nuxt
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-project-generator-nuxt
+yarn add @viasoft/teleport-project-generator-nuxt
 ```
