@@ -7,7 +7,7 @@ import {
   MissingProjectUIDLError,
   VercelMissingTokenError,
   VercelDeleteProject,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import {
   generateProjectFiles,
   createDeployment,

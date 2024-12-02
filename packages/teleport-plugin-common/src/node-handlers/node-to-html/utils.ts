@@ -1,5 +1,5 @@
 import * as hastUtils from '../../utils/hast-utils'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 import {
   UIDLConditionalExpression,
   UIDLConditionalNode,
@@ -7,7 +7,7 @@ import {
   UIDLAttributeValue,
   UIDLEventHandlerStatement,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { HTMLTemplateGenerationParams, HTMLTemplateSyntax } from './types'
 import { createHTMLNode } from '../../builders/hast-builders'
 import generateElementNode from '../node-to-html'

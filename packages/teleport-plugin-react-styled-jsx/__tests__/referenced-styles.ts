@@ -1,4 +1,4 @@
-import { ComponentStructure } from '@teleporthq/teleport-types'
+import { ComponentStructure } from '@viasoft/teleport-types'
 import { createReactStyledJSXPlugin } from '../src'
 import { component, elementNode, staticNode } from '@teleporthq/teleport-uidl-builders'
 import { createComponentChunk } from './mocks'

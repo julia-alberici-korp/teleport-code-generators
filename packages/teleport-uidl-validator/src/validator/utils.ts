@@ -1,4 +1,4 @@
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 
 import {
   ProjectUIDL,
@@ -14,7 +14,7 @@ import {
   UIDLReferencedStyles,
   UIDLStyleSetTokenReference,
   ComponentValidationError,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 // Prop definitions and state definitions should have different keys
 export const checkForDuplicateDefinitions = (input: ComponentUIDL) => {

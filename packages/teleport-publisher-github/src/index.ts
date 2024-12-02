@@ -8,7 +8,7 @@ import {
   GithubInvalidTokenError,
   GithubUnexpectedError,
   GithubServerError,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 import { publishToGithub, generateProjectFiles } from './utils'
 import { GithubFactoryParams, GithubPublisher, GithubPublishMeta } from './types'

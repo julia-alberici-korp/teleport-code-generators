@@ -1,5 +1,5 @@
 import { createReactComponentGenerator } from '../../src'
-import { GeneratedFile } from '@teleporthq/teleport-types'
+import { GeneratedFile } from '@viasoft/teleport-types'
 import componentJSON from './component-with-smilar-element-name-depependencies.json'
 
 import {

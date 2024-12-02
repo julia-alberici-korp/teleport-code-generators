@@ -1,4 +1,4 @@
-import { ComponentUIDL, GeneratorOptions } from '@teleporthq/teleport-types'
+import { ComponentUIDL, GeneratorOptions } from '@viasoft/teleport-types'
 import { wrapHtmlNode } from './utils'
 
 export const resolveHtmlNode = (uidl: ComponentUIDL, options: GeneratorOptions) => {

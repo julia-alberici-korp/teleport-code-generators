@@ -22,7 +22,7 @@ import {
   UIDLRootComponent,
   UIDLResourceItem,
   GeneratorOptions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { basename } from 'path'
 import { StringUtils } from '..'
 

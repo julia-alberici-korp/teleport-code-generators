@@ -1,5 +1,5 @@
 {
-  "name": "@teleporthq/teleport-types",
+  "name": "@viasoft/teleport-types",
   "version": "0.36.0",
   "description": "The collection of reusable types across the entire teleport ecosystem",
   "author": "teleportHQ",

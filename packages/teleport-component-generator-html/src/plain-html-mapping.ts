@@ -1,5 +1,5 @@
 import { HTMLMapping } from '@teleporthq/teleport-uidl-resolver'
-import { Mapping } from '@teleporthq/teleport-types'
+import { Mapping } from '@viasoft/teleport-types'
 
 export const PlainHTMLMapping: Mapping = {
   ...HTMLMapping,

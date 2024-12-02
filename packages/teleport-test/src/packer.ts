@@ -1,17 +1,17 @@
-import { createProjectPacker } from '@teleporthq/teleport-project-packer'
+import { createProjectPacker } from '@viasoft/teleport-project-packer'
 
 import { createReactProjectGenerator } from '@teleporthq/teleport-project-generator-react'
 import { createNextProjectGenerator } from '@teleporthq/teleport-project-generator-next'
 import { createVueProjectGenerator } from '@teleporthq/teleport-project-generator-vue'
 import { createNuxtProjectGenerator } from '@teleporthq/teleport-project-generator-nuxt'
 import { createAngularProjectGenerator } from '@teleporthq/teleport-project-generator-angular'
-import { createDiskPublisher } from '@teleporthq/teleport-publisher-disk'
+import { createDiskPublisher } from '@viasoft/teleport-publisher-disk'
 import {
   RemoteTemplateDefinition,
   ProjectUIDL,
   ProjectGenerator,
   ReactStyleVariation,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 import config from '../config.json'
 

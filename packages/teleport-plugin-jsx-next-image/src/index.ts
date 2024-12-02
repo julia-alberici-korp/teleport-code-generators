@@ -1,5 +1,5 @@
-import { ComponentPluginFactory, ComponentPlugin, UIDLDependency } from '@teleporthq/teleport-types'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+import { ComponentPluginFactory, ComponentPlugin, UIDLDependency } from '@viasoft/teleport-types'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 import * as types from '@babel/types'
 
 interface NextImagePluginConfig {

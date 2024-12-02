@@ -1,10 +1,10 @@
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 import {
   GeneratorOptions,
   UIDLLinkNode,
   UIDLElementNode,
   UIDLAttributeValue,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const insertLinks = (
   node: UIDLElementNode,

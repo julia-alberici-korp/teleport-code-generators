@@ -8,7 +8,7 @@ import {
   VercelDeploymentError,
   VercelDeploymentTimeoutError,
   GeneratedFile,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { ProjectFolderInfo, VercelError, VercelFile, VercelPayload, VercelResponse } from './types'
 import { getImageBufferFromRemoteUrl, getSHA } from './hash'
 

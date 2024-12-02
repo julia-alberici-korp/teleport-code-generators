@@ -1,4 +1,4 @@
-import { ServiceAuth } from '@teleporthq/teleport-types'
+import { ServiceAuth } from '@viasoft/teleport-types'
 
 import GithubInstance from './github-instance'
 import { createEmptyFolder, fetchFilesContent } from './utils'

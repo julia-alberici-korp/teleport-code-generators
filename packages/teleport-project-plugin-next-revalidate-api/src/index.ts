@@ -1,7 +1,7 @@
-import { ProjectPlugin, ProjectPluginStructure } from '@teleporthq/teleport-types'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { ProjectPlugin, ProjectPluginStructure } from '@viasoft/teleport-types'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { createNextCacheValidationPlugin } from './component-plugin'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import prettierJSPlugin from '@teleporthq/teleport-postprocessor-prettier-js'
 
 export class ProjectPluginRevalidateAPI implements ProjectPlugin {

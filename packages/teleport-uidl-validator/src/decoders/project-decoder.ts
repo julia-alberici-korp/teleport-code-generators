@@ -14,7 +14,7 @@ import {
   WebManifest,
   VProjectUIDL,
   UIDLResources,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import {
   globalAssetsDecoder,
   resourceItemDecoder,

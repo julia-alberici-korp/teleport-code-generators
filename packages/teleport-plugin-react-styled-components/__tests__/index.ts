@@ -1,5 +1,5 @@
 import { component, elementNode } from '@teleporthq/teleport-uidl-builders'
-import { ComponentStructure } from '@teleporthq/teleport-types'
+import { ComponentStructure } from '@viasoft/teleport-types'
 import { createReactStyledComponentsPlugin } from '../src/index'
 import { createComponentChunk, createElementWithStyle } from './mocks'
 

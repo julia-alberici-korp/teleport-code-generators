@@ -1,6 +1,6 @@
 import { createImportPlugin } from '../src/'
 import { componentDependency } from '@teleporthq/teleport-uidl-builders'
-import { ComponentStructure } from '@teleporthq/teleport-types'
+import { ComponentStructure } from '@viasoft/teleport-types'
 
 describe('plugin-import-statements', () => {
   const plugin = createImportPlugin({

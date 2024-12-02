@@ -1,4 +1,4 @@
-import { StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import {
   UIDLDynamicReference,
   ComponentUIDL,
@@ -27,7 +27,7 @@ import {
   UIDLDependency,
   UIDLEventHandlerStatement,
   UIDLCMSMixedTypeNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 interface ParseComponentJSONParams {
   noClone?: boolean

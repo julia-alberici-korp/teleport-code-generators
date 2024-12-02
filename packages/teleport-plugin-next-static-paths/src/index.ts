@@ -5,9 +5,9 @@ import {
   FileType,
   TeleportError,
   UIDLLocalResource,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { join, relative } from 'path'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 import { generateInitialPathsAST } from './utils'
 
 interface StaticPropsPluginConfig {

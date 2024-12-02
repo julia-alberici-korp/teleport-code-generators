@@ -1,5 +1,5 @@
-import { PostProcessor, FileType } from '@teleporthq/teleport-types'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { PostProcessor, FileType } from '@viasoft/teleport-types'
+import { StringUtils } from '@viasoft/teleport-shared'
 
 export const createVueFilePostProcessor = () => {
   const processor: PostProcessor = (codeChunks) => {

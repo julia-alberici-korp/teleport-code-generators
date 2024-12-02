@@ -1,4 +1,4 @@
-import { ProjectPlugin, ProjectPluginStructure, ProjectType } from '@teleporthq/teleport-types'
+import { ProjectPlugin, ProjectPluginStructure, ProjectType } from '@viasoft/teleport-types'
 import { nextAfterModifier, nextBeforeModifier } from './next'
 import { reactAfterModifier, reactBeforeModifier } from './react'
 

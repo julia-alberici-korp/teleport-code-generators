@@ -11,7 +11,7 @@ import {
   GeneratedFile,
   FileType,
   ReactStyleVariation,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { staticNode, dynamicNode, component, elementNode } from '@teleporthq/teleport-uidl-builders'
 
 const ComponentWithValidStyle: ComponentUIDL = component(

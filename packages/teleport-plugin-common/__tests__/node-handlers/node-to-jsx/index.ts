@@ -7,7 +7,7 @@ import {
   JSXGenerationParams,
   JSXGenerationOptions,
 } from '../../../src/node-handlers/node-to-jsx/types'
-import { ComponentUIDL } from '@teleporthq/teleport-types'
+import { ComponentUIDL } from '@viasoft/teleport-types'
 
 const uidl = componentUIDLSample as ComponentUIDL
 

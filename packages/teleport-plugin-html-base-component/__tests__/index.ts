@@ -4,7 +4,7 @@ import {
   HastNode,
   HastText,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { component, dynamicNode, elementNode, staticNode } from '@teleporthq/teleport-uidl-builders'
 import { createHTMLBasePlugin } from '../src'
 

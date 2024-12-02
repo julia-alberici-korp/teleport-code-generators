@@ -16,10 +16,10 @@ import {
   ProjectPlugin,
   HTMLComponentGenerator,
   ComponentPlugin,
-} from '@teleporthq/teleport-types'
-import { Constants } from '@teleporthq/teleport-shared'
+} from '@viasoft/teleport-types'
+import { Constants } from '@viasoft/teleport-shared'
 
-import { createProjectPacker } from '@teleporthq/teleport-project-packer'
+import { createProjectPacker } from '@viasoft/teleport-project-packer'
 import {
   ReactTemplate,
   createReactProjectGenerator,
@@ -127,7 +127,7 @@ export const packProject: PackProjectFunction = async (
   let publisher
   if (publisherType === PublisherType.DISK) {
     if (isNodeProcess()) {
-      const createDiskPublisher = await import('@teleporthq/teleport-publisher-disk').then(
+      const createDiskPublisher = await import('@viasoft/teleport-publisher-disk').then(
         (mod) => mod.createDiskPublisher
       )
       publisher = createDiskPublisher

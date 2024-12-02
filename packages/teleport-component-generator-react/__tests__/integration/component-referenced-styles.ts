@@ -6,7 +6,7 @@ import {
   FileType,
   ReactStyleVariation,
   GeneratorOptions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 const findFileByType = (files: GeneratedFile[], type: string = FileType.JS) =>
   files.find((file) => file.fileType === type)

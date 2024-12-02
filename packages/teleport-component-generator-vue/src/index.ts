@@ -1,7 +1,7 @@
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import vueComponentPlugin from '@teleporthq/teleport-plugin-vue-base-component'
 import { createCSSPlugin } from '@teleporthq/teleport-plugin-css'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'
 import prettierHTML from '@teleporthq/teleport-postprocessor-prettier-html'
 import vueFileProcessor from '@teleporthq/teleport-postprocessor-vue-file'
@@ -9,7 +9,7 @@ import {
   ComponentGenerator,
   ComponentGeneratorInstance,
   GeneratorFactoryParams,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 import { VueMapping } from './vue-mapping'
 

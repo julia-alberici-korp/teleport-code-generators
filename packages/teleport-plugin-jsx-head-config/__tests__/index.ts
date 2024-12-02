@@ -1,12 +1,7 @@
 import * as types from '@babel/types'
 import { createJSXHeadConfigPlugin } from '../src'
 import { component, elementNode } from '@teleporthq/teleport-uidl-builders'
-import {
-  ComponentStructure,
-  ChunkType,
-  FileType,
-  ChunkDefinition,
-} from '@teleporthq/teleport-types'
+import { ComponentStructure, ChunkType, FileType, ChunkDefinition } from '@viasoft/teleport-types'
 
 describe('plugin-jsx-head-config', () => {
   const plugin = createJSXHeadConfigPlugin()

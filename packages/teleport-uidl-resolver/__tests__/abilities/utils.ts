@@ -7,7 +7,7 @@ import {
   mailMockedDefinition,
   sectionMockedDefinition,
 } from './mocks'
-import { UIDLElementNode, UIDLURLLinkNode } from '@teleporthq/teleport-types'
+import { UIDLElementNode, UIDLURLLinkNode } from '@viasoft/teleport-types'
 
 describe('insertLink', () => {
   it('wraps a simple element', () => {

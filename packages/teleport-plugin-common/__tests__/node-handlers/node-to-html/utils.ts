@@ -1,4 +1,4 @@
-import { UIDLAttributeValue, UIDLElementNode } from '@teleporthq/teleport-types'
+import { UIDLAttributeValue, UIDLElementNode } from '@viasoft/teleport-types'
 import { handleAttribute } from '../../../src/node-handlers/node-to-html/utils'
 import { createHTMLNode } from '../../../src/builders/hast-builders'
 import {

@@ -3,7 +3,7 @@ import {
   PublisherFactoryParams,
   Publisher,
   GeneratedFolder,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { GithubFile } from '@teleporthq/teleport-github-gateway'
 
 export interface GithubFactoryParams extends PublisherFactoryParams {

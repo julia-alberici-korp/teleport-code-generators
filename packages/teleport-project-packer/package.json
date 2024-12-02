@@ -1,5 +1,5 @@
 {
-  "name": "@teleporthq/teleport-project-packer",
+  "name": "@viasoft/teleport-project-packer",
   "version": "0.36.0",
   "description": "Bare-bone project packer that accepts any project generator and publisher",
   "author": "teleportHQ",
@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@teleporthq/teleport-github-gateway": "^0.36.0",
-    "@teleporthq/teleport-types": "^0.36.0",
+    "@viasoft/teleport-types": "^0.36.0",
     "cross-fetch": "^3.0.4"
   },
   "gitHead": "b185c3fdb7dc94ff8c7eed63f7edba055fffa8d0"

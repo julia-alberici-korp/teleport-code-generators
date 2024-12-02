@@ -3,7 +3,7 @@ import {
   ProjectPluginStructure,
   InMemoryFileRecord,
   ProjectStrategy,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 interface ProjectAssemblyLineResult {
   files: Map<string, InMemoryFileRecord>

@@ -1,5 +1,5 @@
 import { createAngularComponentGenerator } from '../../src'
-import { GeneratedFile } from '@teleporthq/teleport-types'
+import { GeneratedFile } from '@viasoft/teleport-types'
 
 import {
   component,

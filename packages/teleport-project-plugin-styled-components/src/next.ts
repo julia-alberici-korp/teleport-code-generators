@@ -2,9 +2,9 @@ import {
   FileType,
   ProjectPluginStructure,
   ReactNativeStyleVariation,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { createStyleSheetPlugin } from '@teleporthq/teleport-plugin-react-styled-components'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'
 import MagicString from 'magic-string'
 import { STYLED_DEPENDENCIES } from './constant'

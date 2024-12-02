@@ -21,7 +21,7 @@
 </h3>
 
 <p align="center">
-  <a target="_blank" href="https://www.npmjs.com/package/@teleporthq/teleport-component-generator"><img src="https://img.shields.io/npm/v/@teleporthq/teleport-component-generator.svg" /></a>
+  <a target="_blank" href="https://www.npmjs.com/package/@viasoft/teleport-component-generator"><img src="https://img.shields.io/npm/v/@viasoft/teleport-component-generator.svg" /></a>
   <a target="_blank" href="https://discord.gg/5pfSVWJzzX"><img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" /></a>
   <a target="_blank" href="https://github.com/teleporthq/teleport-code-generators/actions/workflows/publish.yml"><img src="https://github.com/teleporthq/teleport-code-generators/actions/workflows/publish.yml/badge.svg" /></a>
   <a target="_blank" href="https://codecov.io/gh/teleporthq/teleport-code-generators"><img src="https://codecov.io/gh/teleporthq/teleport-code-generators/branch/development/graph/badge.svg" /></a>

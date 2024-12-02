@@ -1,5 +1,5 @@
-import { StringUtils } from '@teleporthq/teleport-shared'
-import { UIDLStaticValue, UIDLStyleDefinitions, UIDLStyleValue } from '@teleporthq/teleport-types'
+import { StringUtils } from '@viasoft/teleport-shared'
+import { UIDLStaticValue, UIDLStyleDefinitions, UIDLStyleValue } from '@viasoft/teleport-types'
 
 const getContentOfStyleKey = (styleValue: UIDLStyleValue) => {
   if (styleValue.type === 'static') {

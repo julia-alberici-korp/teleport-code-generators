@@ -4,7 +4,7 @@ import {
   UIDLStyleDefinitions,
   ChunkType,
   FileType,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { component, elementNode, staticNode } from '@teleporthq/teleport-uidl-builders'
 
 export const createComponentChunk = (elementKey: string = 'container') => {

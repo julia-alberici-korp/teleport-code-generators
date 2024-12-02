@@ -1,4 +1,4 @@
-import { UIDLUtils, StringUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils, StringUtils } from '@viasoft/teleport-shared'
 import {
   UIDLEventDefinitions,
   UIDLElement,
@@ -15,7 +15,7 @@ import {
   UIDLDynamicReference,
   UIDLConditionalNode,
   ElementsLookup,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import deepmerge from 'deepmerge'
 
 const STYLE_PROPERTIES_WITH_URL = ['background', 'backgroundImage']

@@ -1,14 +1,14 @@
 import * as types from '@babel/types'
 
-import { UIDLUtils } from '@teleporthq/teleport-shared'
-import { ASTUtils, ASTBuilders, ParsedASTNode } from '@teleporthq/teleport-plugin-common'
+import { UIDLUtils } from '@viasoft/teleport-shared'
+import { ASTUtils, ASTBuilders, ParsedASTNode } from '@viasoft/teleport-plugin-common'
 import {
   UIDLPropDefinition,
   UIDLStateDefinition,
   UIDLEventHandlerStatement,
   ComponentUIDL,
   UIDLPropCallEvent,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const extractStateObject = (stateDefinitions: Record<string, UIDLStateDefinition>) => {
   return Object.keys(stateDefinitions).reduce((result: Record<string, unknown>, key) => {

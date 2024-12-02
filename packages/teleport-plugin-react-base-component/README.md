@@ -6,9 +6,9 @@ A plugin for handling the skeleton/baseline of a React component.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-plugin-react-base-component
+npm install @viasoft/teleport-plugin-react-base-component
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-plugin-react-base-component
+yarn add @viasoft/teleport-plugin-react-base-component
 ```

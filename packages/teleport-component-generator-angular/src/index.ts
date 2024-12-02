@@ -1,8 +1,8 @@
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 
 import angularComponentPlugin from '@teleporthq/teleport-plugin-angular-base-component'
 import { createCSSPlugin } from '@teleporthq/teleport-plugin-css'
-import { createImportPlugin } from '@teleporthq/teleport-plugin-import-statements'
+import { createImportPlugin } from '@viasoft/teleport-plugin-import-statements'
 import prettierTS from '@teleporthq/teleport-postprocessor-prettier-ts'
 import prettierHTML from '@teleporthq/teleport-postprocessor-prettier-html'
 
@@ -12,7 +12,7 @@ import {
   FileType,
   ComponentGeneratorInstance,
   GeneratorFactoryParams,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 const importStatementsPlugin = createImportPlugin({ fileType: FileType.TS })
 const stylePlugin = createCSSPlugin({

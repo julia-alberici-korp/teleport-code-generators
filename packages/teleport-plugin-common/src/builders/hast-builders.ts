@@ -1,4 +1,4 @@
-import { HastNode, HastText } from '@teleporthq/teleport-types'
+import { HastNode, HastText } from '@viasoft/teleport-types'
 
 export const createHTMLNode = (
   tagName: string,

@@ -1,6 +1,6 @@
 import * as hastUtils from '../../utils/hast-utils'
 import { createComment, createHTMLNode } from '../../builders/hast-builders'
-import { UIDLUtils, StringUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils, StringUtils } from '@viasoft/teleport-shared'
 import {
   UIDLRepeatNode,
   UIDLConditionalNode,
@@ -10,7 +10,7 @@ import {
   HastNode,
   HastText,
   UIDLDynamicReference,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { createConditionalStatement, handleAttribute, handleEvent } from './utils'
 import { NodeToHTML } from './types'
 import { DEFAULT_TEMPLATE_SYNTAX } from './constants'

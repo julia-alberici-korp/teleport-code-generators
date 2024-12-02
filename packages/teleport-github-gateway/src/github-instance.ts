@@ -1,7 +1,7 @@
 import fetch from 'cross-fetch'
 import { Octokit } from 'octokit'
 
-import { ServiceAuth } from '@teleporthq/teleport-types'
+import { ServiceAuth } from '@viasoft/teleport-types'
 
 import {
   DEFAULT_REF,

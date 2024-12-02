@@ -1,5 +1,5 @@
-import { GenericUtils, StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
-import { Validator, Parser } from '@teleporthq/teleport-uidl-validator'
+import { GenericUtils, StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
+import { Validator, Parser } from '@viasoft/teleport-uidl-validator'
 import {
   GeneratorOptions,
   GeneratedFolder,
@@ -17,7 +17,7 @@ import {
   ProjectGenerator as ProjectGeneratorType,
   FileType,
   UIDLLocalFontAsset,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import {
   injectFilesToPath,
   resolveLocalDependencies,
@@ -43,9 +43,9 @@ import { DEFAULT_TEMPLATE } from './constants'
 import ProjectAssemblyLine from './assembly-line'
 import { join } from 'path'
 import { resourceGenerator } from './resource'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 
 type UpdateGeneratorCallback = (generator: ComponentGenerator) => void
 

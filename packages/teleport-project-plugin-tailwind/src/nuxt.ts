@@ -1,4 +1,4 @@
-import { FileType } from '@teleporthq/teleport-types'
+import { FileType } from '@viasoft/teleport-types'
 import { TailwindPluginParams } from '.'
 import { AUTO_PREFIXER, POSTCSS, TAILWIND } from './constants'
 

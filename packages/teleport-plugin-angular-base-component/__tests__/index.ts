@@ -1,6 +1,6 @@
 import { createAngularComponentPlugin } from '../src/index'
 import { component, elementNode } from '@teleporthq/teleport-uidl-builders'
-import { ComponentStructure, ChunkType } from '@teleporthq/teleport-types'
+import { ComponentStructure, ChunkType } from '@viasoft/teleport-types'
 
 describe('plugin-angular-base-component', () => {
   const plugin = createAngularComponentPlugin({

@@ -7,9 +7,9 @@ import {
   PluginStyledComponent,
   UIDLElement,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
-import { UIDLUtils, StringUtils } from '@teleporthq/teleport-shared'
-import { ASTUtils, StyleBuilders } from '@teleporthq/teleport-plugin-common'
+} from '@viasoft/teleport-types'
+import { UIDLUtils, StringUtils } from '@viasoft/teleport-shared'
+import { ASTUtils, StyleBuilders } from '@viasoft/teleport-plugin-common'
 import {
   generateStyledComponent,
   generateVariantsfromStyleSet,

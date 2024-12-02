@@ -4,7 +4,7 @@ import uidlSample from '../../../../examples/test-samples/project-sample.json'
 import invalidUidlSample from '../../../../examples/test-samples/project-invalid-sample.json'
 import template from './template-definition.json'
 import { createVueProjectGenerator } from '../../src'
-import { FileType } from '@teleporthq/teleport-types'
+import { FileType } from '@viasoft/teleport-types'
 
 describe('Vue Project Generator', () => {
   const generator = createVueProjectGenerator()

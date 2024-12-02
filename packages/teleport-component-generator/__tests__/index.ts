@@ -1,6 +1,6 @@
 import { createComponentGenerator } from '../src/index'
 import { elementNode, element, component } from '@teleporthq/teleport-uidl-builders'
-import { ChunkDefinition, ChunkType, FileType, ComponentPlugin } from '@teleporthq/teleport-types'
+import { ChunkDefinition, ChunkType, FileType, ComponentPlugin } from '@viasoft/teleport-types'
 
 describe('component generator', () => {
   it('creates a new instance of the generator', () => {

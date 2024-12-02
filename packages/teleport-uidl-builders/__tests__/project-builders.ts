@@ -1,5 +1,5 @@
 import { component } from '../src/component-builders'
-import { ProjectUIDL, ComponentUIDL, UIDLStaticValue } from '@teleporthq/teleport-types'
+import { ProjectUIDL, ComponentUIDL, UIDLStaticValue } from '@viasoft/teleport-types'
 import { project, simpleProjectGlobals } from '../src/project-builders'
 
 describe('Project Builders', () => {

@@ -1,4 +1,4 @@
-import { ProjectUIDL } from '@teleporthq/teleport-types'
+import { ProjectUIDL } from '@viasoft/teleport-types'
 import { createProjectGenerator } from '../src'
 import { resolveLocalDependencies } from '../src/utils'
 import {

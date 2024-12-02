@@ -6,9 +6,9 @@ import {
   UIDLAttributeValue,
   UIDLDynamicReference,
   UIDLStyleSetDefinition,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import ParsedASTNode from '../utils/parsed-ast'
-import { StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import {
   getContentOfStyleObject,
   getCSSVariablesContentFromTokenStyles,

@@ -1,4 +1,4 @@
-import { PrettierFormatOptions, UIDLDependency } from '@teleporthq/teleport-types'
+import { PrettierFormatOptions, UIDLDependency } from '@viasoft/teleport-types'
 
 export const ASSETS_IDENTIFIER = 'playground_assets'
 export const PRETTIER_CONFIG: PrettierFormatOptions = {

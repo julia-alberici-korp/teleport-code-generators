@@ -1,7 +1,7 @@
 import * as types from '@babel/types'
 import { parse } from '@babel/core'
 import ParsedASTNode from './parsed-ast'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 import {
   UIDLStateDefinition,
   UIDLPropDefinition,
@@ -12,7 +12,7 @@ import {
   UIDLPropValue,
   UIDLExpressionValue,
   UIDLStateValue,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import babelPresetReact from '@babel/preset-react'
 
 /**
@@ -417,6 +417,8 @@ export const getTSAnnotationForType = (type: any, t = types) => {
       return t.tsNumberKeyword()
     case 'boolean':
       return t.tsBooleanKeyword()
+    case 'any':
+      return t.tsAnyKeyword()
     default:
       return t.tsUnknownKeyword()
   }

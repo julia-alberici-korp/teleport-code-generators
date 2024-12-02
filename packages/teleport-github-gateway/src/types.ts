@@ -1,5 +1,5 @@
 /* tslint:disable no-any */
-import { ServiceAuth, GeneratedFolder, FileEncoding } from '@teleporthq/teleport-types'
+import { ServiceAuth, GeneratedFolder, FileEncoding } from '@viasoft/teleport-types'
 import GithubInstance from './github-instance'
 
 export type GithubGatewayFactory = (auth?: ServiceAuth) => GithubGateway

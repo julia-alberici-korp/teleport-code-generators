@@ -2,7 +2,7 @@
 import ComponentWithOldFormatAttributesJSON from './component-with-old-format-attributes.json'
 
 import { createReactComponentGenerator } from '../../src'
-import { GeneratedFile } from '@teleporthq/teleport-types'
+import { GeneratedFile } from '@viasoft/teleport-types'
 
 import {
   component,

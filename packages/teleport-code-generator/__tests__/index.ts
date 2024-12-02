@@ -12,7 +12,7 @@ import {
   ProjectType,
   ReactStyleVariation,
   ComponentUIDL,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { packProject, generateComponent } from '../src/index'
 
 const reactProjectPath = join(__dirname, 'react')

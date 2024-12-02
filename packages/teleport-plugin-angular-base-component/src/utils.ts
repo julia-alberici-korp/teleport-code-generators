@@ -1,6 +1,6 @@
 import * as types from '@babel/types'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
-import { ASTUtils, ASTBuilders } from '@teleporthq/teleport-plugin-common'
+import { UIDLUtils } from '@viasoft/teleport-shared'
+import { ASTUtils, ASTBuilders } from '@viasoft/teleport-plugin-common'
 import {
   UIDLMetaTag,
   ComponentUIDL,
@@ -9,7 +9,7 @@ import {
   UIDLStateDefinition,
   UIDLEventHandlerStatement,
   UIDLPropCallEvent,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const generateExportAST = (
   uidl: ComponentUIDL,

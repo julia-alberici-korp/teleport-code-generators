@@ -3,7 +3,7 @@ import invalidUidlSample from '../../../../examples/test-samples/project-invalid
 import projectWithSlot from '../../../../examples/test-samples/project-with-slot.json'
 import { createHTMLProjectGenerator, pluginCloneGlobals, pluginHomeReplace } from '../../src'
 import HTMLTemplate from '../../src/project-template'
-import { FileType } from '@teleporthq/teleport-types'
+import { FileType } from '@viasoft/teleport-types'
 
 describe('Html Project Generator', () => {
   it('runs without crasing', async () => {

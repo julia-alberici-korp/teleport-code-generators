@@ -1,6 +1,6 @@
-import { createProjectGenerator } from '@teleporthq/teleport-project-generator'
+import { createProjectGenerator } from '@viasoft/teleport-project-generator'
 import { createHTMLComponentGenerator } from '@teleporthq/teleport-component-generator-html'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { createStyleSheetPlugin } from '@teleporthq/teleport-plugin-css'
 import prettierHTML from '@teleporthq/teleport-postprocessor-prettier-html'
 import HTMLTemplate from './project-template'

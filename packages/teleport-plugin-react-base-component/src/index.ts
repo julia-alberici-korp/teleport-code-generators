@@ -1,10 +1,10 @@
-import { Constants, UIDLUtils } from '@teleporthq/teleport-shared'
+import { Constants, UIDLUtils } from '@viasoft/teleport-shared'
 import {
   createJSXSyntax,
   JSXGenerationOptions,
   ASTBuilders,
   ASTUtils,
-} from '@teleporthq/teleport-plugin-common'
+} from '@viasoft/teleport-plugin-common'
 
 import {
   ComponentPluginFactory,
@@ -12,7 +12,7 @@ import {
   ChunkType,
   FileType,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import * as types from '@babel/types'
 
 import {

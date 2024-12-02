@@ -4,9 +4,9 @@ import {
   ComponentPluginFactory,
   ChunkType,
   FileType,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { generateVariantsfromStyleSet } from './utils'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 import { projectVariantPropKey, projectVariantPropPrefix, VARIANT_DEPENDENCY } from './constants'
 
 interface StyleSheetPlugin {

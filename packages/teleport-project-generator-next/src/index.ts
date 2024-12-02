@@ -1,8 +1,8 @@
 import prettierJS from '@teleporthq/teleport-postprocessor-prettier-js'
 import nextImagePlugin from '@teleporthq/teleport-plugin-jsx-next-image'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
-import { createProjectGenerator } from '@teleporthq/teleport-project-generator'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
+import { createProjectGenerator } from '@viasoft/teleport-project-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { createReactComponentGenerator } from '@teleporthq/teleport-component-generator-react'
 import { createJSXHeadConfigPlugin } from '@teleporthq/teleport-plugin-jsx-head-config'
 import { createStaticPropsPlugin } from '@teleporthq/teleport-plugin-next-static-props'
@@ -11,7 +11,7 @@ import {
   createNextPagesInlineFetchPlugin,
   createNextComponentInlineFetchPlugin,
 } from '@teleporthq/teleport-plugin-next-inline-fetch'
-import { ReactStyleVariation, FileType } from '@teleporthq/teleport-types'
+import { ReactStyleVariation, FileType } from '@viasoft/teleport-types'
 import { createStyleSheetPlugin } from '@teleporthq/teleport-plugin-css'
 import { createDocumentFileChunks, configContentGenerator } from './utils'
 import { NextProjectMapping } from './next-project-mapping'

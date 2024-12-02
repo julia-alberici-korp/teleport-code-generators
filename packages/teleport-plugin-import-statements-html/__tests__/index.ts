@@ -1,5 +1,5 @@
 import { component, elementNode } from '@teleporthq/teleport-uidl-builders'
-import { ChunkType, ComponentStructure, FileType, HastNode } from '@teleporthq/teleport-types'
+import { ChunkType, ComponentStructure, FileType, HastNode } from '@viasoft/teleport-types'
 import { createHTMLImportStatementsPlugin } from '../src'
 
 describe('Plugin html import statements', () => {

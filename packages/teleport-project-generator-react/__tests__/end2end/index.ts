@@ -1,4 +1,4 @@
-import { FileType, ProjectStrategy, ReactStyleVariation } from '@teleporthq/teleport-types'
+import { FileType, ProjectStrategy, ReactStyleVariation } from '@viasoft/teleport-types'
 import fallbackUidlSample from '../../../../examples/uidl-samples/project.json'
 import uidlSampleWithExternalDependencies from '../../../../examples/test-samples/project-sample-with-dependency.json'
 import uidlSample from '../../../../examples/test-samples/project-sample.json'

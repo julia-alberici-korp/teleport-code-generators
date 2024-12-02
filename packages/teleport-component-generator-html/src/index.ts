@@ -8,10 +8,10 @@ import {
   ComponentUIDL,
   GeneratorFactoryParams,
   GeneratorOptions,
-} from '@teleporthq/teleport-types'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
-import { StringUtils } from '@teleporthq/teleport-shared'
-import { Parser } from '@teleporthq/teleport-uidl-validator'
+} from '@viasoft/teleport-types'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
+import { StringUtils } from '@viasoft/teleport-shared'
+import { Parser } from '@viasoft/teleport-uidl-validator'
 import { Resolver } from '@teleporthq/teleport-uidl-resolver'
 import { PlainHTMLMapping } from './plain-html-mapping'
 

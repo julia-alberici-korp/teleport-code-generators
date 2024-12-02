@@ -1,11 +1,11 @@
 import * as types from '@babel/types'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { StringUtils } from '@viasoft/teleport-shared'
 import {
   UIDLStyleValue,
   UIDLStyleSetDefinition,
   PluginStyledComponent,
   UIDLDependency,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { componentVariantPropPrefix } from './constants'
 
 export const generateStyledComponent = (params: {

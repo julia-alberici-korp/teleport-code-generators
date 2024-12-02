@@ -11,8 +11,8 @@ import {
   UIDLGlobalAsset,
   UIDLStateModifierEvent,
   UIDLStaticValue,
-} from '@teleporthq/teleport-types'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+} from '@viasoft/teleport-types'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 
 // tslint:disable-next-line no-any
 export const createConstAssignment = (constName: string, asignment: any = null, t = types) => {

@@ -1,5 +1,5 @@
 import * as types from '@babel/types'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 import {
   ComponentPluginFactory,
   ComponentPlugin,
@@ -8,7 +8,7 @@ import {
   UIDLPageOptions,
   UIDLRootComponent,
   UIDLRouteDefinitions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { join } from 'path'
 
 interface VueRouterConfig {

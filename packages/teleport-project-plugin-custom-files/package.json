@@ -24,6 +24,6 @@
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.json --module commonjs --outDir dist/cjs"
   },
   "dependencies": {
-    "@teleporthq/teleport-types": "^0.36.0"
+    "@viasoft/teleport-types": "^0.36.0"
   }
 }

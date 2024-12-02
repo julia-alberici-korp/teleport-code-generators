@@ -8,13 +8,13 @@
 */
 
 import * as types from '@babel/types'
-import { StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import {
   ASTUtils,
   ASTBuilders,
   ParsedASTNode,
   StyleBuilders,
-} from '@teleporthq/teleport-plugin-common'
+} from '@viasoft/teleport-plugin-common'
 import {
   ComponentPluginFactory,
   ComponentPlugin,
@@ -24,7 +24,7 @@ import {
   UIDLElementNodeInlineReferencedStyle,
   UIDLElementNode,
   UIDLElement,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import {
   generateStylesFromStyleObj,
   createStylesHookDecleration,

@@ -26,6 +26,6 @@
   "dependencies": {
     "@teleporthq/teleport-plugin-css-modules": "^0.36.0",
     "@teleporthq/teleport-postprocessor-prettier-js": "^0.36.0",
-    "@teleporthq/teleport-types": "^0.36.0"
+    "@viasoft/teleport-types": "^0.36.0"
   }
 }

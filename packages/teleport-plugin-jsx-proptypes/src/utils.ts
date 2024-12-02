@@ -1,6 +1,6 @@
 import * as types from '@babel/types'
-import { ASTUtils, ParsedASTNode } from '@teleporthq/teleport-plugin-common'
-import { UIDLPropDefinition } from '@teleporthq/teleport-types'
+import { ASTUtils, ParsedASTNode } from '@viasoft/teleport-plugin-common'
+import { UIDLPropDefinition } from '@viasoft/teleport-types'
 
 export const buildDefaultPropsAst = (
   componentName: string,

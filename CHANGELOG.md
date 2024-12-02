@@ -451,7 +451,7 @@ Supports all style-flavours that we currently support.
 
 #### :earth_asia: Core
 * [#507](https://github.com/teleporthq/teleport-code-generators/pull/507) feat(vuild): exposing vuidl for better Dx for integrations 
-  We are exporting UIDL types from @teleporthq/teleport-types like, ComponentUIDL, ProjectUIDL etc. But these are mostly used for internal implementations. The syntax for UIDL is much more simpler than this.
+  We are exporting UIDL types from @viasoft/teleport-types like, ComponentUIDL, ProjectUIDL etc. But these are mostly used for internal implementations. The syntax for UIDL is much more simpler than this.
  
  For example, if we define a simple `UIDLNode` with styles. 
  
@@ -484,7 +484,7 @@ Supports all style-flavours that we currently support.
 }
  ```
  
- But, we don't actually need to define static nodes this way, samee thing applies to static children in UIDL. So, start using `VComponentUIDL` from **@teleporthq/teleport-types**
+ But, we don't actually need to define static nodes this way, samee thing applies to static children in UIDL. So, start using `VComponentUIDL` from **@viasoft/teleport-types**
  https://repl.teleporthq.io/?uidlLink=lrvw58rmbqcxpr4dsrfrv
  
  These `VUIDL` helps in writing more compact and human redeable UIDL's. For more types that are exported, please check --> https://github.com/teleporthq/teleport-code-generators/blob/development/packages/teleport-types/src/vuidl.ts

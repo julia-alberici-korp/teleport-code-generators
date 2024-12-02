@@ -6,15 +6,15 @@ import { createCSSPlugin } from '@teleporthq/teleport-plugin-css'
 import reactStyledComponentsPlugin from '@teleporthq/teleport-plugin-react-styled-components'
 import { createReactStyledJSXPlugin } from '@teleporthq/teleport-plugin-react-styled-jsx'
 import propTypesPlugin from '@teleporthq/teleport-plugin-jsx-proptypes'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import prettierJSX from '@teleporthq/teleport-postprocessor-prettier-jsx'
 import {
   ComponentGenerator,
   ReactStyleVariation,
   ComponentGeneratorInstance,
   GeneratorFactoryParams,
-} from '@teleporthq/teleport-types'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+} from '@viasoft/teleport-types'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { ReactMapping } from './react-mapping'
 
 const cssPlugin = createCSSPlugin({

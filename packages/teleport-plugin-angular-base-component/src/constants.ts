@@ -1,4 +1,4 @@
-import { UIDLDependency } from '@teleporthq/teleport-types'
+import { UIDLDependency } from '@viasoft/teleport-types'
 
 export const DEFAULT_ANGULAR_TEMPLATE_CHUNK_NAME = 'template-chunk'
 

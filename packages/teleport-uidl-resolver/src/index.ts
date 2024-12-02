@@ -1,6 +1,6 @@
 import Resolver from './resolver'
 import { HTMLMapping } from './html-mapping'
-import { UIDLElement, GeneratorOptions } from '@teleporthq/teleport-types'
+import { UIDLElement, GeneratorOptions } from '@viasoft/teleport-types'
 import { resolveStyleSetDefinitions } from './resolvers/style-set-definitions'
 import { generateUniqueKeys, createNodesLookup } from './utils'
 

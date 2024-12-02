@@ -1,5 +1,5 @@
-import { UIDLUtils } from '@teleporthq/teleport-shared'
-import { ASTBuilders, ASTUtils } from '@teleporthq/teleport-plugin-common'
+import { UIDLUtils } from '@viasoft/teleport-shared'
+import { ASTBuilders, ASTUtils } from '@viasoft/teleport-plugin-common'
 import { registerReactRouterDeps, constructRouteJSX, createRouteRouterTag } from './utils'
 import {
   ComponentPluginFactory,
@@ -9,7 +9,7 @@ import {
   UIDLPageOptions,
   UIDLRootComponent,
   UIDLRouteDefinitions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { join } from 'path'
 
 interface AppRoutingComponentConfig {

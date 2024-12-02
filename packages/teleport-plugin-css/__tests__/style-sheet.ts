@@ -2,7 +2,7 @@ import {
   UIDLDesignTokens,
   UIDLStyleSetDefinition,
   UIDLStyleSetTokenReference,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { staticNode, dynamicNode } from '@teleporthq/teleport-uidl-builders'
 import { createStyleSheetPlugin } from '../src/style-sheet'
 import { setUpHASTChunk, setUpStructureWithHASTChunk } from './mocks'

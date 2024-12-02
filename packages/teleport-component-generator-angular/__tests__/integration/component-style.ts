@@ -1,7 +1,7 @@
 import ComponentWithNestedStyle from './component-with-nested-styles.json'
 
 import { createAngularComponentGenerator } from '../../src/index'
-import { ComponentUIDL, GeneratedFile } from '@teleporthq/teleport-types'
+import { ComponentUIDL, GeneratedFile } from '@viasoft/teleport-types'
 import { component, elementNode, dynamicNode, staticNode } from '@teleporthq/teleport-uidl-builders'
 
 const ComponentWithValidStyle: ComponentUIDL = component(

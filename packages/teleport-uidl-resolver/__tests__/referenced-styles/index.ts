@@ -2,7 +2,7 @@ import {
   UIDLElementNodeInlineReferencedStyle,
   UIDLElementNodeReferenceStyles,
   UIDLStyleMediaQueryScreenSizeCondition,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { component, elementNode, staticNode } from '@teleporthq/teleport-uidl-builders'
 import { resolveReferencedStyle } from '../../src/resolvers/referenced-styles'
 

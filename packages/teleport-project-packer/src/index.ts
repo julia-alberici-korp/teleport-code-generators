@@ -7,7 +7,7 @@ import {
   GeneratedFolder,
   RemoteTemplateDefinition,
   MissingProjectGeneratorError,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { injectAssetsToProject, fetchTemplate } from './utils'
 import { DEFAULT_TEMPLATE } from './constants'
 

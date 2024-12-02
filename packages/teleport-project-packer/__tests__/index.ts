@@ -12,7 +12,7 @@ import {
   Publisher,
   GeneratedFolder,
   GeneratedFile,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 import { createProjectPacker, PackerFactoryParams } from '../src'
 import { DEFAULT_TEMPLATE } from '../src/constants'

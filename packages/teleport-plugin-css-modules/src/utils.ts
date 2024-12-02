@@ -1,10 +1,10 @@
-import { StyleBuilders, StyleUtils } from '@teleporthq/teleport-plugin-common'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+import { StyleBuilders, StyleUtils } from '@viasoft/teleport-plugin-common'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 import {
   UIDLStyleSetDefinition,
   UIDLStyleSheetContent,
   UIDLStyleValue,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const generateStyledFromStyleContent = (
   styles: Record<string, UIDLStyleSheetContent> | Record<string, UIDLStyleValue> = {}

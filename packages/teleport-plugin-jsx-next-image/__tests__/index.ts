@@ -1,11 +1,6 @@
 import { component, elementNode, staticNode } from '@teleporthq/teleport-uidl-builders'
 import { createNextImagePlugin } from '../src'
-import {
-  ChunkDefinition,
-  ChunkType,
-  FileType,
-  ComponentStructure,
-} from '@teleporthq/teleport-types'
+import { ChunkDefinition, ChunkType, FileType, ComponentStructure } from '@viasoft/teleport-types'
 import * as types from '@babel/types'
 
 describe('plugin-jsx-next-image', () => {

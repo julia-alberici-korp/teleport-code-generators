@@ -24,9 +24,9 @@
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.json --module commonjs --outDir dist/cjs"
   },
   "dependencies": {
-    "@teleporthq/teleport-shared": "^0.36.0",
-    "@teleporthq/teleport-types": "^0.36.0",
     "@teleporthq/teleport-uidl-builders": "^0.36.0",
+    "@viasoft/teleport-shared": "^0.36.0",
+    "@viasoft/teleport-types": "^0.36.0",
     "deepmerge": "^4.0.0"
   },
   "gitHead": "b185c3fdb7dc94ff8c7eed63f7edba055fffa8d0"

@@ -1,5 +1,5 @@
-import { StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
-import { StyleUtils, StyleBuilders, HASTUtils, ASTUtils } from '@teleporthq/teleport-plugin-common'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
+import { StyleUtils, StyleBuilders, HASTUtils, ASTUtils } from '@viasoft/teleport-plugin-common'
 import * as types from '@babel/types'
 import {
   ComponentPluginFactory,
@@ -14,7 +14,7 @@ import {
   PluginCSS,
   UIDLElement,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { createStyleSheetPlugin } from './style-sheet'
 
 interface CSSPluginConfig {

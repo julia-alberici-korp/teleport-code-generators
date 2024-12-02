@@ -1,5 +1,5 @@
 import JSZip from 'jszip'
-import { GeneratedFolder, GeneratedFile } from '@teleporthq/teleport-types'
+import { GeneratedFolder, GeneratedFile } from '@viasoft/teleport-types'
 
 export const isNodeProcess = (): boolean => {
   return (

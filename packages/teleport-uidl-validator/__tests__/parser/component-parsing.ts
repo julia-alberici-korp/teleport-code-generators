@@ -10,7 +10,7 @@ import componentWithReferencedStylesJSON from './componennt-with-referenced-styl
 import componentWithStateReferences from './compoenent-with-state-reference.json'
 
 import { parseComponentJSON, parseProjectJSON } from '../../src/parser'
-import { ComponentUIDL, UIDLConditionalNode } from '@teleporthq/teleport-types'
+import { ComponentUIDL, UIDLConditionalNode } from '@viasoft/teleport-types'
 
 describe('parseComponentJSON', () => {
   it('transforms primitive component values', () => {

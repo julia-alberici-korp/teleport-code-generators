@@ -4,10 +4,10 @@ import {
   ComponentPluginFactory,
   FileType,
   UIDLStaticValue,
-} from '@teleporthq/teleport-types'
-import { StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
+} from '@viasoft/teleport-types'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import * as types from '@babel/types'
-import { ASTUtils } from '@teleporthq/teleport-plugin-common'
+import { ASTUtils } from '@viasoft/teleport-plugin-common'
 import { extractResourceIntoNextAPIFolder } from './utils'
 import { join, relative } from 'path'
 

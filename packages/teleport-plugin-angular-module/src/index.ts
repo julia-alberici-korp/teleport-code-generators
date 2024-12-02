@@ -1,5 +1,5 @@
 import * as types from '@babel/types'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 import {
   ComponentPluginFactory,
   ComponentPlugin,
@@ -7,7 +7,7 @@ import {
   FileType,
   UIDLDependency,
   UIDLRootComponent,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { relative, join } from 'path'
 
 import {

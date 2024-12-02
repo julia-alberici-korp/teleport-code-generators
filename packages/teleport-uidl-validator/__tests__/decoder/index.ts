@@ -1,4 +1,4 @@
-import { UIDLConditionalNode } from '@teleporthq/teleport-types'
+import { UIDLConditionalNode } from '@viasoft/teleport-types'
 import { conditionalNodeDecoder } from '../../src/decoders/utils'
 
 test('decode conditional nodes properly when using dynamic and expression reference', () => {

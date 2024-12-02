@@ -6,10 +6,10 @@ import {
   UIDLResourceItem,
   GeneratorOptions,
   FileType,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import * as types from '@babel/types'
-import { ASTUtils } from '@teleporthq/teleport-plugin-common'
-import { StringUtils } from '@teleporthq/teleport-shared'
+import { ASTUtils } from '@viasoft/teleport-plugin-common'
+import { StringUtils } from '@viasoft/teleport-shared'
 import { relative } from 'path'
 
 export const extractResourceIntoNextAPIFolder = (

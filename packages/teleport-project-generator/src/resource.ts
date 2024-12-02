@@ -1,4 +1,4 @@
-import { ASTUtils } from '@teleporthq/teleport-plugin-common'
+import { ASTUtils } from '@viasoft/teleport-plugin-common'
 import {
   ChunkDefinition,
   ChunkType,
@@ -7,7 +7,7 @@ import {
   UIDLDependency,
   UIDLResourceItem,
   UIDLResources,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import * as types from '@babel/types'
 
 export const resourceGenerator = (

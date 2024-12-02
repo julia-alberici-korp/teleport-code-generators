@@ -268,7 +268,8 @@ export interface UIDLPropDefinition {
 
 export interface UIDLStateDefinition {
   type: string
-  defaultValue: string | number | boolean | unknown[] | object | (() => void)
+  defaultValue?: string | number | boolean | unknown[] | object | (() => void)
+  value?: string | number | boolean | unknown[] | object | (() => void)
 }
 
 export interface UIDLStateValueDetails {

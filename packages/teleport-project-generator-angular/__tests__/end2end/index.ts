@@ -1,4 +1,4 @@
-import { FileType } from '@teleporthq/teleport-types'
+import { FileType } from '@viasoft/teleport-types'
 import fallbackPageSample from '../../../../examples/uidl-samples/project.json'
 import uidlSample from '../../../../examples/test-samples/project-sample-with-dependency.json'
 import invalidUidlSample from '../../../../examples/test-samples/project-invalid-sample.json'

@@ -6,9 +6,9 @@ A utility belt for the entire teleportHQ ecosystem.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-shared
+npm install @viasoft/teleport-shared
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-shared
+yarn add @viasoft/teleport-shared
 ```

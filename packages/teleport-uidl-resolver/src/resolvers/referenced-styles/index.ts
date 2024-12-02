@@ -14,7 +14,7 @@ import {
   UIDLStyleMediaQueryScreenSizeCondition,
   UIDLElementNodeCompReferencedStyle,
   GeneratorOptions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { prefixAssetURLs } from '../../utils'
 
 export const resolveReferencedStyle = (input: ComponentUIDL, options: GeneratorOptions) => {

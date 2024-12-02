@@ -1,9 +1,9 @@
-import { ProjectPluginStructure, ReactStyleVariation } from '@teleporthq/teleport-types'
+import { ProjectPluginStructure, ReactStyleVariation } from '@viasoft/teleport-types'
 import {
   createStyleSheetPlugin,
   createReactStyledComponentsPlugin,
 } from '@teleporthq/teleport-plugin-react-styled-components'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
 import reactAppRoutingPlugin from '@teleporthq/teleport-plugin-react-app-routing'
 import { STYLED_DEPENDENCIES } from './constant'
 

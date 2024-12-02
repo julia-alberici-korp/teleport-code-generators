@@ -4,9 +4,9 @@ import {
   ChunkType,
   HTMLComponentGeneratorError,
   HastNode,
-} from '@teleporthq/teleport-types'
-import { HASTBuilders, HASTUtils } from '@teleporthq/teleport-plugin-common'
-import { StringUtils } from '@teleporthq/teleport-shared'
+} from '@viasoft/teleport-types'
+import { HASTBuilders, HASTUtils } from '@viasoft/teleport-plugin-common'
+import { StringUtils } from '@viasoft/teleport-shared'
 
 export const createHTMLImportStatementsPlugin = () => {
   const htmlImportsPlugin: ComponentPlugin = async (structure) => {

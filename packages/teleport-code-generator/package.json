@@ -33,15 +33,15 @@
     "@teleporthq/teleport-project-generator-nuxt": "^0.36.1",
     "@teleporthq/teleport-project-generator-react": "^0.36.1",
     "@teleporthq/teleport-project-generator-vue": "^0.36.1",
-    "@teleporthq/teleport-project-packer": "^0.36.0",
     "@teleporthq/teleport-publisher-codesandbox": "^0.36.0",
-    "@teleporthq/teleport-publisher-disk": "^0.36.0",
     "@teleporthq/teleport-publisher-github": "^0.36.0",
     "@teleporthq/teleport-publisher-netlify": "^0.36.0",
     "@teleporthq/teleport-publisher-vercel": "^0.36.0",
     "@teleporthq/teleport-publisher-zip": "^0.36.0",
-    "@teleporthq/teleport-shared": "^0.36.0",
-    "@teleporthq/teleport-types": "^0.36.0"
+    "@viasoft/teleport-project-packer": "^0.36.0",
+    "@viasoft/teleport-publisher-disk": "^0.36.0",
+    "@viasoft/teleport-shared": "^0.36.0",
+    "@viasoft/teleport-types": "^0.36.0"
   },
   "gitHead": "b185c3fdb7dc94ff8c7eed63f7edba055fffa8d0"
 }

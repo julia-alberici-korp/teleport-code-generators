@@ -5,7 +5,7 @@ import {
   WebManifest,
   UIDLGlobalProjectValues,
   UIDLRootComponent,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const project = (
   name: string,

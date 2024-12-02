@@ -6,9 +6,9 @@ Bare-bone project packer that accepts any project generator and publisher.
 
 ## Install
 ```bash
-npm install @teleporthq/teleport-project-packer
+npm install @viasoft/teleport-project-packer
 ```
 or
 ```bash
-yarn add @teleporthq/teleport-project-packer
+yarn add @viasoft/teleport-project-packer
 ```

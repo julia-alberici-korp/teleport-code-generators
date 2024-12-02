@@ -1,5 +1,5 @@
-import { StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
-import { ASTUtils, StyleBuilders, ASTBuilders } from '@teleporthq/teleport-plugin-common'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
+import { ASTUtils, StyleBuilders, ASTBuilders } from '@viasoft/teleport-plugin-common'
 import {
   ComponentPluginFactory,
   ComponentPlugin,
@@ -7,7 +7,7 @@ import {
   PluginStyledJSX,
   UIDLElement,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { generateStyledJSXTag } from './utils'
 import * as types from '@babel/types'
 

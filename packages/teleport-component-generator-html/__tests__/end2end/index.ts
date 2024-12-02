@@ -1,7 +1,7 @@
 // @ts-ignore
 import uidlSampleJSON from '../../../../examples/test-samples/component-html.json'
 import { component, elementNode, dynamicNode, staticNode } from '@teleporthq/teleport-uidl-builders'
-import { FileType, GeneratedFile } from '@teleporthq/teleport-types'
+import { FileType, GeneratedFile } from '@viasoft/teleport-types'
 import { createHTMLComponentGenerator } from '../../src'
 
 const findFileByType = (files: GeneratedFile[], type: string = 'js') =>

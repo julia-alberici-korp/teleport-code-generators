@@ -1,4 +1,4 @@
-import { ChunkDefinition } from '@teleporthq/teleport-types'
+import { ChunkDefinition } from '@viasoft/teleport-types'
 
 export const groupChunksByFileType = (
   chunks: ChunkDefinition[]

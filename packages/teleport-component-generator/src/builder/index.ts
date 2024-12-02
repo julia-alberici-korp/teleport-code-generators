@@ -5,7 +5,7 @@ import {
   CodeGeneratorFunction,
   ChunkContent,
   ChunkType,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export default class Builder {
   private chunkDefinitions: ChunkDefinition[] = []

@@ -1,10 +1,10 @@
-import { StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
 import {
   FileType,
   GeneratedFile,
   ProjectPlugin,
   ProjectPluginStructure,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 class ProjectPluginHomeReplace implements ProjectPlugin {
   async runBefore(structure: ProjectPluginStructure) {

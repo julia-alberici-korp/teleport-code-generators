@@ -8,7 +8,7 @@ import {
   array,
   intersection,
 } from '@mojotech/json-type-validation'
-import { VComponentUIDL, VRootComponentUIDL } from '@teleporthq/teleport-types'
+import { VComponentUIDL, VRootComponentUIDL } from '@viasoft/teleport-types'
 import {
   styleSetDefinitionDecoder,
   propDefinitionsDecoder,

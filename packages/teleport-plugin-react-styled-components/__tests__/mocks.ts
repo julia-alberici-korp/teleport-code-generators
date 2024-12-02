@@ -1,5 +1,5 @@
 import { staticNode, elementNode } from '@teleporthq/teleport-uidl-builders'
-import { ChunkDefinition, ChunkType, FileType } from '@teleporthq/teleport-types'
+import { ChunkDefinition, ChunkType, FileType } from '@viasoft/teleport-types'
 
 export const createElementWithStyle = () => {
   const style = {

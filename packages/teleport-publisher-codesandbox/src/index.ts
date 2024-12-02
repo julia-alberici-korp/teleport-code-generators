@@ -8,7 +8,7 @@ import {
   CodeSandboxProjectTooBigError,
   CodeSandboxServerError,
   CodeSandboxUnexpectedError,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { BASE_URL, BASE_SANDBOX_URL } from './constants'
 import { convertToCodesandboxStructure } from './utils'
 

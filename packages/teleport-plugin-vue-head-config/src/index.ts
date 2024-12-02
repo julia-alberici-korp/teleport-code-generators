@@ -1,6 +1,6 @@
-import { ComponentPluginFactory, ComponentPlugin, UIDLMetaTag } from '@teleporthq/teleport-types'
+import { ComponentPluginFactory, ComponentPlugin, UIDLMetaTag } from '@viasoft/teleport-types'
 import * as types from '@babel/types'
-import { ASTUtils } from '@teleporthq/teleport-plugin-common'
+import { ASTUtils } from '@viasoft/teleport-plugin-common'
 
 interface VueMetaPluginConfig {
   vueJSChunkName?: string

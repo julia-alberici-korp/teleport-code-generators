@@ -17,7 +17,7 @@ import {
   UIDLRawValue,
   UIDLReferencedStyles,
   UIDLElement,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export const component = (
   name: string,

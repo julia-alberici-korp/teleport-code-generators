@@ -1,4 +1,4 @@
-import { GeneratedFolder, GeneratedFile, FileEncoding } from '@teleporthq/teleport-types'
+import { GeneratedFolder, GeneratedFile, FileEncoding } from '@viasoft/teleport-types'
 import { GithubFile, FilesFetcherMeta } from './types'
 
 import { DEFAULT_REF, FILE_EXTENTIONS_TO_DECODE } from './constants'

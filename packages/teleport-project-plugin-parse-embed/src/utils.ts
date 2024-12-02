@@ -1,4 +1,4 @@
-import { UIDLExternalDependency } from '@teleporthq/teleport-types'
+import { UIDLExternalDependency } from '@viasoft/teleport-types'
 
 export type SUPPORTED_PROJECT_TYPES =
   | 'teleport-project-html'

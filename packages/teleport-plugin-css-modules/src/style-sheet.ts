@@ -1,11 +1,11 @@
-import { StyleUtils, StyleBuilders } from '@teleporthq/teleport-plugin-common'
+import { StyleUtils, StyleBuilders } from '@viasoft/teleport-plugin-common'
 import {
   ComponentPlugin,
   ComponentPluginFactory,
   ChunkType,
   FileType,
-} from '@teleporthq/teleport-types'
-import { StringUtils } from '@teleporthq/teleport-shared'
+} from '@viasoft/teleport-types'
+import { StringUtils } from '@viasoft/teleport-shared'
 import { relative, join } from 'path'
 
 interface StyleSheetPlugin {

@@ -1,4 +1,4 @@
-import { ProjectPlugin, ProjectPluginStructure, ProjectType } from '@teleporthq/teleport-types'
+import { ProjectPlugin, ProjectPluginStructure, ProjectType } from '@viasoft/teleport-types'
 import { nextAfterModifier, nextBeforeModifier } from './next'
 
 type SUPPORTED_FRAMEWORKS = ProjectType.NEXT

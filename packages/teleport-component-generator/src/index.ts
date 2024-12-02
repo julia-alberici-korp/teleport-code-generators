@@ -1,6 +1,6 @@
-import { Validator, Parser } from '@teleporthq/teleport-uidl-validator'
+import { Validator, Parser } from '@viasoft/teleport-uidl-validator'
 import { Resolver, HTMLMapping } from '@teleporthq/teleport-uidl-resolver'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 import {
   ChunkDefinition,
   ComponentGenerator,
@@ -9,7 +9,7 @@ import {
   FileType,
   GeneratorOptions,
   GeneratorFactoryParams,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import AssemblyLine from './assembly-line'
 import Builder from './builder'
 

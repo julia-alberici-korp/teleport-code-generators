@@ -1,4 +1,4 @@
-import { ProjectPluginStructure, ProjectPlugin } from '@teleporthq/teleport-types'
+import { ProjectPluginStructure, ProjectPlugin } from '@viasoft/teleport-types'
 import { createParseEmbedPlugin } from './component-plugin'
 import { SUPPORTED_PROJECT_TYPES } from './utils'
 

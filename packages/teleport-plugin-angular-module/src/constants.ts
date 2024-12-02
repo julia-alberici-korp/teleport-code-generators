@@ -1,4 +1,4 @@
-import { UIDLDependency } from '@teleporthq/teleport-types'
+import { UIDLDependency } from '@viasoft/teleport-types'
 
 export const DEFAULT_MODULE_CHUNK_NAME = 'ts-module'
 

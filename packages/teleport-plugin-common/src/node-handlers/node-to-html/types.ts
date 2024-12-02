@@ -4,7 +4,7 @@ import {
   UIDLElementNode,
   UIDLPropDefinition,
   UIDLStateDefinition,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 
 export interface HTMLTemplateGenerationParams {
   // tslint:disable-next-line no-any

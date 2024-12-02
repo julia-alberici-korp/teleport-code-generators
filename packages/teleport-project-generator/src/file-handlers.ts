@@ -1,5 +1,5 @@
-import { UIDLUtils, StringUtils, GenericUtils } from '@teleporthq/teleport-shared'
-import { HASTUtils, HASTBuilders } from '@teleporthq/teleport-plugin-common'
+import { UIDLUtils, StringUtils, GenericUtils } from '@viasoft/teleport-shared'
+import { HASTUtils, HASTBuilders } from '@viasoft/teleport-plugin-common'
 import {
   GeneratedFile,
   GeneratedFolder,
@@ -15,11 +15,11 @@ import {
   FileType,
   ChunkType,
   ComponentGenerator,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { DEFAULT_GITIGNORE, DEFAULT_PACKAGE_JSON, DEFAULT_ROUTER_FILE_NAME } from './constants'
 import { PackageJSON } from './types'
 import { bootstrapGenerator } from './utils'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 
 export const createPage = async (
   pageUIDL: ComponentUIDL,

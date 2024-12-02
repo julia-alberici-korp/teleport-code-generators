@@ -9,8 +9,8 @@ import {
   ReactStyleVariation,
   ProjectPlugin,
   FileType,
-} from '@teleporthq/teleport-types'
-import { UIDLUtils } from '@teleporthq/teleport-shared'
+} from '@viasoft/teleport-types'
+import { UIDLUtils } from '@viasoft/teleport-shared'
 import projectUIDL from '../../../examples/test-samples/project-sample.json'
 import { DEFAULT_TEMPLATE } from '../src/constants'
 
@@ -175,7 +175,7 @@ export const mockAssemblyLineStructure = (): ProjectPluginStructure => {
   const rootFolder = UIDLUtils.cloneObject(DEFAULT_TEMPLATE)
 
   return {
-    uidl: (projectUIDL as unknown) as ProjectUIDL,
+    uidl: projectUIDL as unknown as ProjectUIDL,
     template: DEFAULT_TEMPLATE,
     files: new Map<string, InMemoryFileRecord>(),
     dependencies: {},

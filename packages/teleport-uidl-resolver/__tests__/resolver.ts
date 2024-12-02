@@ -1,6 +1,6 @@
 import Resolver from '../src/resolver'
 import mappingJSON from './mapping.json'
-import { Mapping } from '@teleporthq/teleport-types'
+import { Mapping } from '@viasoft/teleport-types'
 
 import {
   element,

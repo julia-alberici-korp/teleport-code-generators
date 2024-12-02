@@ -15,8 +15,8 @@
   ProjectStyle sheet are lost. Since, css-modules can have dynamic values only in inline.
 */
 
-import { StringUtils, UIDLUtils } from '@teleporthq/teleport-shared'
-import { StyleBuilders, ASTUtils } from '@teleporthq/teleport-plugin-common'
+import { StringUtils, UIDLUtils } from '@viasoft/teleport-shared'
+import { StyleBuilders, ASTUtils } from '@viasoft/teleport-plugin-common'
 import * as types from '@babel/types'
 import {
   ComponentPluginFactory,
@@ -29,7 +29,7 @@ import {
   HastNode,
   UIDLElement,
   UIDLElementNode,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { createStyleSheetPlugin } from './style-sheet'
 import { generateStyledFromStyleContent } from './utils'
 

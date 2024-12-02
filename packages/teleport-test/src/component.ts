@@ -1,7 +1,7 @@
 import { join } from 'path'
 import { writeFile } from 'fs'
 import { createHTMLComponentGenerator } from '@teleporthq/teleport-component-generator-html'
-import { GeneratedFile } from '@teleporthq/teleport-types'
+import { GeneratedFile } from '@viasoft/teleport-types'
 import uidlSample from '../../../examples/uidl-samples/component.json'
 
 const run = async () => {

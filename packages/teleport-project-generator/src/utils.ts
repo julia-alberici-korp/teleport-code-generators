@@ -1,4 +1,4 @@
-import { UIDLUtils, StringUtils, GenericUtils } from '@teleporthq/teleport-shared'
+import { UIDLUtils, StringUtils, GenericUtils } from '@viasoft/teleport-shared'
 import {
   GeneratedFile,
   GeneratedFolder,
@@ -17,10 +17,10 @@ import {
   StyleVariation,
   GeneratorFactoryParams,
   UIDLRouteDefinitions,
-} from '@teleporthq/teleport-types'
+} from '@viasoft/teleport-types'
 import { elementNode } from '@teleporthq/teleport-uidl-builders'
-import importStatementsPlugin from '@teleporthq/teleport-plugin-import-statements'
-import { createComponentGenerator } from '@teleporthq/teleport-component-generator'
+import importStatementsPlugin from '@viasoft/teleport-plugin-import-statements'
+import { createComponentGenerator } from '@viasoft/teleport-component-generator'
 import { basename } from 'path'
 
 export const createPageUIDLs = (uidl: ProjectUIDL, strategy: ProjectStrategy): ComponentUIDL[] => {
