@@ -26,7 +26,8 @@
     "standalone": "lerna run standalone --scope teleport-test",
     "local:adduser": "npm adduser --registry http://localhost:4873",
     "local:publish": "lerna exec --bail=false  -- npm publish -f --registry http://localhost:4873",
-    "local:unpublish": "lerna exec --bail=false -- npm unpublish -f --registry http://localhost:4873"
+    "local:unpublish": "lerna exec --bail=false -- npm unpublish -f --registry http://localhost:4873",
+    "pack-all": "node scripts/pack-all.js"
   },
   "husky": {
     "hooks": {
