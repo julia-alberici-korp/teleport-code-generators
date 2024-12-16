@@ -439,7 +439,6 @@ export const stateDefinitionsDecoder: Decoder<UIDLStateDefinition> = object({
     constant('func'),
     constant('object'),
     constant('children'),
-    constant('children'),
     constant('any'),
     // with this we can have a state that have a custom type
     string()

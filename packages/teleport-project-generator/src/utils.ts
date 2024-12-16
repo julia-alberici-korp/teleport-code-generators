@@ -138,15 +138,18 @@ const createPageUIDL = (
 
   if (isHomePage && !strategy.pages?.options?.useFileNameForNavigation) {
     const { importDefinitions = {} } = uidl.root
-    pageUIDL.importDefinitions = Object.keys(importDefinitions).reduce(
-      (acc: Record<string, UIDLExternalDependency>, importRef) => {
-        if (!importDefinitions[importRef].meta?.importJustPath) {
-          acc[importRef] = importDefinitions[importRef]
-        }
-        return acc
-      },
-      {}
-    )
+    pageUIDL.importDefinitions = {
+      ...pageUIDL.importDefinitions,
+      ...Object.keys(importDefinitions).reduce(
+        (acc: Record<string, UIDLExternalDependency>, importRef) => {
+          if (!importDefinitions[importRef].meta?.importJustPath) {
+            acc[importRef] = importDefinitions[importRef]
+          }
+          return acc
+        },
+        {}
+      ),
+    }
   }
 
   return pageUIDL
